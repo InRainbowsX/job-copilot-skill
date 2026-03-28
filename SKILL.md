@@ -88,6 +88,35 @@ Rules for the status block:
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
 
+## Timeline Priority
+
+Evaluate experience on a timeline before locking the main narrative. Do not choose the main story only because one older project sounds brighter on paper.
+
+Default weighting rules:
+
+- In social-hire contexts, prioritize recent 1 to 3 year experience first
+- Recent experience should normally outrank distant campus experience when both can support the target role
+- Role relevance still matters; recent but irrelevant experience should not automatically beat weaker but clearly relevant experience
+- The main narrative should answer: what is this candidate doing most recently, and does it support the target role now?
+
+Use campus experience as the main narrative only when at least one of these is true:
+
+- the recent work is too weak to support the target role
+- the recent work is clearly unrelated and cannot be reframed without distortion
+- the candidate is still close enough to an entry-level transition that campus work is the strongest real signal
+
+Downgrade campus experience to supporting evidence when:
+
+- the candidate is in a social-hire context and recent work can carry the role
+- the campus project is strong but too far from the current hiring moment
+- it works better as proof of early potential, content sense, or foundational skills than as the present-day main story
+
+When timeline weighting affects the result, make it explicit in the analysis:
+
+- which experience is the current main narrative
+- which older experience is retained as supporting evidence
+- why the older experience was downgraded or kept
+
 Supported template families:
 
 - Backend / server-side

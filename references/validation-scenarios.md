@@ -123,3 +123,17 @@ Expected behavior:
 - separate actual ownership from team-level system design
 - avoid inventing architecture authority
 - produce downgrade advice if the candidate cannot defend a stronger version
+
+## Scenario 9: Distant Campus Experience Should Not Override Recent Work
+
+Prompt:
+
+`Use $job-copilot-skill to help me target content operations roles. I have a strong campus self-media project from several years ago, but I also have more recent store and advertising operations work.`
+
+Expected behavior:
+
+- recognize the case as a social-hire timeline, not a campus-first timeline
+- evaluate recent 1 to 3 year experience before choosing the main narrative
+- avoid automatically making the older campus project the main story just because it sounds stronger
+- keep the campus project only as the main narrative if the newer work is clearly too weak or too unrelated
+- explain which experience is the current main narrative and which is supporting evidence
