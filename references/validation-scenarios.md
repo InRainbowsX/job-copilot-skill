@@ -123,3 +123,20 @@ Expected behavior:
 - separate actual ownership from team-level system design
 - avoid inventing architecture authority
 - produce downgrade advice if the candidate cannot defend a stronger version
+
+## Scenario 9: Distant Campus Experience Should Not Override Recent Work
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to help me target content operations roles. I have a strong campus self-media project from 2021, but I also have store operations work from 2024 and advertising operations work from 2025.`
+
+Expected behavior:
+
+- recognize the case as a social-hire timeline, not a campus-first timeline
+- explicitly anchor the judgment to the current date or current hiring moment
+- compare the 2021 campus experience against the 2024-2025 work experience instead of using vague language
+- evaluate recent 1 to 3 year experience before choosing the main narrative
+- avoid automatically making the older campus project the main story just because it sounds stronger
+- keep the campus project only as the main narrative if the newer work is clearly too weak or too unrelated
+- explain which experience is the current main narrative and which is supporting evidence
+- explain why the 2021 experience is downgraded or kept at the 2026-03-29 time point

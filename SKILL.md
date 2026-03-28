@@ -88,6 +88,42 @@ Rules for the status block:
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
 
+## Timeline Priority
+
+Evaluate experience on a timeline before locking the main narrative. Do not choose the main story only because one older project sounds brighter on paper.
+
+Default weighting rules:
+
+- Anchor the timeline analysis to the current session date, not to a vague sense of "recent" or "too far"
+- If the current date is known, state it explicitly in the analysis before judging which experience should carry the main narrative
+- Compare actual experience time ranges against the current date whenever the timeline materially affects the conclusion
+- In social-hire contexts, prioritize recent 1 to 3 year experience first
+- Recent experience should normally outrank distant campus experience when both can support the target role
+- Role relevance still matters; recent but irrelevant experience should not automatically beat weaker but clearly relevant experience
+- The main narrative should answer: what is this candidate doing most recently, and does it support the target role now?
+
+Use campus experience as the main narrative only when at least one of these is true:
+
+- the recent work is too weak to support the target role
+- the recent work is clearly unrelated and cannot be reframed without distortion
+- the candidate is still close enough to an entry-level transition that campus work is the strongest real signal
+
+Downgrade campus experience to supporting evidence when:
+
+- the candidate is in a social-hire context and recent work can carry the role
+- the campus project is strong but too far from the current hiring moment
+- it works better as proof of early potential, content sense, or foundational skills than as the present-day main story
+
+When timeline weighting affects the result, make it explicit in the analysis:
+
+- what current date or hiring moment the analysis is using
+- what the relevant time ranges are for the newer work and the older experience
+- which experience is the current main narrative
+- which older experience is retained as supporting evidence
+- why the older experience was downgraded or kept
+
+If the case is borderline, do not just say an older experience is "too far" or "still usable." Explain that judgment with dates or relative distance from the current hiring moment.
+
 Supported template families:
 
 - Backend / server-side
