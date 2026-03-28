@@ -1,27 +1,41 @@
-name: Feature
-description: Add or extend skill capability
-title: "[Feature] "
+name: 功能
+description: 新增或扩展 skill 能力
+title: "[功能] "
 labels:
   - feature
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Problem
-      description: What problem should this change solve?
+      label: 问题背景
+      description: 这次改动要解决什么问题？
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Proposal
-      description: What should be added or changed?
+      label: 要做什么
+      description: 计划新增或修改什么？请写清范围。
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: 别做什么
+      description: 这次不要顺手扩到哪些范围？
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 什么算完成
+      description: 满足哪些条件才能关闭这个 Issue？
     validations:
       required: true
   - type: checkboxes
     id: layers
     attributes:
-      label: Affected Layers
+      label: 影响层级
       options:
         - label: SKILL.md
         - label: references
@@ -30,5 +44,5 @@ body:
   - type: textarea
     id: validation
     attributes:
-      label: Validation Idea
-      description: How should this be validated?
+      label: 验证思路
+      description: 这项改动准备怎么验证？

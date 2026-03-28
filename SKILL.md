@@ -64,6 +64,7 @@ Current role-specific template coverage:
 
 - Sales: [sales-template.md](./references/sales-template.md)
 - Operations: [operations-template.md](./references/operations-template.md)
+- Backend: [backend-template.md](./references/backend-template.md)
 - Other job families: use the shared workflow plus family routing rules until dedicated templates are added
 
 ## Dual-Agent Contract
@@ -118,9 +119,13 @@ For each project, Agent 2 must also produce:
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
 
+
 When the routed family is sales, also apply the sales-specific rules in [sales-template.md](./references/sales-template.md).
 
 When the routed family is operations, including self-media operations, also apply the operations-specific rules in [operations-template.md](./references/operations-template.md).
+
+When the routed family is backend or server-side, also apply the backend-specific rules in [backend-template.md](./references/backend-template.md).
+
 
 ## Project Packaging Card
 

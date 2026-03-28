@@ -1,25 +1,39 @@
-name: Improvement
-description: Improve an existing rule, template, or workflow
-title: "[Improvement] "
+name: 优化
+description: 优化已有规则、模板或流程
+title: "[优化] "
 labels:
   - improvement
 body:
   - type: textarea
     id: current_gap
     attributes:
-      label: Current Gap
-      description: What feels weak, unclear, or unstable?
+      label: 背景
+      description: 现在哪部分偏弱、不清晰或不稳定？
     validations:
       required: true
   - type: textarea
     id: target
     attributes:
-      label: Target Change
-      description: What should become better?
+      label: 要做什么
+      description: 这次具体准备优化什么？
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: 别做什么
+      description: 这次不打算覆盖哪些范围？
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 什么算完成
+      description: 满足哪些条件才算这个优化完成？
     validations:
       required: true
   - type: textarea
     id: risk
     attributes:
-      label: Risk
-      description: What risk should reviewers watch for?
+      label: 风险提示
+      description: 审核时需要特别注意什么风险？

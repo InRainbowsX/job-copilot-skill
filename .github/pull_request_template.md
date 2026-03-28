@@ -1,13 +1,13 @@
-## Summary
+## 变更摘要
 
-- What changed:
-- Why it changed:
+- 改了什么：
+- 为什么改：
 
-## Linked Issue
+## 关联 Issue
 
-Close #
+close #
 
-## Changed Layers
+## 影响层级
 
 - [ ] SKILL.md
 - [ ] references
@@ -15,13 +15,13 @@ Close #
 - [ ] README
 - [ ] governance
 
-## Validation
+## 验证情况
 
-- [ ] Ran `./scripts/run_checks.sh`
-- [ ] Updated validation scenarios when behavior changed
-- [ ] Reviewed packaging-risk impact
+- [ ] 已运行 `./scripts/run_checks.sh`
+- [ ] 行为变更时已更新验证场景
+- [ ] 已评估包装风险影响
 
-## Risk Notes
+## 风险说明
 
-- New risk:
-- Mitigation:
+- 新风险：
+- 缓解方式：
