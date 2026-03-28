@@ -120,6 +120,69 @@ Job Copilot 更关注的是：
 
 目标不是让简历“看起来强”，而是让候选人“真的能讲住这份强简历”。
 
+## Installation / 安装
+
+### 1. Prompt 安装
+
+一句话直接让当前 AI 帮你安装：
+
+```text
+请把 https://github.com/InRainbowsX/job-copilot-skill 安装为当前环境可用的 skill，目录名使用 job-copilot-skill，如果已安装则更新，并在完成后告诉我如何调用它。
+```
+
+### 2. 一键脚本安装
+
+默认自动识别当前环境，优先安装到 Claude Code、Codex 或 OpenClaw 的标准 skills 目录。
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash
+```
+
+也可以显式指定环境：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- claude
+curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- codex
+curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- openclaw
+```
+
+对应安装目录：
+
+- `Claude Code`: `~/.claude/skills/job-copilot-skill`
+- `Codex`: `~/.codex/skills/job-copilot-skill`
+- `OpenClaw`: `~/.openclaw/skills/job-copilot-skill`
+
+### 3. 手动 clone 安装
+
+如果你更希望手动管理 skill，可以直接 clone 到目标目录。
+
+Claude Code:
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.claude/skills/job-copilot-skill
+```
+
+Codex:
+
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.codex/skills/job-copilot-skill
+```
+
+OpenClaw:
+
+```bash
+mkdir -p ~/.openclaw/skills
+git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.openclaw/skills/job-copilot-skill
+```
+
+安装完成后，推荐用这句话开始：
+
+```text
+使用 $job-copilot-skill，基于我的原始简历和自我介绍，识别岗位方向并开始深挖项目。
+```
+
 ## 仓库结构
 
 ```text
