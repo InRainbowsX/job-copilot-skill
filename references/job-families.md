@@ -73,11 +73,15 @@ Signals:
 
 - pipeline, conversion, customer acquisition, contract, revenue, upsell, key account
 
+When this family is selected, also apply [sales-template.md](./sales-template.md).
+
 ### Operations / Self-Media Operations
 
 Signals:
 
 - growth, activity planning, content strategy, retention, funnel, traffic, self-media, followers
+
+When this family is selected, also apply [operations-template.md](./operations-template.md).
 
 ## Conflict Handling
 
