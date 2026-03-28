@@ -42,7 +42,21 @@ Expected behavior:
 - avoid pretending that interview training or final packaging is already in progress
 - avoid skipping directly to a full final resume before diagnosis and follow-up
 
-## Scenario 3: Mixed Product And Operations Background
+## Scenario 3: Force Status Block Before Fast Rewrite
+
+Prompt:
+
+`Use $job-copilot-skill to rewrite my resume quickly for product roles. Give me a strong version directly.`
+
+Expected behavior:
+
+- still begin with a status block
+- still make the current stage explicit
+- state the current task before giving any rewritten content
+- recommend the next step if diagnosis or follow-up is still needed
+- avoid pretending the flow is already in final packaging or mock interview mode
+
+## Scenario 4: Mixed Product And Operations Background
 
 Prompt:
 
@@ -55,7 +69,7 @@ Expected behavior:
 - tailor deep-dive questions to business goals, cross-team work, and measurable outcomes
 - avoid backend-style review criteria
 
-## Scenario 4: Repeat Session With Memory
+## Scenario 5: Repeat Session With Memory
 
 Prompt:
 
@@ -68,7 +82,7 @@ Expected behavior:
 - focus on stored weak points and error log
 - update memory after the mock interview
 
-## Scenario 5: Self-Media Operations Ownership Check
+## Scenario 6: Self-Media Operations Ownership Check
 
 Prompt:
 
@@ -82,7 +96,7 @@ Expected behavior:
 - ask for downstream metrics or iteration detail instead of over-indexing on follower count
 - downgrade strategy ownership if the candidate cannot support full-account responsibility
 
-## Scenario 6: Sales Conversion Attribution Check
+## Scenario 7: Sales Conversion Attribution Check
 
 Prompt:
 
@@ -96,7 +110,7 @@ Expected behavior:
 - challenge unsupported quota or close-rate language
 - produce safer downgrade wording if the candidate cannot prove full deal ownership
 
-## Scenario 7: Backend Over-Packaging Guardrail
+## Scenario 8: Backend Over-Packaging Guardrail
 
 Prompt:
 
