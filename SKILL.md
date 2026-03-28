@@ -60,6 +60,12 @@ Supported template families:
 
 Use the routing and evaluation guidance in [job-families.md](./references/job-families.md).
 
+Current role-specific template coverage:
+
+- Sales: [sales-template.md](./references/sales-template.md)
+- Operations: [operations-template.md](./references/operations-template.md)
+- Other job families: use the shared workflow plus family routing rules until dedicated templates are added
+
 ## Dual-Agent Contract
 
 Treat the system as two distinct passes, even if the environment only has one visible assistant.
@@ -111,6 +117,10 @@ For each project, Agent 2 must also produce:
 - Interview pressure points
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
+
+When the routed family is sales, also apply the sales-specific rules in [sales-template.md](./references/sales-template.md).
+
+When the routed family is operations, including self-media operations, also apply the operations-specific rules in [operations-template.md](./references/operations-template.md).
 
 ## Project Packaging Card
 

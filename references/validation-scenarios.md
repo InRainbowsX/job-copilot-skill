@@ -51,3 +51,31 @@ Expected behavior:
 - continue from approved wording
 - focus on stored weak points and error log
 - update memory after the mock interview
+
+## Scenario 4: Self-Media Operations Ownership Check
+
+Prompt:
+
+`Use $job-copilot-skill to package my self-media operations experience. The account grew from 5k to 40k followers, but I only owned topic planning and part of the weekly review.`
+
+Expected behavior:
+
+- route to operations
+- apply operations-specific deep-dive questions
+- distinguish account-level growth from the candidate's direct actions
+- ask for downstream metrics or iteration detail instead of over-indexing on follower count
+- downgrade strategy ownership if the candidate cannot support full-account responsibility
+
+## Scenario 5: Sales Conversion Attribution Check
+
+Prompt:
+
+`Use $job-copilot-skill to strengthen my sales story. Our team signed several large clients last quarter, and I want the resume to sound more aggressive.`
+
+Expected behavior:
+
+- route to sales
+- ask for customer segment, sales stage ownership, and attributable metrics
+- separate team revenue from personal contribution
+- challenge unsupported quota or close-rate language
+- produce safer downgrade wording if the candidate cannot prove full deal ownership
