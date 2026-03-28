@@ -15,11 +15,12 @@ This repository is a skill project, not a general application codebase. Contribu
 ## Preferred Workflow
 
 1. Open or pick an issue
-2. Clarify the target layer
-3. Create a branch
-4. Update rules, templates, or governance files
-5. Run `./scripts/run_checks.sh`
-6. Open a PR linked to the issue
+2. Complete the issue before implementation starts
+3. Clarify the target layer
+4. Create a branch
+5. Update rules, templates, or governance files
+6. Run `./scripts/run_checks.sh`
+7. Open a PR linked to the issue
 
 Before implementation starts, the issue must clearly include:
 
@@ -27,6 +28,12 @@ Before implementation starts, the issue must clearly include:
 - 要做什么
 - 别做什么
 - 什么算完成
+
+Hard rule:
+
+- no issue, no implementation
+- no complete issue, no implementation
+- no linked issue, no PR
 
 ## Branch Naming
 
@@ -58,7 +65,7 @@ Examples:
 Every PR should:
 
 - link an issue, such as `close #12`
-- only implement the scope defined in the issue
+- only start from a complete issue
 - explain which layer changed
 - explain what validation was performed
 - mention any packaging-risk change
@@ -67,6 +74,7 @@ Every PR should:
 
 Before asking for review, confirm:
 
+- the work started from a complete issue
 - the change matches the issue scope
 - the relevant template or reference files were updated
 - validation scenarios were updated if behavior changed

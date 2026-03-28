@@ -43,7 +43,7 @@ job-copilot-skill/
 
 ```bash
 ./scripts/run_checks.sh
-python3 /Users/qitmac001629/.codex/skills/.system/skill-creator/scripts/quick_validate.py .
+python3 ./scripts/validate_skill.py .
 git status --short --branch
 ```
 
@@ -77,7 +77,13 @@ git status --short --branch
 
 只改规则、不补验证入口，视为不完整。
 
-### 4. 每个 Issue 必须是完整任务单
+### 4. 无 Issue 不开工，无关联不提 PR
+
+这是硬性规则，不是建议：
+
+1. 没有对应 Issue，不开始正式改动
+2. Issue 没写完整，不开始正式改动
+3. PR 没有关联 Issue，不进入评审
 
 开始实现前，Issue 必须至少写清楚四件事：
 
@@ -86,7 +92,20 @@ git status --short --branch
 3. `别做什么`
 4. `什么算完成`
 
-如果 Issue 只有标题或只有模糊描述，先补完整，再开始改动。
+允许的最小流程必须是：
+
+1. 先建立或认领 Issue
+2. 先补齐 Issue 四段式内容
+3. 再开分支改动
+4. 再提交 PR，并在标题或正文中写 `close #编号`
+
+如果发现自己已经先做了改动，但没有对应 Issue：
+
+1. 立即停止继续扩展改动
+2. 先补建或补全 Issue
+3. 再继续提交、推送和 PR 动作
+
+不允许跳过这个补救步骤。
 
 ### 5. 长期记忆规则不能失真
 
@@ -120,6 +139,7 @@ git status --short --branch
 
 ## 交付前检查
 
+- 是否先有完整 issue，再开始实现
 - 是否关联 issue
 - issue 是否包含背景、要做什么、别做什么、完成标准
 - 是否更新了受影响的规则文件
