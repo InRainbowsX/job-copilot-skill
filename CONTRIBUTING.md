@@ -76,6 +76,12 @@ If a PR changes user-visible behavior, it should also update one or more of:
 - `references/smoke-test-checklist.md`
 - `references/regression-cases.md`
 
+If smoke testing discovers a new failure that is not already covered by an open issue:
+
+- create the issue first
+- use `assets/smoke-failure-issue-template.md` or `scripts/create_smoke_issue.sh`
+- only then start the fix branch and PR flow
+
 ## Review Checklist
 
 Before asking for review, confirm:
@@ -86,6 +92,7 @@ Before asking for review, confirm:
 - validation scenarios were updated if behavior changed
 - the repository still passes `./scripts/run_checks.sh`
 - rule cases, smoke tests, or regression cases were updated when the behavior changed
+- new smoke failures were captured as issues before implementation continued
 
 ## What Not To Contribute
 
