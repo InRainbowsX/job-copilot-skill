@@ -1,6 +1,6 @@
 # Review Rubric
 
-Agent 2 uses this shared rubric before anything becomes final wording.
+审核官在任何表述定稿前都要先应用这套共享 rubric。
 
 ## Decision Labels
 
@@ -66,7 +66,11 @@ For each project card, output:
 
 - decision label
 - risk level
+- 当前层级
 - top 3 risks
+- 不足点
 - missing info to collect
+- 升级建议
+- 可守的更优表达
 - downgrade wording if needed
 - likely interview pressure points

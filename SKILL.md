@@ -9,7 +9,7 @@ description: Use when improving, packaging, or stress-testing an internet job se
 
 Run internet job-search coaching as a controlled system, not as one-off copy editing. Infer the target role from the candidate's materials, deepen the strongest projects, upgrade the narrative, then pressure-test the result through a separate review pass before treating any wording as final.
 
-The core pattern is `Agent 1 writes, Agent 2 reviews`. Agent 1 pulls signal out of weak or incomplete material; Agent 2 challenges unsupported claims, over-packaging, and role mismatch. Keep a running `memory.md` so future sessions resume from the candidate's actual state.
+The core pattern is `简历包装教练先写，审核官再审`. The packaging coach pulls signal out of weak or incomplete material; the review officer challenges unsupported claims, over-packaging, and role mismatch while showing the safest way to strengthen a draft. Keep a running `memory.md` so future sessions resume from the candidate's actual state.
 
 ## When to Use
 
@@ -38,7 +38,7 @@ The user should be able to tell where they are in the process at a glance. Keep 
 | `1. Intake` | Read resume, self-introduction, and any JD or target role hints | Candidate snapshot |
 | `2. Role Routing` | Infer main and secondary job track from the materials | Selected template family |
 | `3. Agent 1 Deep-Dive` | Ask targeted questions, extract missing project detail, propose stronger positioning | Project packaging cards, draft wording |
-| `4. Agent 2 Review` | Audit truthfulness, role fit, explainability, and interview survivability | Risk report, missing-info requests, downgrade advice |
+| `4. 审核官 Review` | Audit truthfulness, role fit, explainability, and interview survivability | Risk report, missing-info requests, downgrade advice |
 | `5. Consolidate` | Keep only reviewed wording and summarize what still needs work | Resume sections, self-introduction, action list |
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
@@ -51,7 +51,7 @@ Map the workflow to four user-facing stages and keep those stage names stable:
 |---|---|---|
 | `阶段 1：简历诊断与初步包装` | `1. Intake` + `2. Role Routing` + early `3. Agent 1 Deep-Dive` | 识别岗位方向、指出核心问题、决定优先包装的经历 |
 | `阶段 2：项目深挖与补强` | remaining `3. Agent 1 Deep-Dive` | 围绕高潜力项目追问背景、职责、难点、结果和支撑细节 |
-| `阶段 3：包装定稿与讲述稿生成` | `4. Agent 2 Review` + `5. Consolidate` | 在审核通过后输出可用表述、风险提醒和讲述版本 |
+| `阶段 3：包装定稿与讲述稿生成` | `4. 审核官 Review` + `5. Consolidate` | 在审核通过后输出可用表述、风险提醒和讲述版本 |
 | `阶段 4：模拟面试与错题复盘` | `6. Train` + `7. Persist` | 基于已审核版本进行面试训练、记录错题并更新长期记忆 |
 
 Do not introduce alternate stage names unless the repository explicitly adds them later.
@@ -278,7 +278,7 @@ Agent 1 is not allowed to:
 - Hide uncertainty; mark unconfirmed items as gaps
 - Treat first-pass packaging as pure rewriting when diagnosis and follow-up are still missing
 
-### Agent 2: Review And Calibrate
+### 审核官（Review And Calibrate）
 
 Responsibilities:
 
@@ -287,21 +287,29 @@ Responsibilities:
 - Judge role-template fit: does this read like a real candidate for the routed job family?
 - Identify interview failure points: what breaks under 3 to 5 follow-up questions?
 - Force a downgrade when the candidate cannot support a stronger version
+- Judge the current level of the wording instead of only labeling it risky
+- Show the safest upgrade path when the material can still be strengthened
 
-Agent 2 outputs:
+审核官输出结论标签:
 
 - `pass`
 - `pass after supplement`
 - `rewrite required`
 
-For each project, Agent 2 must also produce:
+For each project, the review output must also produce:
 
+- decision label
+- `风险等级`
+- `当前层级`
 - Missing information to collect
+- `不足点`
+- `升级建议`
+- `可守的更优表达`
 - Risk notes
 - Safer downgrade wording when needed
 - Interview pressure points
 
-Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
+Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist. The rubric defines the minimum checks; this section defines the user-visible review output shape.
 
 
 When the routed family is sales, also apply the sales-specific rules in [sales-template.md](./references/sales-template.md).
@@ -390,7 +398,7 @@ If the user says this:
 - "Mock interview me"  
   Use the latest reviewed wording, not raw resume text.
 - "I want stronger packaging"  
-  Increase clarity and ownership only until Agent 2 can still defend it.
+  Increase clarity and ownership only until the review officer can still defend it.
 - "I don't want to repeat myself next session"  
   Read and update `memory.md`.
 
@@ -407,7 +415,7 @@ Apply the skill like this:
 3. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
 4. Move to `阶段 2：项目深挖与补强` once the strongest project is selected and deeper follow-up begins.
 5. Fill a project packaging card for the strongest project.
-6. Run Agent 2 review to check inflated ownership, missing metrics, and weak strategic logic.
+6. Run the review officer pass to check inflated ownership, missing metrics, weak strategic logic, and the next safe upgrade path.
 7. Move to `阶段 3：包装定稿与讲述稿生成` only after the reviewed version is stable enough to keep.
 8. Keep only the reviewed bullets in the rewritten resume and self-introduction.
 9. Create a targeted mock interview focused on project tradeoffs, priorities, and results, then move to `阶段 4：模拟面试与错题复盘`.
@@ -419,7 +427,7 @@ Apply the skill like this:
 |---|---|
 | Rewriting the whole resume before clarifying the role | Route the candidate first, then choose the correct template family |
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
-| Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
+| Letting Agent 1's strongest wording go straight into final output | Always run the review officer pass first |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
