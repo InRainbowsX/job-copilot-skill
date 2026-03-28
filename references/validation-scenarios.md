@@ -140,3 +140,17 @@ Expected behavior:
 - keep the campus project only as the main narrative if the newer work is clearly too weak or too unrelated
 - explain which experience is the current main narrative and which is supporting evidence
 - explain why the 2021 experience is downgraded or kept at the 2026-03-29 time point
+
+## Scenario 10: Gap And Non-Standard Experience Must Be Classified First
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to review my resume. I have a 9-month period in 2025 where I was not in a fixed company. During that time I prepared for a role transition, wrote online fiction, and ran a small personal content account.`
+
+Expected behavior:
+
+- recognize this as a gap or non-standard experience period instead of ignoring it
+- avoid converting the period directly into formal employment
+- classify the period as learning, project, creative, mixed, or explain why the current information is still insufficient
+- ask for time range, output, and continuity details if the classification is still ambiguous
+- make it clear that recognition comes before packaging
