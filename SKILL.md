@@ -58,7 +58,15 @@ Do not introduce alternate stage names unless the repository explicitly adds the
 
 ### Turn-Level Status Block
 
+The status block is required, not optional.
+
 At the start of each meaningful response, include a short status block that makes the workflow explicit.
+
+You must begin the response with this status block in all of these cases:
+
+- the first meaningful response after the user provides a resume, self-introduction, or target role
+- any response that moves the workflow into a new stage
+- any response where the user asks for rewriting but the skill still needs diagnosis, routing, or follow-up questions
 
 Minimum fields:
 
@@ -70,9 +78,11 @@ Rules for the status block:
 
 - Keep it concise: one short line or one short bullet per field is enough
 - Keep it conversational, not report-heavy
+- Put it before deeper analysis or rewritten content
 - Match the real workflow state; do not claim later stages are in progress if the skill is still collecting facts
 - When still in early packaging, explicitly signal that deeper project follow-up or interview training comes later
-- Do not skip the status block just because the user asked for rewriting; if the skill is still in diagnosis or deep-dive, say so first
+- Do not skip it just because the user asked for a faster result
+- If the skill is still in diagnosis or deep-dive, say so first rather than acting as if final packaging is already underway
 
 ## Role Routing
 
