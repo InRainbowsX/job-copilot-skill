@@ -11,6 +11,7 @@
 - Gap or non-standard period:
 - Narrative position:
 - Timeline weighting note:
+- Resume from stage:
 
 ## One-Line Definition
 

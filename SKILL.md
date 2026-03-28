@@ -374,6 +374,10 @@ Use [project-packaging-card-template.md](./assets/project-packaging-card-templat
 Minimum fields:
 
 - Project identity and time range
+- Whether the experience is recent core experience
+- Whether the experience belongs to a gap or non-standard period
+- Narrative position: main story, supporting story, or supplemental highlight
+- Timeline weighting note
 - One-line project definition
 - Business background and goal
 - Candidate responsibility boundary
@@ -396,8 +400,6 @@ The memory file should track:
 
 - Candidate profile and job-search targets
 - Current approved resume direction
-- Current main narrative and any downgraded older experiences
-- Gap explanation and non-standard experience handling conclusions
 - Project archive with statuses
 - Approved resume wording and self-introduction
 - Review risks and banned phrasing
@@ -412,9 +414,38 @@ Write only durable information:
 - Approved wording
 - Repeated weak points
 - Pending follow-ups
-- Narrative and gap conclusions should mark what is confirmed versus still pending
 
 Do not dump raw conversation transcripts into memory.
+
+## Flow-State And Memory Link
+
+Stage labels must stay visible in the conversation, but not every stage detail belongs in long-term memory.
+
+Use this boundary:
+
+- `当前阶段 / 当前任务 / 下一步推荐` are session-facing state and should be shown in the conversation
+- reviewed milestone decisions should be written into memory when they will matter next session
+- project-level progress should live in the project packaging card first, then be summarized into memory only when it becomes durable
+
+Persist into memory when the result is stable enough to reuse:
+
+- current approved workflow stage for the candidate
+- whether the next session should resume from stage 1, 2, 3, or 4
+- main narrative decisions, downgraded older experiences, and gap explanations
+- approved wording, banned phrasing, and still-open follow-ups
+
+Do not persist into memory:
+
+- every intermediate status block
+- every temporary packaging guess
+- every back-and-forth clarification that has not yet become a stable conclusion
+
+Session resume rule:
+
+- read memory first
+- detect the last durable workflow stage
+- resume from that stage unless the new user request clearly resets the workflow
+- use project cards to recover project-level context before asking duplicate questions
 
 ## Mock Interview Pattern
 
