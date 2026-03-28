@@ -31,6 +31,8 @@ Do not use this skill for:
 
 Follow this sequence every time. Do not skip directly to rewritten bullets unless the user explicitly asks for a draft first.
 
+The user should be able to tell where they are in the process at a glance. Keep the workflow visible instead of silently jumping from intake to final bullets.
+
 | Step | Goal | Output |
 |---|---|---|
 | `1. Intake` | Read resume, self-introduction, and any JD or target role hints | Candidate snapshot |
@@ -40,6 +42,37 @@ Follow this sequence every time. Do not skip directly to rewritten bullets unles
 | `5. Consolidate` | Keep only reviewed wording and summarize what still needs work | Resume sections, self-introduction, action list |
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
+
+### Visible Stage Model
+
+Map the workflow to four user-facing stages and keep those stage names stable:
+
+| 阶段 | 覆盖步骤 | 用途 |
+|---|---|---|
+| `阶段 1：简历诊断与初步包装` | `1. Intake` + `2. Role Routing` + early `3. Agent 1 Deep-Dive` | 识别岗位方向、指出核心问题、决定优先包装的经历 |
+| `阶段 2：项目深挖与补强` | remaining `3. Agent 1 Deep-Dive` | 围绕高潜力项目追问背景、职责、难点、结果和支撑细节 |
+| `阶段 3：包装定稿与讲述稿生成` | `4. Agent 2 Review` + `5. Consolidate` | 在审核通过后输出可用表述、风险提醒和讲述版本 |
+| `阶段 4：模拟面试与错题复盘` | `6. Train` + `7. Persist` | 基于已审核版本进行面试训练、记录错题并更新长期记忆 |
+
+Do not introduce alternate stage names unless the repository explicitly adds them later.
+
+### Turn-Level Status Block
+
+At the start of each meaningful response, include a short status block that makes the workflow explicit.
+
+Minimum fields:
+
+- `当前阶段`
+- `当前任务`
+- `下一步推荐`
+
+Rules for the status block:
+
+- Keep it concise: one short line or one short bullet per field is enough
+- Keep it conversational, not report-heavy
+- Match the real workflow state; do not claim later stages are in progress if the skill is still collecting facts
+- When still in early packaging, explicitly signal that deeper project follow-up or interview training comes later
+- Do not skip the status block just because the user asked for rewriting; if the skill is still in diagnosis or deep-dive, say so first
 
 ## Role Routing
 
@@ -218,13 +251,16 @@ User request:
 
 Apply the skill like this:
 
-1. Route the materials to `product-management` as primary and `operations` as secondary if both are truly present.
-2. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
-3. Fill a project packaging card for the strongest project.
-4. Run Agent 2 review to check inflated ownership, missing metrics, and weak strategic logic.
-5. Keep only the reviewed bullets in the rewritten resume and self-introduction.
-6. Create a targeted mock interview focused on project tradeoffs, priorities, and results.
-7. Update `memory.md` with approved wording, weak points, and next drills.
+1. Start with a status block showing `阶段 1：简历诊断与初步包装`, the current task, and the next recommended step.
+2. Route the materials to `product-management` as primary and `operations` as secondary if both are truly present.
+3. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
+4. Move to `阶段 2：项目深挖与补强` once the strongest project is selected and deeper follow-up begins.
+5. Fill a project packaging card for the strongest project.
+6. Run Agent 2 review to check inflated ownership, missing metrics, and weak strategic logic.
+7. Move to `阶段 3：包装定稿与讲述稿生成` only after the reviewed version is stable enough to keep.
+8. Keep only the reviewed bullets in the rewritten resume and self-introduction.
+9. Create a targeted mock interview focused on project tradeoffs, priorities, and results, then move to `阶段 4：模拟面试与错题复盘`.
+10. Update `memory.md` with approved wording, weak points, and next drills.
 
 ## Common Mistakes
 

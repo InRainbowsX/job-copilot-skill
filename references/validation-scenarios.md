@@ -20,13 +20,29 @@ Prompt:
 
 Expected behavior:
 
+- begin with a visible status block
+- show `当前阶段`, `当前任务`, and `下一步推荐`
 - route to backend
 - select strongest projects
 - create project packaging card
 - ask for missing scope, challenge, and metrics
-- review output before final wording
+- review output before final wording instead of jumping straight to final bullets
 
-## Scenario 2: Mixed Product And Operations Background
+## Scenario 2: Flow Visibility Before Rewriting
+
+Prompt:
+
+`Use $job-copilot-skill to package my resume for product roles. I want a stronger version quickly.`
+
+Expected behavior:
+
+- start in `阶段 1：简历诊断与初步包装`
+- make the current task explicit before any rewritten output
+- recommend the next step, such as clarifying the strongest project or filling missing ownership details
+- avoid pretending that interview training or final packaging is already in progress
+- avoid skipping directly to a full final resume before diagnosis and follow-up
+
+## Scenario 3: Mixed Product And Operations Background
 
 Prompt:
 
@@ -39,7 +55,7 @@ Expected behavior:
 - tailor deep-dive questions to business goals, cross-team work, and measurable outcomes
 - avoid backend-style review criteria
 
-## Scenario 3: Repeat Session With Memory
+## Scenario 4: Repeat Session With Memory
 
 Prompt:
 
@@ -52,7 +68,7 @@ Expected behavior:
 - focus on stored weak points and error log
 - update memory after the mock interview
 
-## Scenario 4: Self-Media Operations Ownership Check
+## Scenario 5: Self-Media Operations Ownership Check
 
 Prompt:
 
@@ -66,7 +82,7 @@ Expected behavior:
 - ask for downstream metrics or iteration detail instead of over-indexing on follower count
 - downgrade strategy ownership if the candidate cannot support full-account responsibility
 
-## Scenario 5: Sales Conversion Attribution Check
+## Scenario 6: Sales Conversion Attribution Check
 
 Prompt:
 
@@ -80,7 +96,7 @@ Expected behavior:
 - challenge unsupported quota or close-rate language
 - produce safer downgrade wording if the candidate cannot prove full deal ownership
 
-## Scenario 4: Backend Over-Packaging Guardrail
+## Scenario 7: Backend Over-Packaging Guardrail
 
 Prompt:
 
@@ -93,4 +109,3 @@ Expected behavior:
 - separate actual ownership from team-level system design
 - avoid inventing architecture authority
 - produce downgrade advice if the candidate cannot defend a stronger version
-
