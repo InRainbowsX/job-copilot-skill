@@ -154,3 +154,17 @@ Expected behavior:
 - classify the period as learning, project, creative, mixed, or explain why the current information is still insufficient
 - ask for time range, output, and continuity details if the classification is still ambiguous
 - make it clear that recognition comes before packaging
+
+## Scenario 11: Gap Packaging Should Reduce Ambiguity Without Faking Employment
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to help me package a 2025 gap period. I was not in a fixed company, but I spent that time writing online fiction and running a personal content account. I want the gap to look more reasonable on my resume and in interviews.`
+
+Expected behavior:
+
+- acknowledge that this is still a gap or non-standard period
+- avoid converting it directly into formal employment
+- suggest a safer resume placement such as personal project or supplemental experience
+- suggest an interview explanation that first admits the gap, then explains sustained work and transferable skills
+- avoid fake companies, fake titles, or unsupported commercial scale
