@@ -129,6 +129,20 @@ git status --short --branch
 - 检查本地是否处于 detached HEAD
 - 验证 skill 结构
 
+### 7. 行为变更必须补测试层
+
+如果改动影响用户可见行为，不能只跑静态检查。
+
+至少按以下规则补齐对应测试层：
+
+- 改核心规则：补 `references/rule-test-cases.md`
+- 改真实对话流程：补 `references/smoke-test-checklist.md`
+- 修复真实出现过的问题：补 `references/regression-cases.md`
+
+测试框架总入口见：
+
+- `references/testing-framework.md`
+
 ## 典型高风险点
 
 - 新包装规则超过候选人可讲述边界
@@ -136,6 +150,7 @@ git status --short --branch
 - 岗位模板更新了，但审核 rubric 没同步
 - 新增 job family，却没有对应验证场景
 - memory 模板开始记录过多闲聊内容
+- 行为规则改了，但没有补规则用例、冒烟测试或回归案例
 
 ## 交付前检查
 
@@ -144,4 +159,5 @@ git status --short --branch
 - issue 是否包含背景、要做什么、别做什么、完成标准
 - 是否更新了受影响的规则文件
 - 是否运行了 `./scripts/run_checks.sh`
+- 若行为变更，是否补了对应测试层
 - 是否说明了风险变化或验证方式

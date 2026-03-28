@@ -70,6 +70,12 @@ Every PR should:
 - explain what validation was performed
 - mention any packaging-risk change
 
+If a PR changes user-visible behavior, it should also update one or more of:
+
+- `references/rule-test-cases.md`
+- `references/smoke-test-checklist.md`
+- `references/regression-cases.md`
+
 ## Review Checklist
 
 Before asking for review, confirm:
@@ -79,6 +85,7 @@ Before asking for review, confirm:
 - the relevant template or reference files were updated
 - validation scenarios were updated if behavior changed
 - the repository still passes `./scripts/run_checks.sh`
+- rule cases, smoke tests, or regression cases were updated when the behavior changed
 
 ## What Not To Contribute
 
