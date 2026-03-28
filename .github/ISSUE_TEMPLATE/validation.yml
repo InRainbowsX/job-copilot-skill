@@ -1,25 +1,39 @@
-name: Validation
-description: Add or improve forward-testing and validation coverage
-title: "[Validation] "
+name: 验证
+description: 新增或完善 forward test 与验证覆盖
+title: "[验证] "
 labels:
   - validation
 body:
   - type: textarea
     id: scenario
     attributes:
-      label: Scenario
-      description: Which real or simulated case should be validated?
+      label: 背景
+      description: 当前缺的是哪个验证场景，为什么要补？
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior
-      description: What should the skill do in this case?
+      label: 要做什么
+      description: 这次准备新增或完善哪些验证内容？
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: 别做什么
+      description: 这次不打算扩到哪些验证范围？
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 什么算完成
+      description: 满足哪些验证结果才能关闭这个 Issue？
     validations:
       required: true
   - type: textarea
     id: failure
     attributes:
-      label: Failure Risk
-      description: What would count as a bad or risky result?
+      label: 失败风险
+      description: 什么结果算失败或高风险？

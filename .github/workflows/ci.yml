@@ -1,4 +1,4 @@
-name: CI
+name: 持续检查
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
 
 jobs:
   pr-check:
-    name: PR issue link check
+    name: PR 关联 Issue 检查
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
-      - name: Verify linked issue
+      - name: 检查是否关联 Issue
         uses: actions/github-script@v7
         with:
           script: |
@@ -21,19 +21,19 @@ jobs:
             const hasIssueRef = issuePattern.test(body || '') || issuePattern.test(title || '');
 
             if (!hasIssueRef) {
-              core.setFailed('PR must link an issue, for example: close #12');
+              core.setFailed('PR 必须关联 Issue，例如：close #12');
             }
 
   governance:
-    name: Governance and skill validation
+    name: 仓库治理与 Skill 校验
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run repository checks
+      - name: 运行仓库检查
         run: ./scripts/run_checks.sh
 
   summary:
-    name: Summary
+    name: 汇总结果
     runs-on: ubuntu-latest
     needs: [pr-check, governance]
     if: always()

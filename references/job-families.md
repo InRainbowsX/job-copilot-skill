@@ -22,6 +22,8 @@ Signals:
 
 Bias toward this family when the resume reads like systems, services, data flow, reliability, or infrastructure-heavy delivery.
 
+When this family is selected, also apply [backend-template.md](./backend-template.md).
+
 ### Frontend
 
 Signals:

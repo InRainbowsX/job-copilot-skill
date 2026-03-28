@@ -51,3 +51,17 @@ Expected behavior:
 - continue from approved wording
 - focus on stored weak points and error log
 - update memory after the mock interview
+
+## Scenario 4: Backend Over-Packaging Guardrail
+
+Prompt:
+
+`Use $job-copilot-skill to package my backend project more aggressively. I used Redis and MQ, but I only implemented part of the order service and I am not sure how to describe ownership.`
+
+Expected behavior:
+
+- route to backend
+- use backend-specific deep-dive questions
+- separate actual ownership from team-level system design
+- avoid inventing architecture authority
+- produce downgrade advice if the candidate cannot defend a stronger version

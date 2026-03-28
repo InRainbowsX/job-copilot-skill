@@ -1,20 +1,34 @@
-name: Governance
-description: Improve repository process, workflow, or contribution rules
-title: "[Governance] "
+name: 治理
+description: 优化仓库流程、workflow 或协作规范
+title: "[治理] "
 labels:
   - governance
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Governance Problem
-      description: What process gap exists today?
+      label: 背景
+      description: 当前存在哪个流程或规范缺口？
     validations:
       required: true
   - type: textarea
     id: change
     attributes:
-      label: Proposed Change
-      description: What should be added, simplified, or enforced?
+      label: 要做什么
+      description: 准备新增、简化或约束什么？
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: 别做什么
+      description: 这次不打算处理哪些治理范围？
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 什么算完成
+      description: 满足哪些条件才算治理改动完成？
     validations:
       required: true

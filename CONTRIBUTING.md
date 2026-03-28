@@ -21,6 +21,13 @@ This repository is a skill project, not a general application codebase. Contribu
 5. Run `./scripts/run_checks.sh`
 6. Open a PR linked to the issue
 
+Before implementation starts, the issue must clearly include:
+
+- 背景
+- 要做什么
+- 别做什么
+- 什么算完成
+
 ## Branch Naming
 
 Recommended branch patterns:
@@ -51,6 +58,7 @@ Examples:
 Every PR should:
 
 - link an issue, such as `close #12`
+- only implement the scope defined in the issue
 - explain which layer changed
 - explain what validation was performed
 - mention any packaging-risk change
