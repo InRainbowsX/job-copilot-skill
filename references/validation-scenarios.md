@@ -199,3 +199,18 @@ Expected behavior:
 - the review pass should explain how to move the wording up one level safely
 - the review pass should provide a safer stronger expression the candidate can still defend
 - the review pass should avoid generic praise or generic caution with no actionable next step
+
+## Scenario 14: Packaging Output Must Show Problem Direction Result And Risk
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package my strongest operations project into a stronger version for resume use, but keep the explanation easy to follow.`
+
+Expected behavior:
+
+- stay in the packaging flow instead of collapsing directly into one final bullet
+- show what the current weakness is
+- show the recommended packaging direction
+- show a stronger draft result
+- show what still needs supplement or what risks remain
+- keep the output conversational rather than turning it into a long report

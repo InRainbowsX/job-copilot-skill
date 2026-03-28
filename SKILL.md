@@ -112,6 +112,27 @@ Minimum packaging output per experience:
 
 When information is incomplete, prioritize follow-up questions over shallow wording upgrades.
 
+### Packaging Result Structure
+
+Packaging output should read like `问题 + 方向 + 结果 + 风险`, not like a single rewritten paragraph dropped on the user.
+
+Use this standard structure whenever the packaging coach presents a strengthened version of an experience:
+
+- `当前问题`: what is weak, vague, misplaced, or under-supported right now
+- `推荐方向`: what capability, narrative angle, or value signal the experience should emphasize
+- `改写结果`: the stronger draft wording or provisional rewrite
+- `补充建议`: what facts, baselines, ownership detail, or support should be collected next
+- `风险提醒`: what still sounds over-packaged, unsupported, or likely to break under follow-up
+
+Keep it concise and conversational, but do not collapse these ideas into a single bullet.
+
+Boundary with the review officer:
+
+- the packaging coach owns `当前问题`、`推荐方向`、`改写结果`、`补充建议`
+- the review officer owns formal risk grading, current level judgment, upgrade calibration, and safer stronger wording after the review pass
+
+If support is still weak, the packaging coach may recommend a softer draft before the review officer decides whether the wording can stand.
+
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
