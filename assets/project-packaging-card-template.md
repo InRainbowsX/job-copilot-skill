@@ -7,6 +7,10 @@
 - Company or business line:
 - Job family:
 - Tech or work context:
+- Is recent core experience:
+- Gap or non-standard period:
+- Narrative position:
+- Timeline weighting note:
 
 ## One-Line Definition
 
