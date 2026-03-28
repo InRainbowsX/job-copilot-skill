@@ -214,3 +214,17 @@ Expected behavior:
 - show a stronger draft result
 - show what still needs supplement or what risks remain
 - keep the output conversational rather than turning it into a long report
+
+## Scenario 15: Packaging Should Use The High-Quality Signal Library
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to make my resume look stronger for operations, but do not just beautify the wording. I want it to read like a genuinely strong operations candidate.`
+
+Expected behavior:
+
+- use role-specific high-quality signals instead of generic polishing
+- choose stronger capability angles that match operations
+- reflect a stronger expression structure or result strategy
+- make it clear what kind of strong-candidate signal the packaging is trying to surface
+- avoid treating the signal library like a raw template dump

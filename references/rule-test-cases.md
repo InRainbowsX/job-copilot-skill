@@ -212,3 +212,25 @@ Each rule case should include:
 - 只给一段最终改写
 - 没有说明为什么这样改
 - 没有提示还缺什么支撑或有什么风险
+
+## Case 10: Packaging Should Use Role-Specific High-Quality Signals
+
+目标规则:
+
+- 包装不能只靠泛化润色，应该参考岗位化的高质量信号
+
+输入 prompt:
+
+`Use $job-copilot-skill to strengthen my resume for operations. I want it to sound much stronger than ordinary wording.`
+
+期望行为:
+
+- 不只做“更高级措辞”式改写
+- 会往岗位相关的高质量信号上靠拢
+- 会体现结果表达策略或包装升级策略
+- 会说明更强版本想突出什么能力
+
+禁止行为:
+
+- 只输出泛泛的漂亮句子
+- 不区分岗位，套同一种强简历话术

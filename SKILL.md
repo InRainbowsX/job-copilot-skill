@@ -173,6 +173,31 @@ When timeline weighting affects the result, make it explicit in the analysis:
 
 If the case is borderline, do not just say an older experience is "too far" or "still usable." Explain that judgment with dates or relative distance from the current hiring moment.
 
+## High-Quality Resume Signal Library
+
+Use a role-specific signal library instead of relying on generic beautification. The library is not a dump of raw resume samples; it is a structured reference for what stronger internet-job resumes usually signal and how they organize that signal.
+
+Use [high-quality-signal-library.md](./references/high-quality-signal-library.md).
+
+The v1 library covers:
+
+- 后端
+- 产品
+- 运营
+- 销售
+
+Each family in the library should be used for four things:
+
+- `高质量信号`: what makes the experience read as stronger for that role
+- `高质量表达结构`: how strong bullets or stories are usually organized
+- `结果表达策略`: how outcomes should be expressed more professionally and credibly
+- `包装升级策略`: how to move ordinary experience up one level without fabricating
+
+How to use it:
+
+- 简历包装教练 uses it to choose the packaging angle, decide which follow-up questions matter most, and avoid shallow rewriting
+- 审核官 uses it to judge the current level of a draft, spot missing high-value signals, and suggest a safer stronger version
+
 ## Gap And Non-Standard Experience Recognition
 
 Do not treat every gap as a blank period, and do not treat every non-company experience as fake employment.
