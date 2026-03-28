@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Copilot"
+  short_description: "Resume packaging and interview coaching"
+  default_prompt: "Use $job-copilot-skill to deepen my projects, optimize my resume, and coach me through interview prep."
