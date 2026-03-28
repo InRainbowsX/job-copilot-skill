@@ -17,6 +17,8 @@
 
 Document that, by default:
 
+- the current session date or current hiring moment should be stated when timeline weighting matters
+- the analysis should compare concrete experience time ranges, not just say "recent" or "too far"
 - recent 1 to 3 year experience carries the highest weight
 - timeline priority applies before choosing the main project narrative
 - role relevance still matters, but distant experience should not automatically outrank recent work just because it sounds stronger
@@ -42,6 +44,7 @@ Clarify when campus experience should be downgraded:
 
 Create a scenario where:
 
+- the current date is explicit
 - the candidate has an older campus content project
 - the candidate also has newer work experience
 - the skill should keep the newer work as the main narrative unless the newer work clearly fails the target role

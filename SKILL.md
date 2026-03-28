@@ -94,6 +94,9 @@ Evaluate experience on a timeline before locking the main narrative. Do not choo
 
 Default weighting rules:
 
+- Anchor the timeline analysis to the current session date, not to a vague sense of "recent" or "too far"
+- If the current date is known, state it explicitly in the analysis before judging which experience should carry the main narrative
+- Compare actual experience time ranges against the current date whenever the timeline materially affects the conclusion
 - In social-hire contexts, prioritize recent 1 to 3 year experience first
 - Recent experience should normally outrank distant campus experience when both can support the target role
 - Role relevance still matters; recent but irrelevant experience should not automatically beat weaker but clearly relevant experience
@@ -113,9 +116,13 @@ Downgrade campus experience to supporting evidence when:
 
 When timeline weighting affects the result, make it explicit in the analysis:
 
+- what current date or hiring moment the analysis is using
+- what the relevant time ranges are for the newer work and the older experience
 - which experience is the current main narrative
 - which older experience is retained as supporting evidence
 - why the older experience was downgraded or kept
+
+If the case is borderline, do not just say an older experience is "too far" or "still usable." Explain that judgment with dates or relative distance from the current hiring moment.
 
 Supported template families:
 
