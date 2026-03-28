@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  pr-check:
+    name: PR issue link check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Verify linked issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { body, title } = context.payload.pull_request;
+            const issuePattern = /(?:close|closes|fix|fixes|resolve|resolves)\s+#\d+/i;
+            const hasIssueRef = issuePattern.test(body || '') || issuePattern.test(title || '');
+
+            if (!hasIssueRef) {
+              core.setFailed('PR must link an issue, for example: close #12');
+            }
+
+  governance:
+    name: Governance and skill validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run repository checks
+        run: ./scripts/run_checks.sh
+
+  summary:
+    name: Summary
+    runs-on: ubuntu-latest
+    needs: [pr-check, governance]
+    if: always()
+    steps:
+      - run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            [[ "${{ needs.pr-check.result }}" == "success" ]] || exit 1
+          fi
+          [[ "${{ needs.governance.result }}" == "success" ]] || exit 1

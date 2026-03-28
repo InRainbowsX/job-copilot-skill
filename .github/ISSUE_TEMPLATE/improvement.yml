@@ -1,0 +1,25 @@
+name: Improvement
+description: Improve an existing rule, template, or workflow
+title: "[Improvement] "
+labels:
+  - improvement
+body:
+  - type: textarea
+    id: current_gap
+    attributes:
+      label: Current Gap
+      description: What feels weak, unclear, or unstable?
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Target Change
+      description: What should become better?
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk
+      description: What risk should reviewers watch for?

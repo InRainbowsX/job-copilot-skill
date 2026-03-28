@@ -1,0 +1,25 @@
+name: Validation
+description: Add or improve forward-testing and validation coverage
+title: "[Validation] "
+labels:
+  - validation
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Which real or simulated case should be validated?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should the skill do in this case?
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure Risk
+      description: What would count as a bad or risky result?

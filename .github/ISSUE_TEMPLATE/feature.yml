@@ -1,0 +1,34 @@
+name: Feature
+description: Add or extend skill capability
+title: "[Feature] "
+labels:
+  - feature
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem should this change solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should be added or changed?
+    validations:
+      required: true
+  - type: checkboxes
+    id: layers
+    attributes:
+      label: Affected Layers
+      options:
+        - label: SKILL.md
+        - label: references
+        - label: assets
+        - label: governance
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation Idea
+      description: How should this be validated?

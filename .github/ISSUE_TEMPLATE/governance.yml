@@ -1,0 +1,20 @@
+name: Governance
+description: Improve repository process, workflow, or contribution rules
+title: "[Governance] "
+labels:
+  - governance
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Governance Problem
+      description: What process gap exists today?
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed Change
+      description: What should be added, simplified, or enforced?
+    validations:
+      required: true
