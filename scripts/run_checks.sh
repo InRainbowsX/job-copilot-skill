@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VALIDATOR="/Users/qitmac001629/.codex/skills/.system/skill-creator/scripts/quick_validate.py"
+VALIDATOR="$ROOT_DIR/scripts/validate_skill.py"
 
 cd "$ROOT_DIR"
 
