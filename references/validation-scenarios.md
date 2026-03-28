@@ -184,3 +184,18 @@ Expected behavior:
 - ask for missing scope, ownership, baseline, or result details before treating any rewritten version as final
 - if a draft is provided, mark it as provisional rather than final
 - avoid jumping straight to a polished full rewrite with no diagnosis
+
+## Scenario 13: Review Officer Must Provide Upgrade Guidance
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package my operations project aggressively and then run the review pass. I improved activity conversion, but I am not fully sure whether the ownership and metrics are strong enough.`
+
+Expected behavior:
+
+- the review pass should still do risk control
+- the review pass should explicitly judge the current level instead of only saying the wording is risky
+- the review pass should identify the main shortcomings
+- the review pass should explain how to move the wording up one level safely
+- the review pass should provide a safer stronger expression the candidate can still defend
+- the review pass should avoid generic praise or generic caution with no actionable next step
