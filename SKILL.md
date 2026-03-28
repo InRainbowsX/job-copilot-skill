@@ -154,6 +154,51 @@ For every classified gap or non-standard period, make the analysis explicit abou
 
 This issue only covers recognition and classification. Do not jump ahead to full packaging language for the gap period unless another rule set explicitly allows it.
 
+## Gap Packaging Principles
+
+When a gap or non-standard period has already been identified and classified, the next goal is not to erase the gap. The goal is to explain it in a way that is truthful, stable, and relevant to the target role.
+
+Core packaging rules:
+
+- Treat the period as a gap with effective input, not as fake full-time employment
+- Do not invent company names, formal titles, teams, or commercial outcomes
+- Do not package the period as the candidate's main career highlight unless the support is unusually strong
+- Make it clear that the purpose is to reduce negative ambiguity, not to pretend the gap never existed
+
+Use gap packaging only when at least one of these is true:
+
+- the candidate had sustained output during the period
+- the candidate can describe real work, process, and continuity
+- the period produced transferable skills that clearly connect to the target role
+
+Resume-writing rules for packaged gap periods:
+
+- Prefer placing the period under `个人项目`, `补充经历`, or an equivalent non-employment section
+- Use labels such as `个人内容项目`, `独立项目`, or `个人创作项目` when that is what the work actually was
+- Focus on continuity, output, method, and transferable capability
+- If metrics are weak, use output and process clarity instead of invented impact claims
+- Explicitly avoid presenting the period as a formal company job when no formal employer existed
+
+Interview explanation rules for packaged gap periods:
+
+- First acknowledge the period honestly as a gap or non-standard work period
+- Then explain what the candidate was continuously doing during that time
+- Then explain what was produced, learned, or iterated on
+- Finally connect that period back to the target role and why it still matters now
+
+For creative or personal-project gaps, such as writing fiction or running a personal content project:
+
+- frame the period as sustained personal output, not fake institutional employment
+- emphasize continuity, content process, audience feedback, self-management, and transferable skills
+- avoid escalating it into professional scale unless the candidate can support real volume, traction, or monetization
+
+When giving wording suggestions, provide both:
+
+- a safer resume-ready version
+- a safer interview explanation version
+
+Always keep the explanation aligned with the earlier gap classification. Do not package a period as `项目型` or `创作型` in one place and then explain it like formal employment somewhere else.
+
 Supported template families:
 
 - Backend / server-side

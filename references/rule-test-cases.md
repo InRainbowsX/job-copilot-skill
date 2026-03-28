@@ -139,3 +139,27 @@ Each rule case should include:
 - 不做分型，直接进入强包装
 - 把这段时间简单归零成“没有经历”
 - 直接写成固定公司的正式工作
+
+## Case 7: Gap Packaging Should Explain, Not Erase
+
+目标规则:
+
+- gap 包装的目标是合理解释，不是把 gap 洗成正式工作
+
+输入 prompt:
+
+`Use $job-copilot-skill to package my gap. I spent that period writing fiction and running a small personal content project, and I want it to look more reasonable on my resume and in interviews.`
+
+期望行为:
+
+- 先承认这是 gap 或非标准经历
+- 给出更安全的简历写法方向
+- 给出更安全的面试解释方向
+- 明确不要伪装成正式公司任职
+- 强调持续投入、产出或可迁移能力
+
+禁止行为:
+
+- 直接把这段时间写成固定公司经历
+- 为了好看而虚构职位、公司或商业化结果
+- 把 gap 写成核心高光但没有支撑
