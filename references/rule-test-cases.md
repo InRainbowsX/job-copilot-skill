@@ -188,3 +188,27 @@ Each rule case should include:
 - 第一轮直接给完整终稿
 - 只有措辞润色，没有诊断或方向判断
 - 在缺少职责、范围或结果支撑时假装内容已经稳定
+
+## Case 9: Packaging Output Must Stay Structured
+
+目标规则:
+
+- 包装结果必须让用户看见问题、方向、结果和风险，而不是只有改写稿
+
+输入 prompt:
+
+`Use $job-copilot-skill to package my strongest operations project and show me a stronger version.`
+
+期望行为:
+
+- 输出里能看见当前问题
+- 输出里能看见推荐方向
+- 输出里能看见改写结果
+- 输出里能看见补充建议或风险提醒
+- 对话仍然简洁，不变成大报告
+
+禁止行为:
+
+- 只给一段最终改写
+- 没有说明为什么这样改
+- 没有提示还缺什么支撑或有什么风险
