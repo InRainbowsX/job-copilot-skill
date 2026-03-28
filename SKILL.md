@@ -124,6 +124,36 @@ When timeline weighting affects the result, make it explicit in the analysis:
 
 If the case is borderline, do not just say an older experience is "too far" or "still usable." Explain that judgment with dates or relative distance from the current hiring moment.
 
+## Gap And Non-Standard Experience Recognition
+
+Do not treat every gap as a blank period, and do not treat every non-company experience as fake employment.
+
+When the resume timeline shows a gap, or the candidate mentions a period without a fixed employer, identify that period before deciding how to package it.
+
+Recognition rules:
+
+- First determine whether the period is a true blank gap, a non-standard experience, or a mix of both
+- Do not automatically convert personal projects, writing, freelancing, self-media work, study periods, or transition periods into formal employment
+- Do not automatically collapse those periods into an empty gap either
+- If the timeline is unclear, ask for the start date, end date, and what the candidate was doing during that period before packaging it
+
+Minimum classification buckets:
+
+- `纯空档`: no sustained work, study, or project activity can be shown yet
+- `学习型 gap`: the candidate mainly studied, trained, prepared for transition, or built foundational knowledge
+- `项目型 gap`: the candidate worked on independent projects, freelance work, consulting, or hands-on side work
+- `创作型 gap`: the candidate spent the period on sustained creative output such as writing, content creation, or independent publishing
+- `混合型 gap`: the period includes a meaningful mix of study, project work, and non-standard output
+
+For every classified gap or non-standard period, make the analysis explicit about:
+
+- the approximate time range
+- whether the period is a gap, a non-standard experience, or both
+- which classification bucket it belongs to
+- what facts still need confirmation before any stronger packaging is attempted
+
+This issue only covers recognition and classification. Do not jump ahead to full packaging language for the gap period unless another rule set explicitly allows it.
+
 Supported template families:
 
 - Backend / server-side

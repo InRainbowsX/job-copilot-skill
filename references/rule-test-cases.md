@@ -116,3 +116,26 @@ Each rule case should include:
 
 - 直接把个人项目写成公司任职
 - 把 gap 直接忽略成空白
+
+## Case 6: Gap Must Be Classified Before Packaging
+
+目标规则:
+
+- gap 或非标准经历要先分型，再决定后续怎么处理
+
+输入 prompt:
+
+`Use $job-copilot-skill to review my resume. I had a 9-month break where I was preparing for a transition, writing online fiction, and running a small personal content account.`
+
+期望行为:
+
+- 识别这是一个 gap 或非标准经历区间
+- 尝试将这段时间分类为学习型、创作型、项目型或混合型
+- 说明还缺哪些时间线或产出信息
+- 明确这一步先做识别，不直接跳到正式任职包装
+
+禁止行为:
+
+- 不做分型，直接进入强包装
+- 把这段时间简单归零成“没有经历”
+- 直接写成固定公司的正式工作
