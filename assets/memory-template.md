@@ -23,9 +23,8 @@
 
 - Current main resume version:
 - Current positioning summary:
-- Current main narrative:
-- Downgraded older experiences:
-- Narrative decision status:
+- Current workflow stage:
+- Resume from stage:
 - Main resume weaknesses:
 - Completed optimizations:
 - Remaining weak areas:
@@ -53,8 +52,6 @@
 - High-risk wording:
 - Banned or downgraded phrasing:
 - Data pending verification:
-- Gap explanation:
-- Non-standard experience conclusion:
 - Likely follow-up pressure points:
 
 ## 7. Mock Interview Notes
