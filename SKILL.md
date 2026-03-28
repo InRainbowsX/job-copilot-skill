@@ -374,10 +374,6 @@ Use [project-packaging-card-template.md](./assets/project-packaging-card-templat
 Minimum fields:
 
 - Project identity and time range
-- Whether the experience is recent core experience
-- Whether the experience belongs to a gap or non-standard period
-- Narrative position: main story, supporting story, or supplemental highlight
-- Timeline weighting note
 - One-line project definition
 - Business background and goal
 - Candidate responsibility boundary
@@ -400,6 +396,8 @@ The memory file should track:
 
 - Candidate profile and job-search targets
 - Current approved resume direction
+- Current main narrative and any downgraded older experiences
+- Gap explanation and non-standard experience handling conclusions
 - Project archive with statuses
 - Approved resume wording and self-introduction
 - Review risks and banned phrasing
@@ -414,6 +412,7 @@ Write only durable information:
 - Approved wording
 - Repeated weak points
 - Pending follow-ups
+- Narrative and gap conclusions should mark what is confirmed versus still pending
 
 Do not dump raw conversation transcripts into memory.
 

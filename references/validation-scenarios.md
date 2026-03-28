@@ -229,15 +229,15 @@ Expected behavior:
 - make it clear what kind of strong-candidate signal the packaging is trying to surface
 - avoid treating the signal library like a raw template dump
 
-## Scenario 16: Project Card Must Support Timeline And Narrative Sorting
+## Scenario 17: Memory Should Persist Main Narrative And Gap Decisions
 
 Prompt:
 
-`Today is 2026-03-29. Use $job-copilot-skill to package my resume. I have a campus content project from 2021, store operations work from 2024, and a 2025 gap period where I ran a personal content account.`
+`Today is 2026-03-29. Use $job-copilot-skill with my existing memory to continue resume prep. Last time we decided that my 2024 operations work is the main narrative, my 2021 campus project is supporting evidence, and my 2025 gap should be explained as a non-standard content project period.`
 
 Expected behavior:
 
-- when creating project cards, mark which experience is recent core work
-- mark the 2025 content account period as gap or non-standard experience rather than formal employment
-- show which card is the main narrative, which is supporting evidence, and which is only a supplemental highlight
-- include an explicit timeline weighting note instead of relying on unstated judgment
+- read and reuse the stored main narrative decision
+- keep the downgraded 2021 experience as supporting evidence instead of re-promoting it by default
+- reuse the stored gap explanation rather than asking from zero again
+- preserve which conclusions are confirmed and which still need support
