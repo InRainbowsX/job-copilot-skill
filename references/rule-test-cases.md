@@ -277,3 +277,51 @@ Each rule case should include:
 
 - 卡片只记录项目内容，不表达时间位置
 - 无法区分主线和补充经历
+
+## Case 12: Real Content-Operations Resume Must Respect Timeline And Gap Boundaries
+
+目标规则:
+
+- 真实内容运营社招简历必须同时处理时间轴、gap 与旧校园亮点
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to analyze Zhang Xueqin's resume. She has a strong campus self-media project from 2018-2021, advertising operations work from 2022-2023, Dianping operations work from 2023-2024, and an ongoing 2024-2026 period of Zhihu short-fiction creation.`
+
+期望行为:
+
+- 明确这是社招时间轴
+- 主路由落在内容运营 / 自媒体运营方向，而不是泛运营
+- 明确校园自媒体、近年工作和知乎创作期各自的定位
+- 将知乎创作期识别为 gap 中的非标准经历或个人内容项目，而不是直接写成正式任职
+- 审核时指出校园数据口径、点评运营指标基线和广告优化职责边界风险
+
+禁止行为:
+
+- 只因为校园项目更亮就直接定为当前主叙事
+- 把知乎创作期直接伪装成公司经历
+- 忽略近年工作经历的主叙事价值
+
+## Case 13: Real Risk-Control Backend Resume Must Trigger Deep Technical Review
+
+目标规则:
+
+- 真实后端风控简历必须触发后端主路由和高强度技术审核，而不是泛化润色
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to analyze Wang Xu's resume. He has backend and risk-control architecture experience across anti-crawl, device fingerprint, and large-scale security systems at Qunar and 58.`
+
+期望行为:
+
+- 主路由明确为后端 / 服务端
+- 次标签可体现风控 / 反爬，但不能替代后端主路由
+- 优先挑最近高价值系统经历深挖
+- 深挖问题要落到系统边界、性能、稳定性、风控策略与 ownership
+- 审核官要主动质疑“架构师”“整体设计”“AI 提效工具”这类高风险表述的支撑度
+
+禁止行为:
+
+- 把这类简历只当成普通后端措辞优化
+- 因为有风控或 AI 关键词就偏离后端主路由
+- 对高流量、高可用和架构 ownership 表述不做风险审查
