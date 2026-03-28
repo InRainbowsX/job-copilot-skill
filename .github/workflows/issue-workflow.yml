@@ -74,10 +74,11 @@ jobs:
               "## 建议流程",
               "",
               "1. 先补完整 Issue：背景、要做什么、别做什么、什么算完成",
-              "2. 明确本次改动影响的层级",
-              "3. 更新 skill、references、assets 或治理文件",
-              "4. 运行 `./scripts/run_checks.sh`",
-              "5. 提交 PR，并关联当前 Issue",
+              "2. 没有完整 Issue，不开始正式改动",
+              "3. 明确本次改动影响的层级",
+              "4. 更新 skill、references、assets 或治理文件",
+              "5. 运行 `./scripts/run_checks.sh`",
+              "6. 提交 PR，并在标题或正文中关联当前 Issue，例如 `close #编号`",
             ].join("\\n");
 
             await github.rest.issues.createComment({
