@@ -60,6 +60,11 @@ Supported template families:
 
 Use the routing and evaluation guidance in [job-families.md](./references/job-families.md).
 
+Current role-specific template coverage:
+
+- Backend: [backend-template.md](./references/backend-template.md)
+- Other job families: use the shared workflow plus family routing rules until dedicated templates are added
+
 ## Dual-Agent Contract
 
 Treat the system as two distinct passes, even if the environment only has one visible assistant.
@@ -111,6 +116,8 @@ For each project, Agent 2 must also produce:
 - Interview pressure points
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
+
+When the routed family is backend or server-side, also apply the backend-specific rules in [backend-template.md](./references/backend-template.md).
 
 ## Project Packaging Card
 
