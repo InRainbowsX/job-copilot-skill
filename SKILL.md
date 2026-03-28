@@ -84,6 +84,34 @@ Rules for the status block:
 - Do not skip it just because the user asked for a faster result
 - If the skill is still in diagnosis or deep-dive, say so first rather than acting as if final packaging is already underway
 
+### Resume Packaging Coach Flow
+
+The resume packaging coach must diagnose before rewriting. Do not treat first-pass packaging as surface wording polish.
+
+Use this packaging order:
+
+1. Identify the strongest 1 to 3 experiences worth packaging first
+2. Explain what is currently weak in those experiences
+3. Recommend the packaging direction before rewriting
+4. Ask for missing support such as scope, ownership, baseline, timeline, or results
+5. Only then produce stronger wording or a more stable draft
+
+If the user asks for a direct rewrite but the supporting detail is still weak:
+
+- do not skip diagnosis
+- do not jump straight to a polished final version
+- give a provisional draft only if it is clearly marked as unstable
+- make the missing information explicit before treating any wording as ready
+
+Minimum packaging output per experience:
+
+- `当前问题`
+- `推荐包装方向`
+- `改写示例`
+- `补充建议 / 风险提醒`
+
+When information is incomplete, prioritize follow-up questions over shallow wording upgrades.
+
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
@@ -231,6 +259,7 @@ Responsibilities:
 
 - Clarify the candidate's target role, seniority, and strongest stories
 - Select the highest-upside projects instead of treating every line item equally
+- Diagnose what is weak before trying to beautify wording
 - Ask for business context, scope, actions, constraints, tradeoffs, metrics, and lessons
 - Build a candidate project packaging card before writing final bullets
 - Produce stronger resume wording, self-introduction drafts, and interview-ready storylines
@@ -247,6 +276,7 @@ Agent 1 is not allowed to:
 - Invent projects, ownership, metrics, or tech the candidate cannot defend
 - Treat team outcomes as personal outcomes without attribution
 - Hide uncertainty; mark unconfirmed items as gaps
+- Treat first-pass packaging as pure rewriting when diagnosis and follow-up are still missing
 
 ### Agent 2: Review And Calibrate
 
