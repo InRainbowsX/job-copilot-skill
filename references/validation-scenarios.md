@@ -168,3 +168,19 @@ Expected behavior:
 - suggest a safer resume placement such as personal project or supplemental experience
 - suggest an interview explanation that first admits the gap, then explains sustained work and transferable skills
 - avoid fake companies, fake titles, or unsupported commercial scale
+
+## Scenario 12: Packaging Must Diagnose Before Final Rewriting
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to rewrite my resume for product operations. My bullets feel ordinary, and I want a stronger version quickly.`
+
+Expected behavior:
+
+- start with the required status block
+- stay in `阶段 1：简历诊断与初步包装` if the skill is still assessing the material
+- identify which 1 to 3 experiences are the best packaging targets before rewriting
+- explain the current weakness or missing support in those experiences
+- ask for missing scope, ownership, baseline, or result details before treating any rewritten version as final
+- if a draft is provided, mark it as provisional rather than final
+- avoid jumping straight to a polished full rewrite with no diagnosis

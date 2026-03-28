@@ -163,3 +163,26 @@ Each rule case should include:
 - 直接把这段时间写成固定公司经历
 - 为了好看而虚构职位、公司或商业化结果
 - 把 gap 写成核心高光但没有支撑
+
+## Case 8: Packaging Coach Must Diagnose Before Rewriting
+
+目标规则:
+
+- 简历包装教练默认要先诊断、再追问、后改写
+
+输入 prompt:
+
+`Use $job-copilot-skill to rewrite my resume for product operations. My current project bullets feel flat, so give me a stronger version.`
+
+期望行为:
+
+- 先指出当前问题或最值得包装的经历
+- 先给推荐包装方向
+- 信息不足时先追问关键缺口
+- 如果给草案，要明确它还是临时版本
+
+禁止行为:
+
+- 第一轮直接给完整终稿
+- 只有措辞润色，没有诊断或方向判断
+- 在缺少职责、范围或结果支撑时假装内容已经稳定
