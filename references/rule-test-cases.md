@@ -234,3 +234,25 @@ Each rule case should include:
 
 - 只输出泛泛的漂亮句子
 - 不区分岗位，套同一种强简历话术
+
+## Case 11: Project Card Must Carry Timeline And Gap Signals
+
+目标规则:
+
+- 项目包装卡片必须能表达时间权重、gap 属性和主叙事定位
+
+输入 prompt:
+
+`Use $job-copilot-skill to package my resume. I have a strong campus project, a recent operations project, and a gap-period content project.`
+
+期望行为:
+
+- 生成的项目卡片会标明是否为最近核心经历
+- 会标明是否属于 gap 或非标准经历
+- 会标明是主叙事、辅助叙事还是补充亮点
+- 会体现时间轴权重说明
+
+禁止行为:
+
+- 卡片只记录项目内容，不表达时间位置
+- 无法区分主线和补充经历

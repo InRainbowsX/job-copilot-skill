@@ -374,6 +374,10 @@ Use [project-packaging-card-template.md](./assets/project-packaging-card-templat
 Minimum fields:
 
 - Project identity and time range
+- Whether the experience is recent core experience
+- Whether the experience belongs to a gap or non-standard period
+- Narrative position: main story, supporting story, or supplemental highlight
+- Timeline weighting note
 - One-line project definition
 - Business background and goal
 - Candidate responsibility boundary
