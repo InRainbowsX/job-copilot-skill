@@ -256,35 +256,30 @@ Expected behavior:
 - show which card is the main narrative, which is supporting evidence, and which is only a supplemental highlight
 - include an explicit timeline weighting note instead of relying on unstated judgment
 
-## Scenario 17: Real Resume Forward Test - Zhang Xueqin Content Operations
+## Scenario 20: Content Operations Resume Should Trigger Content-Specific Background Understanding
 
 Prompt:
 
-`Today is 2026-03-29. Use $job-copilot-skill to analyze this real resume for internet job packaging. The candidate is Zhang Xueqin. She has campus self-media experience from 2018-2021, advertising operations work from 2022-2023, Dianping operations work from 2023-2024, and an ongoing 2024-2026 period of Zhihu short-fiction creation and market observation.`
+`Today is 2026-03-29. Use $job-copilot-skill to package a content-operations resume. The candidate has campus self-media work, personal ongoing content creation, and some generic operations experience.`
 
 Expected behavior:
 
-- anchor the judgment to the 2026-03-29 social-hire timeline
-- route primarily to operations, more specifically content operations or self-media operations
-- avoid collapsing the resume into vague generic operations wording
-- avoid making the 2018-2021 campus self-media story the automatic main narrative only because it sounds brighter
-- recognize the Zhihu fiction period as a gap or non-standard period first, then decide whether it should be treated as a personal content project
-- distinguish the current main narrative, supporting work experience, and older highlight experience
-- challenge unsupported metric clusters in the Dianping and advertising operations sections
-- flag explainability risks in the campus self-media reach, follower, and income claims
+- route toward operations, but narrow the language to content operations or self-media operations
+- use content-specific concepts such as audience positioning, topic selection, editorial cadence, distribution, and review loops
+- avoid flattening the resume into generic operations wording
+- evaluate personal creation or personal-account work as a non-standard but potentially valuable content signal
+- distinguish account-level outcomes from the candidate's direct contribution
 
-## Scenario 18: Real Resume Forward Test - Wang Xu Risk-Control Backend
+## Scenario 21: Risk-Control Backend Resume Should Trigger Subdomain Background Understanding
 
 Prompt:
 
-`Today is 2026-03-29. Use $job-copilot-skill to analyze this real resume for internet job packaging. The candidate is Wang Xu. He has backend and risk-control architecture experience across anti-crawl, device fingerprint, and large-scale security systems at Qunar and 58.`
+`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, and real-time risk-control system experience.`
 
 Expected behavior:
 
-- route primarily to backend or server-side
-- treat risk-control or anti-crawl as a secondary context, not a replacement for the backend route
-- choose recent high-value system stories instead of flattening all jobs into equal weight
-- ask backend-specific questions about system boundaries, throughput, availability, ownership, and failure handling
-- treat "architect", very large traffic metrics, and AI-assisted tooling as review hot spots rather than auto-approved selling points
-- use the review pass to separate real personal ownership from team- or system-level achievements
-- keep follow-up interview themes on architecture, risk-control strategy, performance, and explainability under pressure
+- keep backend as the primary route
+- treat risk-control and anti-crawl as backend sub-context, not as a different main family
+- ask better questions about system boundary, decision path, latency, availability, and feedback loops
+- treat architecture authority, large-scale metrics, and AI-assisted tooling as review hot spots
+- avoid collapsing the case into generic backend bullet polishing
