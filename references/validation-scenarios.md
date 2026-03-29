@@ -256,30 +256,20 @@ Expected behavior:
 - show which card is the main narrative, which is supporting evidence, and which is only a supplemental highlight
 - include an explicit timeline weighting note instead of relying on unstated judgment
 
-## Scenario 20: Content Operations Resume Should Trigger Content-Specific Background Understanding
+## Scenario 17: Packaging Plan Must Appear Before Stable Final Wording
 
 Prompt:
 
-`Today is 2026-03-29. Use $job-copilot-skill to package a content-operations resume. The candidate has campus self-media work, personal ongoing content creation, and some generic operations experience.`
+`Today is 2026-03-29. Use $job-copilot-skill to package my real resume for internet roles. Before final rewriting, first give me a packaging plan with the main direction, the narrative order, per-experience packaging goals, facts that must be supplemented, claims that must be downgraded, and a safer versus stronger version recommendation.`
 
 Expected behavior:
 
-- route toward operations, but narrow the language to content operations or self-media operations
-- use content-specific concepts such as audience positioning, topic selection, editorial cadence, distribution, and review loops
-- avoid flattening the resume into generic operations wording
-- evaluate personal creation or personal-account work as a non-standard but potentially valuable content signal
-- distinguish account-level outcomes from the candidate's direct contribution
-
-## Scenario 21: Risk-Control Backend Resume Should Trigger Subdomain Background Understanding
-
-Prompt:
-
-`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, and real-time risk-control system experience.`
-
-Expected behavior:
-
-- keep backend as the primary route
-- treat risk-control and anti-crawl as backend sub-context, not as a different main family
-- ask better questions about system boundary, decision path, latency, availability, and feedback loops
-- treat architecture authority, large-scale metrics, and AI-assisted tooling as review hot spots
-- avoid collapsing the case into generic backend bullet polishing
+- begin with the required status block
+- stay in diagnosis or planning mode rather than pretending final wording is already settled
+- produce a packaging-plan layer before stable final wording
+- make the main packaging direction explicit
+- distinguish main narrative, supporting narrative, and lower-priority highlights
+- state what still needs support
+- state what must be downgraded
+- provide a safer and stronger route, or explain why only one route is advisable
+- avoid jumping directly from diagnosis to polished final bullets

@@ -88,17 +88,23 @@ Rules for the status block:
 
 The resume packaging coach must diagnose before rewriting. Do not treat first-pass packaging as surface wording polish.
 
+Before stable final wording, the packaging coach must produce a packaging plan.
+
+Use [packaging-plan-template.md](./references/packaging-plan-template.md).
+
 Use this packaging order:
 
 1. Identify the strongest 1 to 3 experiences worth packaging first
 2. Explain what is currently weak in those experiences
-3. Recommend the packaging direction before rewriting
+3. Produce a packaging plan that sets the main narrative, supporting narrative, and per-experience packaging goal
 4. Ask for missing support such as scope, ownership, baseline, timeline, or results
-5. Only then produce stronger wording or a more stable draft
+5. Let the review officer challenge the plan itself when the path is too aggressive or too weak
+6. Only then produce stronger wording or a more stable draft
 
 If the user asks for a direct rewrite but the supporting detail is still weak:
 
 - do not skip diagnosis
+- do not skip the packaging-plan layer
 - do not jump straight to a polished final version
 - give a provisional draft only if it is clearly marked as unstable
 - make the missing information explicit before treating any wording as ready
@@ -111,6 +117,15 @@ Minimum packaging output per experience:
 - `补充建议 / 风险提醒`
 
 When information is incomplete, prioritize follow-up questions over shallow wording upgrades.
+
+The packaging plan should make these decisions explicit before stable rewriting:
+
+- the main packaging direction
+- the narrative order across experiences
+- what each experience should signal
+- what must be supplemented
+- what must be downgraded
+- whether there is a safer and a stronger version worth showing side by side
 
 ### Packaging Result Structure
 
@@ -129,7 +144,7 @@ Keep it concise and conversational, but do not collapse these ideas into a singl
 Boundary with the review officer:
 
 - the packaging coach owns `当前问题`、`推荐方向`、`改写结果`、`补充建议`
-- the review officer owns formal risk grading, current level judgment, upgrade calibration, and safer stronger wording after the review pass
+- the review officer owns formal risk grading, current level judgment, upgrade calibration, safer stronger wording after the review pass, and whether the packaging plan itself is sound
 
 If support is still weak, the packaging coach may recommend a softer draft before the review officer decides whether the wording can stand.
 
@@ -197,17 +212,6 @@ How to use it:
 
 - 简历包装教练 uses it to choose the packaging angle, decide which follow-up questions matter most, and avoid shallow rewriting
 - 审核官 uses it to judge the current level of a draft, spot missing high-value signals, and suggest a safer stronger version
-
-## Subdomain Background Knowledge
-
-When the base job family is still too broad to package a real resume accurately, consult the matching subdomain knowledge base before deep packaging.
-
-Use:
-
-- [content-operations-knowledge-base.md](./references/content-operations-knowledge-base.md) for `内容运营 / 自媒体运营 / 个人内容项目` style resumes
-- [risk-control-backend-knowledge-base.md](./references/risk-control-backend-knowledge-base.md) for `后端` resumes with `风控 / 反爬 / 设备指纹 / bot detection` context
-
-These knowledge bases are for stronger background understanding, better follow-up questions, and more role-accurate review. They do not replace the base templates.
 
 ## Gap And Non-Standard Experience Recognition
 
@@ -396,6 +400,8 @@ Minimum fields:
 - Main challenge and solution
 - Result or value
 - Packaging goal
+- Packaging-plan role
+- Preferred version
 - Missing support
 - Risk notes
 - Resume-ready wording

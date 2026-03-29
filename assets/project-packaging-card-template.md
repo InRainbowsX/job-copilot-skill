@@ -57,6 +57,8 @@
 ## Packaging Goal
 
 - What capability this project should signal:
+- Packaging-plan role:
+- Preferred version:
 
 ## Missing Support
 
@@ -90,3 +92,4 @@
 - Top review concerns:
 - Required supplements:
 - Downgrade wording if needed:
+- Packaging-plan verdict:
