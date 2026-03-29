@@ -302,3 +302,28 @@ Each rule case should include:
 - 直接从诊断跳到最终简历 bullets
 - 只给几句泛泛建议，不形成方案层
 - 不说明哪些事实还没补，哪些说法必须降级
+
+## Case 14: Real Resume Must Be Decomposed Before Stable Packaging
+
+目标规则:
+
+- 在真实简历进入稳定包装前，必须先形成系统拆解报告或同等拆解结论
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package my real resume for internet jobs. Before rewriting it, show me how you understand the timeline, the main narrative, the supporting narrative, the gap or non-standard periods, and the main interview pressure points.`
+
+期望行为:
+
+- 先给出系统拆解层，而不是直接给最终改写
+- 明确当前分析日期或招聘时点
+- 明确主叙事、辅助叙事和补充亮点
+- 明确 gap 或非标准经历的结论
+- 明确主要 ownership / 指标 / 可解释性风险
+- 明确下一步优先深挖哪些经历
+
+禁止行为:
+
+- 一上来直接输出最终简历 bullets
+- 只说“我理解了你的简历”，但不给结构化拆解
+- 不区分主叙事、支撑经历和补充亮点
