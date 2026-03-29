@@ -373,3 +373,27 @@ Each rule case should include:
 - 只靠 broad backend 模板处理
 - 只做通用服务端措辞优化
 - 不区分普通后端项目和风控后端项目的审核重点
+
+## Case 17: Personal Creation Period Must Get Safe Content-Project Packaging
+
+目标规则:
+
+- 内容运营 / 自媒体运营场景中的 `个人创作期 / 个人账号 / 内容项目` 必须给出安全放置方式、包装边界和面试解释口径
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a content-operations resume where the candidate has a personal creation period writing fiction and running a personal content account.`
+
+期望行为:
+
+- 会把这段识别为 gap 中的个人内容项目或非标准经历，而不是正式任职
+- 会明确简历中的安全放置方式
+- 会明确包装边界，避免虚构正式 title、商业化结果或全链路增长能力
+- 会给出可守的面试解释口径
+- 会把这段经历和目标内容岗位建立能力迁移连接
+
+禁止行为:
+
+- 直接把个人创作期包装成固定公司正式任职
+- 只说“这是 gap”，不给任何安全包装方式
+- 不说明面试里应该怎么解释

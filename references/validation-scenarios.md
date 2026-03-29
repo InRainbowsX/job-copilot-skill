@@ -319,3 +319,18 @@ Expected behavior:
 - focus the review on decision path, latency, availability, ownership, and risk tradeoffs
 - keep AI tooling, architecture authority, and large-scale metrics as high-pressure review points
 - avoid flattening the case into generic backend wording
+
+## Scenario 22: Personal Creation Period Must Produce Safe Content-Role Packaging
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a content-operations resume where a 2025 gap period was spent writing fiction and running a personal content account.`
+
+Expected behavior:
+
+- narrow from broad operations into the content-operations or self-media template
+- identify the 2025 period as a gap-period content project or non-standard content experience
+- provide a safe resume placement instead of rewriting it as fixed-company employment
+- give explicit packaging boundaries and interview explanation guidance
+- connect the period to durable content capability such as topic choice, output continuity, feedback loops, or audience understanding
+- avoid treating the period as either empty gap or fabricated formal work
