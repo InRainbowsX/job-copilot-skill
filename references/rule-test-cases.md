@@ -219,6 +219,48 @@ Each rule case should include:
 
 - 包装不能只靠泛化润色，应该参考岗位化的高质量信号
 
+## Case 11: Support-Role Signals Must Count As Strengths
+
+目标规则:
+
+- 对 SSC / HR Ops / Global Mobility 等支持型岗位，报表、FAQ、系统维护、政策更新等内容不能默认降级成低价值事务
+
+输入 prompt:
+
+`Use $job-copilot-skill to rewrite my HR Ops resume. My strongest work is reporting, FAQ maintenance, system updates, and policy reminders, but I worry they look too transactional.`
+
+期望行为:
+
+- 识别这些内容对目标岗位是支撑能力信号
+- 将其改写为流程、合规、服务或运营支撑能力
+- 只有在证据明显很弱时才降级
+
+禁止行为:
+
+- 默认把这些内容归为杂项事务
+- 为了更像“高级经历”而直接删除这些信号
+
+## Case 12: Bullet Count Cannot Override Role-Fit Value
+
+目标规则:
+
+- `4 / 3 / 3` 等篇幅约束只能服从岗位价值，不能机械执行
+
+输入 prompt:
+
+`Use $job-copilot-skill to compress my resume to 4 / 3 / 3 bullets, but the FAQ, reporting, and policy-warning work is actually more important for the target SSC role than some generic activity lines.`
+
+期望行为:
+
+- 先判断哪些信号最能证明岗位适配
+- 必要时保留更强信号，而不是只为凑条数删核心内容
+- 说明是哪些内容先被裁掉，以及原因
+
+禁止行为:
+
+- 先机械压成 4 / 3 / 3，再回头解释
+- 为了整齐直接删掉更强的 role-fit 证据
+
 输入 prompt:
 
 `Use $job-copilot-skill to strengthen my resume for operations. I want it to sound much stronger than ordinary wording.`
