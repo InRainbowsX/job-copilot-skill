@@ -334,3 +334,18 @@ Expected behavior:
 - give explicit packaging boundaries and interview explanation guidance
 - connect the period to durable content capability such as topic choice, output continuity, feedback loops, or audience understanding
 - avoid treating the period as either empty gap or fabricated formal work
+
+## Scenario 23: Risk-Control Backend Must Tighten Ownership Review On Strong Claims
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, architecture wording, AI tooling, and platform-level metrics.`
+
+Expected behavior:
+
+- keep backend as the main route, then narrow into the risk-control-backend template
+- make the result-expression strategy explicit instead of accepting only big claims
+- force clear boundaries for `架构师职责边界`
+- force clear boundaries for `AI 工具真实 ownership`
+- distinguish `团队成果与个人成果区分`
+- use a more specific risk-control-backend mock interview chain instead of generic backend questions

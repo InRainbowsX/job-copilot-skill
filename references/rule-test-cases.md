@@ -397,3 +397,28 @@ Each rule case should include:
 - 直接把个人创作期包装成固定公司正式任职
 - 只说“这是 gap”，不给任何安全包装方式
 - 不说明面试里应该怎么解释
+
+## Case 18: Risk-Control Backend Must Enforce Ownership And Risk-Signal Boundaries
+
+目标规则:
+
+- 风控 / 反爬 / 设备指纹后端场景必须对 `架构师职责边界`、`AI 工具真实 ownership`、`团队成果与个人成果区分` 做更严格审查
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, architecture wording, and AI tooling.` 
+
+期望行为:
+
+- 会把这类经历放到风控 / 反爬后端细分模板下处理
+- 会明确结果表达策略，而不是只堆大指标
+- 会对架构师职责边界做限制
+- 会对 AI 工具真实 ownership 做限制
+- 会区分团队成果与个人成果
+- 会给出更贴合该子方向的面试追问主题
+
+禁止行为:
+
+- 默认接受 `架构师`、`整体设计`、`AI 能力` 这类强表述
+- 只做 broad backend 的泛化包装
+- 不区分团队成果和个人成果
