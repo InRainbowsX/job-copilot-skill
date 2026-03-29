@@ -74,3 +74,30 @@ For each project card, output:
 - 可守的更优表达
 - downgrade wording if needed
 - likely interview pressure points
+
+## 写回条件
+
+Review output must not stay isolated from long-term memory. Use these rules:
+
+### 必须写回 memory
+
+- wording that is `pass` and becomes approved resume wording
+- wording downgraded because it is too risky and should not be reused later
+- metrics or claims marked `data pending verification`
+- repeated interview pressure points that will likely return in future sessions
+
+### 不应写回 memory
+
+- speculative wording that the candidate has not confirmed
+- early brainstorming angles that were not approved
+- one-off conversational details with no long-term reuse value
+
+### 状态边界
+
+When review results are written back, keep the status explicit:
+
+- `已确认`: safe to reuse in later sessions
+- `待补充`: direction is useful but support is still missing
+- `高风险`: keep as a warning or banned phrase, not approved wording
+
+If a project stays at `rewrite required`, write the risk to memory but do not write the wording as approved output.

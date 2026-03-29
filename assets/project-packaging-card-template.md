@@ -93,3 +93,6 @@
 - Required supplements:
 - Downgrade wording if needed:
 - Packaging-plan verdict:
+- Memory writeback status:
+- Memory writeback note:
+- 回写到项目卡片:
