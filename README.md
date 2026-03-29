@@ -36,6 +36,8 @@ Job Copilot 使用写审分离的机制：
 
 这意味着它不是无约束地“写得更厉害”，而是在“更强表达”和“可讲述性”之间找平衡。
 
+现在它还要求给出解释层：为什么某个项目被提升为主叙事，为什么另一个项目只能作为辅助叙事或 gap 解释，以及当前为什么仍停留在某个阶段。
+
 ### 2. 动态岗位模板
 
 Job Copilot 不会默认把所有简历都当成后端简历处理。  
@@ -54,6 +56,11 @@ Job Copilot 不会默认把所有简历都当成后端简历处理。
 - 销售
 - 运营（含自媒体运营）
 
+在此基础上，系统还开始支持更细的岗位参考层，例如：
+
+- 内容运营 / 自媒体运营
+- 风控 / 反爬后端
+
 ### 3. 项目深挖卡片
 
 在正式改简历之前，Job Copilot 会先构建项目包装卡片，用来明确：
@@ -68,6 +75,8 @@ Job Copilot 不会默认把所有简历都当成后端简历处理。
 
 这样简历优化不再是“直接改文案”，而是先有结构化分析，再有最终输出。
 
+卡片里不仅要写“怎么包装”，还要写“为什么这样排序”和“更强写法为什么暂时不安全”。
+
 ### 4. 长期记忆
 
 Job Copilot 支持 `memory.md` 长期记忆，用来记录：
@@ -81,6 +90,8 @@ Job Copilot 支持 `memory.md` 长期记忆，用来记录：
 
 这让它更像一个长期陪跑教练，而不是一次性工具。
 
+对于长对话场景，`memory.md` 也会帮助系统记录当前阶段阻塞点和下一阶段进入条件，避免聊久了只剩模糊感。
+
 ### 5. 模拟面试与错题追踪
 
 当简历和项目故事通过审核后，Job Copilot 会继续做模拟面试训练，包括：
@@ -91,6 +102,8 @@ Job Copilot 支持 `memory.md` 长期记忆，用来记录：
 - 行为面
 
 每轮训练产生的薄弱点都会进入错题记录，支持后续持续复训。
+
+对于细分岗位，模拟面试不再只是一组通用追问，而会逐步切换到对应方向的高压追问题链。
 
 ## 它解决的问题
 
@@ -116,72 +129,10 @@ Job Copilot 更关注的是：
 - 这段经历是否真的值得包装
 - 这段包装是否能撑住连续追问
 - 这份简历是否真的像目标岗位候选人
+- 这套主叙事排序是否说得清理由
 - 这套故事是否能在下一轮训练里继续复用
 
 目标不是让简历“看起来强”，而是让候选人“真的能讲住这份强简历”。
-
-## Installation / 安装
-
-### 1. Prompt 安装
-
-一句话直接让当前 AI 帮你安装：
-
-```text
-请把 https://github.com/InRainbowsX/job-copilot-skill 安装为当前环境可用的 skill，目录名使用 job-copilot-skill，如果已安装则更新，并在完成后告诉我如何调用它。
-```
-
-### 2. 一键脚本安装
-
-默认自动识别当前环境，优先安装到 Claude Code、Codex 或 OpenClaw 的标准 skills 目录。
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash
-```
-
-也可以显式指定环境：
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- claude
-curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- codex
-curl -fsSL https://raw.githubusercontent.com/InRainbowsX/job-copilot-skill/main/install.sh | bash -s -- openclaw
-```
-
-对应安装目录：
-
-- `Claude Code`: `~/.claude/skills/job-copilot-skill`
-- `Codex`: `~/.codex/skills/job-copilot-skill`
-- `OpenClaw`: `~/.openclaw/skills/job-copilot-skill`
-
-### 3. 手动 clone 安装
-
-如果你更希望手动管理 skill，可以直接 clone 到目标目录。
-
-Claude Code:
-
-```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.claude/skills/job-copilot-skill
-```
-
-Codex:
-
-```bash
-mkdir -p ~/.codex/skills
-git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.codex/skills/job-copilot-skill
-```
-
-OpenClaw:
-
-```bash
-mkdir -p ~/.openclaw/skills
-git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.openclaw/skills/job-copilot-skill
-```
-
-安装完成后，推荐用这句话开始：
-
-```text
-使用 $job-copilot-skill，基于我的原始简历和自我介绍，识别岗位方向并开始深挖项目。
-```
 
 ## 仓库结构
 
@@ -195,8 +146,12 @@ git clone https://github.com/InRainbowsX/job-copilot-skill.git ~/.openclaw/skill
 │   ├── memory-template.md
 │   └── project-packaging-card-template.md
 └── references/
+    ├── content-operations-interview-chain.md
+    ├── content-operations-patterns.md
     ├── job-families.md
     ├── review-rubric.md
+    ├── risk-control-backend-interview-chain.md
+    ├── risk-control-backend-patterns.md
     └── validation-scenarios.md
 ```
 
@@ -240,12 +195,14 @@ Use $job-copilot-skill with my approved resume version to run a mock interview f
 - 项目包装卡片模板
 - memory 模板
 - 模拟面试错题模板
+- 细分岗位参考层基础版本
+- 长对话阶段刷新基础规则
 
 下一步重点是：
 
-- 补全更细的岗位专属模板
-- 增加真实案例 forward test
-- 继续优化 prompt 和 check points
+- 继续扩展更多细分岗位模式库
+- 增加更多真实案例 forward test
+- 继续提升岗位化 reviewer 和 interviewer 的质感
 
 ## 项目定位
 

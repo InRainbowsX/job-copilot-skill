@@ -22,7 +22,12 @@ Signals:
 
 Bias toward this family when the resume reads like systems, services, data flow, reliability, or infrastructure-heavy delivery.
 
-When this family is selected, also apply [backend-template.md](./backend-template.md).
+Sub-signals worth routing explicitly:
+
+- risk control, anti-crawler, anti-abuse, decision engine, device fingerprint, strategy platform
+- confrontation-heavy delivery where attacker behavior, interception quality, false positives, or strategy iteration are central
+
+When these sub-signals dominate, keep the primary family as `backend`, but apply the segmented guidance in [risk-control-backend-patterns.md](./risk-control-backend-patterns.md) and [risk-control-backend-interview-chain.md](./risk-control-backend-interview-chain.md).
 
 ### Frontend
 
@@ -67,15 +72,11 @@ Signals:
 
 - requirement design, roadmap, user problem, feature spec, cross-team delivery, KPI, PRD
 
-When this family is selected, also apply [product-management-template.md](./product-management-template.md).
-
 ### Sales
 
 Signals:
 
 - pipeline, conversion, customer acquisition, contract, revenue, upsell, key account
-
-When this family is selected, also apply [sales-template.md](./sales-template.md).
 
 ### Operations / Self-Media Operations
 
@@ -83,7 +84,12 @@ Signals:
 
 - growth, activity planning, content strategy, retention, funnel, traffic, self-media, followers
 
-When this family is selected, also apply [operations-template.md](./operations-template.md).
+Sub-signals worth routing explicitly:
+
+- content operations, editorial operations, creator operations, platform distribution, topic planning
+- gap periods supported by sustained personal creation or account operations
+
+When these sub-signals dominate, apply the segmented guidance in [content-operations-patterns.md](./content-operations-patterns.md) and [content-operations-interview-chain.md](./content-operations-interview-chain.md).
 
 ## Conflict Handling
 
@@ -91,3 +97,4 @@ When this family is selected, also apply [operations-template.md](./operations-t
 - If the resume mixes product and operations, pick `product-management` only when ownership over problem definition and solution design is clear.
 - If the resume mixes sales and operations, prefer `sales` only when quota, conversion, or deal-making is central.
 - If the user explicitly states a target role, respect it unless the materials clearly contradict it. In that case, note the mismatch and ask once for confirmation.
+- If the candidate looks like generic backend or generic operations at first, but the strongest project logic depends on segmented-role signals, keep the base family and activate the corresponding segmented reference files.

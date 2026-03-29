@@ -7,11 +7,6 @@
 - Company or business line:
 - Job family:
 - Tech or work context:
-- Is recent core experience:
-- Gap or non-standard period:
-- Narrative position:
-- Timeline weighting note:
-- Resume from stage:
 
 ## One-Line Definition
 
@@ -57,8 +52,8 @@
 ## Packaging Goal
 
 - What capability this project should signal:
-- Packaging-plan role:
-- Preferred version:
+- Why this should be a main story, support story, or gap explanation:
+- Why this ordering is better than competing stories:
 
 ## Missing Support
 
@@ -77,6 +72,13 @@
 - Bullet 1:
 - Bullet 2:
 
+## Packaging Explanation Layer
+
+- Role-fit explanation:
+- Ranking rationale:
+- Evidence ceiling:
+- Why stronger wording would become unsafe:
+
 ## Interview-Ready Story
 
 - Background:
@@ -84,6 +86,7 @@
 - Challenge:
 - Solution:
 - Result:
+- Likely pressure follow-up chain:
 
 ## Review Output
 
@@ -92,7 +95,4 @@
 - Top review concerns:
 - Required supplements:
 - Downgrade wording if needed:
-- Packaging-plan verdict:
-- Memory writeback status:
-- Memory writeback note:
-- 回写到项目卡片:
+- Stage blocker if not ready to advance:

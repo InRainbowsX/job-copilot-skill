@@ -9,7 +9,9 @@ description: Use when improving, packaging, or stress-testing an internet job se
 
 Run internet job-search coaching as a controlled system, not as one-off copy editing. Infer the target role from the candidate's materials, deepen the strongest projects, upgrade the narrative, then pressure-test the result through a separate review pass before treating any wording as final.
 
-The core pattern is `简历包装教练先写，审核官再审`. The packaging coach pulls signal out of weak or incomplete material; the review officer challenges unsupported claims, over-packaging, and role mismatch while showing the safest way to strengthen a draft. Keep a running `memory.md` so future sessions resume from the candidate's actual state.
+The core pattern is `Agent 1 writes, Agent 2 reviews`. Agent 1 pulls signal out of weak or incomplete material; Agent 2 challenges unsupported claims, over-packaging, and role mismatch. Keep a running `memory.md` so future sessions resume from the candidate's actual state.
+
+The system must also explain itself. It is not enough to output a stronger package. The user should be able to understand why a project became the main story, why another project stayed secondary, why a gap-period item was downgraded, and what would be needed to advance to the next stage.
 
 ## When to Use
 
@@ -31,301 +33,28 @@ Do not use this skill for:
 
 Follow this sequence every time. Do not skip directly to rewritten bullets unless the user explicitly asks for a draft first.
 
-The user should be able to tell where they are in the process at a glance. Keep the workflow visible instead of silently jumping from intake to final bullets.
-
 | Step | Goal | Output |
 |---|---|---|
 | `1. Intake` | Read resume, self-introduction, and any JD or target role hints | Candidate snapshot |
 | `2. Role Routing` | Infer main and secondary job track from the materials | Selected template family |
 | `3. Agent 1 Deep-Dive` | Ask targeted questions, extract missing project detail, propose stronger positioning | Project packaging cards, draft wording |
-| `4. 审核官 Review` | Audit truthfulness, role fit, explainability, and interview survivability | Risk report, missing-info requests, downgrade advice |
+| `4. Agent 2 Review` | Audit truthfulness, role fit, explainability, and interview survivability | Risk report, missing-info requests, downgrade advice |
 | `5. Consolidate` | Keep only reviewed wording and summarize what still needs work | Resume sections, self-introduction, action list |
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
 
-### Real Resume Decomposition Report
+At the end of any stage that changes the user's next action, provide a short stage refresh containing:
 
-Before stable packaging, the skill must first understand the resume as a structured system rather than as disconnected bullets.
+- current stage
+- why the process is still in that stage
+- blocker or missing support
+- condition to exit the stage
 
-Use [resume-decomposition-report.md](./references/resume-decomposition-report.md).
-
-The `真实简历系统拆解报告` is the shared input between the `简历包装教练` and the `审核官`.
-
-Rules:
-
-- Build or summarize the decomposition report before treating packaging as stable
-- Use the report to explain what the skill already understands from the resume before rewriting major sections
-- Keep the decomposition report separate from final resume copy; it is an analysis layer, not the final deliverable
-- The report should be reusable across later packaging, review, interview, and memory updates
-- If the resume is still ambiguous, the report should make the ambiguity explicit instead of hiding it behind polished wording
-
-Minimum decomposition dimensions:
-
-- current analysis date and target-role routing
-- timeline breakdown
-- `主叙事 / 辅助叙事 / 补充亮点`
-- metric-caliber and ownership-risk notes
-- gap / non-standard experience conclusion
-- transferable capabilities
-- interview pressure points
-- next deep-dive priorities
-
-The decomposition report should help the user feel that the skill has actually understood the resume before packaging it.
-
-### Visible Stage Model
-
-Map the workflow to four user-facing stages and keep those stage names stable:
-
-| 阶段 | 覆盖步骤 | 用途 |
-|---|---|---|
-| `阶段 1：简历诊断与初步包装` | `1. Intake` + `2. Role Routing` + early `3. Agent 1 Deep-Dive` | 识别岗位方向、指出核心问题、决定优先包装的经历 |
-| `阶段 2：项目深挖与补强` | remaining `3. Agent 1 Deep-Dive` | 围绕高潜力项目追问背景、职责、难点、结果和支撑细节 |
-| `阶段 3：包装定稿与讲述稿生成` | `4. 审核官 Review` + `5. Consolidate` | 在审核通过后输出可用表述、风险提醒和讲述版本 |
-| `阶段 4：模拟面试与错题复盘` | `6. Train` + `7. Persist` | 基于已审核版本进行面试训练、记录错题并更新长期记忆 |
-
-Do not introduce alternate stage names unless the repository explicitly adds them later.
-
-### Turn-Level Status Block
-
-The status block is required, not optional.
-
-At the start of each meaningful response, include a short status block that makes the workflow explicit.
-
-You must begin the response with this status block in all of these cases:
-
-- the first meaningful response after the user provides a resume, self-introduction, or target role
-- any response that moves the workflow into a new stage
-- any response where the user asks for rewriting but the skill still needs diagnosis, routing, or follow-up questions
-
-Minimum fields:
-
-- `当前阶段`
-- `当前任务`
-- `下一步推荐`
-
-Rules for the status block:
-
-- Keep it concise: one short line or one short bullet per field is enough
-- Keep it conversational, not report-heavy
-- Put it before deeper analysis or rewritten content
-- Match the real workflow state; do not claim later stages are in progress if the skill is still collecting facts
-- When still in early packaging, explicitly signal that deeper project follow-up or interview training comes later
-- Do not skip it just because the user asked for a faster result
-- If the skill is still in diagnosis or deep-dive, say so first rather than acting as if final packaging is already underway
-
-### Resume Packaging Coach Flow
-
-The resume packaging coach must diagnose before rewriting. Do not treat first-pass packaging as surface wording polish.
-
-Before stable final wording, the packaging coach must produce a packaging plan.
-
-Use [packaging-plan-template.md](./references/packaging-plan-template.md).
-
-Use this packaging order:
-
-1. Produce a `真实简历系统拆解报告` or a concise decomposition summary first
-2. Identify the strongest 1 to 3 experiences worth packaging first
-3. Explain what is currently weak in those experiences
-4. Produce a packaging plan that sets the main narrative, supporting narrative, and per-experience packaging goal
-5. Ask for missing support such as scope, ownership, baseline, timeline, or results
-6. Let the review officer challenge the plan itself when the path is too aggressive or too weak
-6. Only then produce stronger wording or a more stable draft
-
-If the user asks for a direct rewrite but the supporting detail is still weak:
-
-- do not skip diagnosis
-- do not skip the decomposition layer
-- do not skip the packaging-plan layer
-- do not jump straight to a polished final version
-- give a provisional draft only if it is clearly marked as unstable
-- make the missing information explicit before treating any wording as ready
-
-Before major packaging, the packaging coach should be able to answer in plain language:
-
-- what the resume is mainly about
-- which experience carries the current main narrative
-- which items are only support or supplemental highlights
-- where the ownership, metric, or timeline risks are
-- what should be deepened next
-
-Minimum packaging output per experience:
-
-- `当前问题`
-- `推荐包装方向`
-- `改写示例`
-- `补充建议 / 风险提醒`
-
-When information is incomplete, prioritize follow-up questions over shallow wording upgrades.
-
-The packaging plan should make these decisions explicit before stable rewriting:
-
-- the main packaging direction
-- the narrative order across experiences
-- what each experience should signal
-- what must be supplemented
-- what must be downgraded
-- whether there is a safer and a stronger version worth showing side by side
-
-### Packaging Result Structure
-
-Packaging output should read like `问题 + 方向 + 结果 + 风险`, not like a single rewritten paragraph dropped on the user.
-
-Use this standard structure whenever the packaging coach presents a strengthened version of an experience:
-
-- `当前问题`: what is weak, vague, misplaced, or under-supported right now
-- `推荐方向`: what capability, narrative angle, or value signal the experience should emphasize
-- `改写结果`: the stronger draft wording or provisional rewrite
-- `补充建议`: what facts, baselines, ownership detail, or support should be collected next
-- `风险提醒`: what still sounds over-packaged, unsupported, or likely to break under follow-up
-
-Keep it concise and conversational, but do not collapse these ideas into a single bullet.
-
-Boundary with the review officer:
-
-- the packaging coach owns `当前问题`、`推荐方向`、`改写结果`、`补充建议`
-- the review officer owns formal risk grading, current level judgment, upgrade calibration, safer stronger wording after the review pass, and whether the packaging plan itself is sound
-
-If support is still weak, the packaging coach may recommend a softer draft before the review officer decides whether the wording can stand.
+In long conversations, refresh this more explicitly instead of relying on implication alone.
 
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
-
-## Timeline Priority
-
-Evaluate experience on a timeline before locking the main narrative. Do not choose the main story only because one older project sounds brighter on paper.
-
-Default weighting rules:
-
-- Anchor the timeline analysis to the current session date, not to a vague sense of "recent" or "too far"
-- If the current date is known, state it explicitly in the analysis before judging which experience should carry the main narrative
-- Compare actual experience time ranges against the current date whenever the timeline materially affects the conclusion
-- In social-hire contexts, prioritize recent 1 to 3 year experience first
-- Recent experience should normally outrank distant campus experience when both can support the target role
-- Role relevance still matters; recent but irrelevant experience should not automatically beat weaker but clearly relevant experience
-- The main narrative should answer: what is this candidate doing most recently, and does it support the target role now?
-
-Use campus experience as the main narrative only when at least one of these is true:
-
-- the recent work is too weak to support the target role
-- the recent work is clearly unrelated and cannot be reframed without distortion
-- the candidate is still close enough to an entry-level transition that campus work is the strongest real signal
-
-Downgrade campus experience to supporting evidence when:
-
-- the candidate is in a social-hire context and recent work can carry the role
-- the campus project is strong but too far from the current hiring moment
-- it works better as proof of early potential, content sense, or foundational skills than as the present-day main story
-
-When timeline weighting affects the result, make it explicit in the analysis:
-
-- what current date or hiring moment the analysis is using
-- what the relevant time ranges are for the newer work and the older experience
-- which experience is the current main narrative
-- which older experience is retained as supporting evidence
-- why the older experience was downgraded or kept
-
-If the case is borderline, do not just say an older experience is "too far" or "still usable." Explain that judgment with dates or relative distance from the current hiring moment.
-
-## High-Quality Resume Signal Library
-
-Use a role-specific signal library instead of relying on generic beautification. The library is not a dump of raw resume samples; it is a structured reference for what stronger internet-job resumes usually signal and how they organize that signal.
-
-Use [high-quality-signal-library.md](./references/high-quality-signal-library.md).
-
-The v1 library covers:
-
-- 后端
-- 产品
-- 运营
-- 销售
-
-Each family in the library should be used for four things:
-
-- `高质量信号`: what makes the experience read as stronger for that role
-- `高质量表达结构`: how strong bullets or stories are usually organized
-- `结果表达策略`: how outcomes should be expressed more professionally and credibly
-- `包装升级策略`: how to move ordinary experience up one level without fabricating
-
-How to use it:
-
-- 简历包装教练 uses it to choose the packaging angle, decide which follow-up questions matter most, and avoid shallow rewriting
-- 审核官 uses it to judge the current level of a draft, spot missing high-value signals, and suggest a safer stronger version
-
-## Gap And Non-Standard Experience Recognition
-
-Do not treat every gap as a blank period, and do not treat every non-company experience as fake employment.
-
-When the resume timeline shows a gap, or the candidate mentions a period without a fixed employer, identify that period before deciding how to package it.
-
-Recognition rules:
-
-- First determine whether the period is a true blank gap, a non-standard experience, or a mix of both
-- Do not automatically convert personal projects, writing, freelancing, self-media work, study periods, or transition periods into formal employment
-- Do not automatically collapse those periods into an empty gap either
-- If the timeline is unclear, ask for the start date, end date, and what the candidate was doing during that period before packaging it
-
-Minimum classification buckets:
-
-- `纯空档`: no sustained work, study, or project activity can be shown yet
-- `学习型 gap`: the candidate mainly studied, trained, prepared for transition, or built foundational knowledge
-- `项目型 gap`: the candidate worked on independent projects, freelance work, consulting, or hands-on side work
-- `创作型 gap`: the candidate spent the period on sustained creative output such as writing, content creation, or independent publishing
-- `混合型 gap`: the period includes a meaningful mix of study, project work, and non-standard output
-
-For every classified gap or non-standard period, make the analysis explicit about:
-
-- the approximate time range
-- whether the period is a gap, a non-standard experience, or both
-- which classification bucket it belongs to
-- what facts still need confirmation before any stronger packaging is attempted
-
-This issue only covers recognition and classification. Do not jump ahead to full packaging language for the gap period unless another rule set explicitly allows it.
-
-## Gap Packaging Principles
-
-When a gap or non-standard period has already been identified and classified, the next goal is not to erase the gap. The goal is to explain it in a way that is truthful, stable, and relevant to the target role.
-
-Core packaging rules:
-
-- Treat the period as a gap with effective input, not as fake full-time employment
-- Do not invent company names, formal titles, teams, or commercial outcomes
-- Do not package the period as the candidate's main career highlight unless the support is unusually strong
-- Make it clear that the purpose is to reduce negative ambiguity, not to pretend the gap never existed
-
-Use gap packaging only when at least one of these is true:
-
-- the candidate had sustained output during the period
-- the candidate can describe real work, process, and continuity
-- the period produced transferable skills that clearly connect to the target role
-
-Resume-writing rules for packaged gap periods:
-
-- Prefer placing the period under `个人项目`, `补充经历`, or an equivalent non-employment section
-- Use labels such as `个人内容项目`, `独立项目`, or `个人创作项目` when that is what the work actually was
-- Focus on continuity, output, method, and transferable capability
-- If metrics are weak, use output and process clarity instead of invented impact claims
-- Explicitly avoid presenting the period as a formal company job when no formal employer existed
-
-Interview explanation rules for packaged gap periods:
-
-- First acknowledge the period honestly as a gap or non-standard work period
-- Then explain what the candidate was continuously doing during that time
-- Then explain what was produced, learned, or iterated on
-- Finally connect that period back to the target role and why it still matters now
-
-For creative or personal-project gaps, such as writing fiction or running a personal content project:
-
-- frame the period as sustained personal output, not fake institutional employment
-- emphasize continuity, content process, audience feedback, self-management, and transferable skills
-- avoid escalating it into professional scale unless the candidate can support real volume, traction, or monetization
-
-When giving wording suggestions, provide both:
-
-- a safer resume-ready version
-- a safer interview explanation version
-
-Always keep the explanation aligned with the earlier gap classification. Do not package a period as `项目型` or `创作型` in one place and then explain it like formal employment somewhere else.
 
 Supported template families:
 
@@ -342,13 +71,10 @@ Supported template families:
 
 Use the routing and evaluation guidance in [job-families.md](./references/job-families.md).
 
-Current role-specific template coverage:
+When the selected family has a segmented-role reference, apply that reference in addition to the shared family guidance. Current segmented references:
 
-- Product Management: [product-management-template.md](./references/product-management-template.md)
-- Sales: [sales-template.md](./references/sales-template.md)
-- Operations: [operations-template.md](./references/operations-template.md)
-- Backend: [backend-template.md](./references/backend-template.md)
-- Other job families: use the shared workflow plus family routing rules until dedicated templates are added
+- `operations` -> [content-operations-patterns.md](./references/content-operations-patterns.md)
+- `backend` in risk-control / anti-crawler contexts -> [risk-control-backend-patterns.md](./references/risk-control-backend-patterns.md)
 
 ## Dual-Agent Contract
 
@@ -360,10 +86,10 @@ Responsibilities:
 
 - Clarify the candidate's target role, seniority, and strongest stories
 - Select the highest-upside projects instead of treating every line item equally
-- Diagnose what is weak before trying to beautify wording
 - Ask for business context, scope, actions, constraints, tradeoffs, metrics, and lessons
 - Build a candidate project packaging card before writing final bullets
 - Produce stronger resume wording, self-introduction drafts, and interview-ready storylines
+- Explain why each chosen story is ranked as main, support, or gap-explanation material
 
 Agent 1 is allowed to:
 
@@ -371,15 +97,16 @@ Agent 1 is allowed to:
 - Reorder facts to emphasize impact
 - Convert vague participation into precise contribution language when the candidate can explain it
 - Suggest missing support details that must be confirmed
+- Use segmented-role pattern references when they materially change what "strong" looks like
 
 Agent 1 is not allowed to:
 
 - Invent projects, ownership, metrics, or tech the candidate cannot defend
 - Treat team outcomes as personal outcomes without attribution
 - Hide uncertainty; mark unconfirmed items as gaps
-- Treat first-pass packaging as pure rewriting when diagnosis and follow-up are still missing
+- Output a stronger ranking without explaining the reason for that ranking
 
-### 审核官（Review And Calibrate）
+### Agent 2: Review And Calibrate
 
 Responsibilities:
 
@@ -388,39 +115,28 @@ Responsibilities:
 - Judge role-template fit: does this read like a real candidate for the routed job family?
 - Identify interview failure points: what breaks under 3 to 5 follow-up questions?
 - Force a downgrade when the candidate cannot support a stronger version
-- Judge the current level of the wording instead of only labeling it risky
-- Show the safest upgrade path when the material can still be strengthened
+- Challenge ranking logic and explanation quality, not just wording quality
 
-审核官输出结论标签:
+Agent 2 outputs:
 
 - `pass`
 - `pass after supplement`
 - `rewrite required`
 
-For each project, the review output must also produce:
+For each project, Agent 2 must also produce:
 
-- decision label
-- `风险等级`
-- `当前层级`
 - Missing information to collect
-- `不足点`
-- `升级建议`
-- `可守的更优表达`
 - Risk notes
 - Safer downgrade wording when needed
 - Interview pressure points
+- Ranking rationale
 
-Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist. The rubric defines the minimum checks; this section defines the user-visible review output shape.
+Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
 
+When the routed case matches a segmented role, Agent 2 should also use the relevant segmented reference:
 
-When the routed family is sales, also apply the sales-specific rules in [sales-template.md](./references/sales-template.md).
-
-When the routed family is product management, also apply the product-specific rules in [product-management-template.md](./references/product-management-template.md).
-
-When the routed family is operations, including self-media operations, also apply the operations-specific rules in [operations-template.md](./references/operations-template.md).
-
-When the routed family is backend or server-side, also apply the backend-specific rules in [backend-template.md](./references/backend-template.md).
-
+- [content-operations-patterns.md](./references/content-operations-patterns.md)
+- [risk-control-backend-patterns.md](./references/risk-control-backend-patterns.md)
 
 ## Project Packaging Card
 
@@ -431,10 +147,6 @@ Use [project-packaging-card-template.md](./assets/project-packaging-card-templat
 Minimum fields:
 
 - Project identity and time range
-- Whether the experience is recent core experience
-- Whether the experience belongs to a gap or non-standard period
-- Narrative position: main story, supporting story, or supplemental highlight
-- Timeline weighting note
 - One-line project definition
 - Business background and goal
 - Candidate responsibility boundary
@@ -442,14 +154,15 @@ Minimum fields:
 - Main challenge and solution
 - Result or value
 - Packaging goal
-- Packaging-plan role
-- Preferred version
+- Packaging explanation layer
 - Missing support
 - Risk notes
 - Resume-ready wording
 - Interview-ready explanation
 
 Do not allow a project into the final resume if the card is still missing basic scope, ownership, or support.
+
+Do not allow a ranked packaging plan into the final answer if it still cannot explain why that ranking is better than alternative story orders.
 
 ## Long-Term Memory
 
@@ -459,6 +172,7 @@ The memory file should track:
 
 - Candidate profile and job-search targets
 - Current approved resume direction
+- Approved ranking logic and current stage blockers
 - Project archive with statuses
 - Approved resume wording and self-introduction
 - Review risks and banned phrasing
@@ -476,36 +190,6 @@ Write only durable information:
 
 Do not dump raw conversation transcripts into memory.
 
-## Flow-State And Memory Link
-
-Stage labels must stay visible in the conversation, but not every stage detail belongs in long-term memory.
-
-Use this boundary:
-
-- `当前阶段 / 当前任务 / 下一步推荐` are session-facing state and should be shown in the conversation
-- reviewed milestone decisions should be written into memory when they will matter next session
-- project-level progress should live in the project packaging card first, then be summarized into memory only when it becomes durable
-
-Persist into memory when the result is stable enough to reuse:
-
-- current approved workflow stage for the candidate
-- whether the next session should resume from stage 1, 2, 3, or 4
-- main narrative decisions, downgraded older experiences, and gap explanations
-- approved wording, banned phrasing, and still-open follow-ups
-
-Do not persist into memory:
-
-- every intermediate status block
-- every temporary packaging guess
-- every back-and-forth clarification that has not yet become a stable conclusion
-
-Session resume rule:
-
-- read memory first
-- detect the last durable workflow stage
-- resume from that stage unless the new user request clearly resets the workflow
-- use project cards to recover project-level context before asking duplicate questions
-
 ## Mock Interview Pattern
 
 Use mock interviews only after at least one reviewed project version exists. Tie every interview back to the current approved narrative, not the original messy resume.
@@ -521,10 +205,16 @@ For every weak answer, record:
 
 - The question
 - What failed
+- Which pressure chain exposed the failure
 - Better answer structure
 - What to study or clarify next
 
 Log these in [interview-error-log-template.md](./assets/interview-error-log-template.md).
+
+When available, use segmented pressure chains instead of generic follow-up logic:
+
+- [content-operations-interview-chain.md](./references/content-operations-interview-chain.md)
+- [risk-control-backend-interview-chain.md](./references/risk-control-backend-interview-chain.md)
 
 ## Quick Reference
 
@@ -537,9 +227,13 @@ If the user says this:
 - "Mock interview me"  
   Use the latest reviewed wording, not raw resume text.
 - "I want stronger packaging"  
-  Increase clarity and ownership only until the review officer can still defend it.
+  Increase clarity and ownership only until Agent 2 can still defend it.
+- "Why is this the main project?"
+  Explain the ranking using role relevance, evidence strength, time recency, and interview survivability.
 - "I don't want to repeat myself next session"  
   Read and update `memory.md`.
+- "Why are we still here?"
+  Refresh the current stage, blocker, and exit condition before continuing.
 
 ## Example
 
@@ -549,16 +243,13 @@ User request:
 
 Apply the skill like this:
 
-1. Start with a status block showing `阶段 1：简历诊断与初步包装`, the current task, and the next recommended step.
-2. Route the materials to `product-management` as primary and `operations` as secondary if both are truly present.
-3. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
-4. Move to `阶段 2：项目深挖与补强` once the strongest project is selected and deeper follow-up begins.
-5. Fill a project packaging card for the strongest project.
-6. Run the review officer pass to check inflated ownership, missing metrics, weak strategic logic, and the next safe upgrade path.
-7. Move to `阶段 3：包装定稿与讲述稿生成` only after the reviewed version is stable enough to keep.
-8. Keep only the reviewed bullets in the rewritten resume and self-introduction.
-9. Create a targeted mock interview focused on project tradeoffs, priorities, and results, then move to `阶段 4：模拟面试与错题复盘`.
-10. Update `memory.md` with approved wording, weak points, and next drills.
+1. Route the materials to `product-management` as primary and `operations` as secondary if both are truly present.
+2. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
+3. Fill a project packaging card for the strongest project.
+4. Explain why that project should be the main story instead of another candidate project.
+5. Run Agent 2 review to check inflated ownership, missing metrics, weak strategic logic, and whether the ranking rationale holds up.
+6. Keep only the reviewed bullets in the rewritten resume and self-introduction.
+7. Add a short stage refresh and update `memory.md` with approved wording, weak points, next drills, and current blocker if any.
 
 ## Common Mistakes
 
@@ -566,7 +257,8 @@ Apply the skill like this:
 |---|---|
 | Rewriting the whole resume before clarifying the role | Route the candidate first, then choose the correct template family |
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
-| Letting Agent 1's strongest wording go straight into final output | Always run the review officer pass first |
+| Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
+| Giving a ranked packaging plan with no explanation | Explain why the main story wins on role fit, evidence, and survivability |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
@@ -580,6 +272,8 @@ Stop and recalibrate when any of these appear:
 - A metric appears with no source or explanation
 - Ownership grows while the candidate's explanation shrinks
 - The role template changes but the review rubric does not
+- The main-story ranking changes but no one explains why
+- The conversation passes 100+ turns and the current stage is only implied
 - Memory starts storing unverified claims as facts
 
 When a red flag appears, ask for missing facts or downgrade the wording.
