@@ -213,6 +213,15 @@ Log these in [interview-error-log-template.md](./assets/interview-error-log-temp
 
 ## Quick Reference
 
+After completing a user's explicit request, do not stop at the artifact alone. Add a concrete judgment about the result.
+
+That judgment should state:
+
+- how strong or weak the result is
+- whether it meets the current stage standard
+- the main shortfalls that still matter
+- whether the workflow should continue, pause, or stay in the current stage
+
 If the user says this:
 
 - "My resume is too ordinary"  
@@ -256,6 +265,7 @@ Apply the skill like this:
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
 | Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
 | Matching the JD but still sounding like a task list | Rebuild the section around strongest-first value bullets |
+| Returning a draft without saying what you think of it | Add a concrete quality judgment after the deliverable |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
@@ -269,6 +279,7 @@ Stop and recalibrate when any of these appear:
 - A metric appears with no source or explanation
 - Ownership grows while the candidate's explanation shrinks
 - Every bullet starts with a duty verb and none show why the work mattered
+- The system completed the user's ask but never said whether the result is actually good enough
 - The user asked for an excellent sample, but the response skipped straight to editing the current draft
 - The role template changes but the review rubric does not
 - Memory starts storing unverified claims as facts

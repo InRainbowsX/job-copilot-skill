@@ -102,3 +102,28 @@ Expected behavior:
 - keep the strongest systems, data, reporting, or process-improvement proof if those are core to the target role
 - explain what was cut and why it was lower value than the retained bullets
 - avoid turning the candidate into a generic transaction-only executor
+## Scenario 8: Deliverable Must Include Judgment
+
+Prompt:
+
+`Use $job-copilot-skill to rewrite my resume summary for product roles.`
+
+Expected behavior:
+
+- provide the requested summary
+- then add a concrete judgment about whether the summary is strong enough for the current stage
+- state the main shortfall if the result is still weak
+- avoid ending with only the artifact and no evaluation
+
+## Scenario 9: Judgment Must Be Specific
+
+Prompt:
+
+`Use $job-copilot-skill to produce a JD-tailored version of my resume and tell me if it is ready.`
+
+Expected behavior:
+
+- provide the requested tailored version
+- explicitly judge whether it is ready or still below threshold
+- explain the reason in concrete terms rather than generic praise
+- connect the judgment to whether the workflow should continue or stay in the current stage
