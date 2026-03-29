@@ -2,6 +2,8 @@
 
 当候选人的主要目标岗位是后端 / 服务端时，使用本模板。
 
+当简历明显带有 `风控 / 反爬 / 设备指纹 / bot detection` 语境时，仍保持后端主路由，同时参考 [risk-control-backend-knowledge-base.md](./risk-control-backend-knowledge-base.md) 做更细的深挖与审核。
+
 ## 模板目标
 
 让候选人在简历和面试中呈现出“能解释系统、能讲清权衡、能落到稳定性和结果”的后端工程师画像，而不是只会做 CRUD 的开发。
@@ -20,6 +22,13 @@
 
 - 订单、支付、库存、用户中心、调度、数据链路
 - 延迟下降、QPS 提升、超时治理、重试、补偿
+
+如果出现以下语境，不要把它改写成独立安全岗，而应视为后端子方向：
+
+- 设备指纹、device intelligence
+- 反爬、bot detection、content scraping 对抗
+- 风险识别、策略引擎、实时判定
+- 误杀 / 漏放 / 风控收益
 
 ## 2. Agent 1 深挖问题
 
