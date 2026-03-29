@@ -62,6 +62,7 @@ Challenge rewrites where:
 - every bullet has equal weight and no strongest proof appears first
 - the section matches JD keywords but still sounds like checklist work
 - systems, data, reporting, policy, or process work are reduced to low-value admin wording
+- compression deletes a capability line that materially differentiates the candidate for the routed role
 - the rewrite says what happened but not why it mattered
 
 ## Risk Levels
@@ -82,4 +83,5 @@ For each project card, output:
 - downgrade wording if needed
 - likely interview pressure points
 - strongest value proof
+- capability line accidentally removed
 - whether the section still reads like a duty list

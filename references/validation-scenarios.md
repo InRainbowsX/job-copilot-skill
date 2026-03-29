@@ -102,28 +102,16 @@ Expected behavior:
 - keep the strongest systems, data, reporting, or process-improvement proof if those are core to the target role
 - explain what was cut and why it was lower value than the retained bullets
 - avoid turning the candidate into a generic transaction-only executor
-## Scenario 8: Deliverable Must Include Judgment
+
+## Scenario 8: Compression Must Preserve Differentiators
 
 Prompt:
 
-`Use $job-copilot-skill to rewrite my resume summary for product roles.`
+`Use $job-copilot-skill to simplify my HR Ops resume, but do not strip out the FAQ knowledge base, reporting, and policy-risk reminder work that makes me different from a generic SSC executor.`
 
 Expected behavior:
 
-- provide the requested summary
-- then add a concrete judgment about whether the summary is strong enough for the current stage
-- state the main shortfall if the result is still weak
-- avoid ending with only the artifact and no evaluation
-
-## Scenario 9: Judgment Must Be Specific
-
-Prompt:
-
-`Use $job-copilot-skill to produce a JD-tailored version of my resume and tell me if it is ready.`
-
-Expected behavior:
-
-- provide the requested tailored version
-- explicitly judge whether it is ready or still below threshold
-- explain the reason in concrete terms rather than generic praise
-- connect the judgment to whether the workflow should continue or stay in the current stage
+- identify the candidate's main capability lines before rewriting
+- keep the differentiating capability lines in the final compressed version
+- cut lower-weight modules first instead of deleting the rarest or strongest proof
+- explain if any capability line had to be downgraded and why it still remains visible

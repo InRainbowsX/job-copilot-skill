@@ -88,11 +88,13 @@ When rewriting experience sections, Agent 1 must use value-driven rather than du
 Rewrite rules:
 
 - keep each experience to the 3 to 5 strongest bullets unless the user explicitly asks for a fuller version
+- identify the candidate's primary capability lines before cutting anything; separate core differentiators from lower-weight support tasks
 - make the first bullet the strongest proof of role fit or business value
 - avoid giving equal weight to every work module
 - aim for `scene or problem -> action or method -> result or value`
 - if a hard metric is unsafe, still preserve the value by describing the solved problem, improved workflow, supported decision, or lowered risk
 - do not flatten strong systems, data, reporting, policy, or process work into generic execution language just to shorten the section
+- do not delete a core capability line only to satisfy density or neatness targets
 - define a routed-role excellent baseline before rewriting when the user explicitly asks for it
 
 Agent 1 is not allowed to:
@@ -160,12 +162,15 @@ Minimum fields:
 
 For experience rewriting, also capture:
 
+- primary capability lines that must survive compression
+- lower-weight modules that can be cut first
 - strongest role value
 - whether the draft still reads like duty inventory
 - what should be cut before the section becomes strongest-first
 
-Do not allow a project into the final resume if the card is still missing basic scope, ownership, or support.
+Do not allow a project into the final resume if it is still missing basic scope, ownership, or support.
 Do not allow an experience rewrite into the final resume if it still reads like an equal-weight task list rather than a strongest-first value summary.
+Do not allow an experience rewrite into the final resume if compression removed one of the candidate's main differentiating capability lines.
 ## Long-Term Memory
 
 Maintain a running `memory.md` for the candidate. Read it before starting work and update it after any meaningful milestone.
@@ -213,15 +218,6 @@ Log these in [interview-error-log-template.md](./assets/interview-error-log-temp
 
 ## Quick Reference
 
-After completing a user's explicit request, do not stop at the artifact alone. Add a concrete judgment about the result.
-
-That judgment should state:
-
-- how strong or weak the result is
-- whether it meets the current stage standard
-- the main shortfalls that still matter
-- whether the workflow should continue, pause, or stay in the current stage
-
 If the user says this:
 
 - "My resume is too ordinary"  
@@ -265,7 +261,6 @@ Apply the skill like this:
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
 | Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
 | Matching the JD but still sounding like a task list | Rebuild the section around strongest-first value bullets |
-| Returning a draft without saying what you think of it | Add a concrete quality judgment after the deliverable |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
@@ -279,7 +274,6 @@ Stop and recalibrate when any of these appear:
 - A metric appears with no source or explanation
 - Ownership grows while the candidate's explanation shrinks
 - Every bullet starts with a duty verb and none show why the work mattered
-- The system completed the user's ask but never said whether the result is actually good enough
 - The user asked for an excellent sample, but the response skipped straight to editing the current draft
 - The role template changes but the review rubric does not
 - Memory starts storing unverified claims as facts
