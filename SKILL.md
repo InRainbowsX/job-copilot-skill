@@ -11,8 +11,6 @@ Run internet job-search coaching as a controlled system, not as one-off copy edi
 
 The core pattern is `Agent 1 writes, Agent 2 reviews`. Agent 1 pulls signal out of weak or incomplete material; Agent 2 challenges unsupported claims, over-packaging, and role mismatch. Keep a running `memory.md` so future sessions resume from the candidate's actual state.
 
-The system must also explain itself. It is not enough to output a stronger package. The user should be able to understand why a project became the main story, why another project stayed secondary, why a gap-period item was downgraded, and what would be needed to advance to the next stage.
-
 ## When to Use
 
 Use this skill when the user wants any of the following:
@@ -43,43 +41,6 @@ Follow this sequence every time. Do not skip directly to rewritten bullets unles
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
 
-At the end of any stage that changes the user's next action, provide a short stage refresh containing:
-
-- current stage
-- why the process is still in that stage
-- blocker or missing support
-- condition to exit the stage
-
-In long conversations, refresh this more explicitly instead of relying on implication alone.
-
-## Stage Release Gate
-
-Stage names alone are not enough. A later stage may begin only when the current stage is both complete and strong enough to support the next one.
-
-Before moving from resume packaging into mock interview or talking-point generation, the system must explicitly decide whether the resume is ready to advance.
-
-Minimum release conditions:
-
-- the target role direction is locked
-- the main story and support stories are stable enough to keep
-- at least one reviewed project version exists
-- the current version is strong enough to serve as a real interview baseline
-- major blockers are no longer at `rewrite required` level
-
-Blocked-release rule:
-
-- if the current version is still below the minimum release standard, do not advance
-- if Agent 2 outputs `rewrite required`, the release decision must be `blocked`
-- if the current version is only usable after major补充 or risk reduction, stay in the current stage and explain what still blocks release
-- the user may ask to skip ahead, but the system must still state that the stage is not released and why
-
-Required release output before stage advancement:
-
-- current rating or decision label
-- release decision: `released` or `blocked`
-- why the decision was made
-- what must be fixed before the next stage can start
-
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
@@ -99,11 +60,6 @@ Supported template families:
 
 Use the routing and evaluation guidance in [job-families.md](./references/job-families.md).
 
-When the selected family has a segmented-role reference, apply that reference in addition to the shared family guidance. Current segmented references:
-
-- `operations` -> [content-operations-patterns.md](./references/content-operations-patterns.md)
-- `backend` in risk-control / anti-crawler contexts -> [risk-control-backend-patterns.md](./references/risk-control-backend-patterns.md)
-
 ## Dual-Agent Contract
 
 Treat the system as two distinct passes, even if the environment only has one visible assistant.
@@ -117,7 +73,6 @@ Responsibilities:
 - Ask for business context, scope, actions, constraints, tradeoffs, metrics, and lessons
 - Build a candidate project packaging card before writing final bullets
 - Produce stronger resume wording, self-introduction drafts, and interview-ready storylines
-- Explain why each chosen story is ranked as main, support, or gap-explanation material
 
 Agent 1 is allowed to:
 
@@ -125,14 +80,24 @@ Agent 1 is allowed to:
 - Reorder facts to emphasize impact
 - Convert vague participation into precise contribution language when the candidate can explain it
 - Suggest missing support details that must be confirmed
-- Use segmented-role pattern references when they materially change what "strong" looks like
+
+When rewriting experience sections, Agent 1 must use value-driven rather than duty-driven structure.
+
+Rewrite rules:
+
+- keep each experience to the 3 to 5 strongest bullets unless the user explicitly asks for a fuller version
+- make the first bullet the strongest proof of role fit or business value
+- avoid giving equal weight to every work module
+- aim for `scene or problem -> action or method -> result or value`
+- if a hard metric is unsafe, still preserve the value by describing the solved problem, improved workflow, supported decision, or lowered risk
+- do not flatten strong systems, data, reporting, policy, or process work into generic execution language just to shorten the section
 
 Agent 1 is not allowed to:
 
 - Invent projects, ownership, metrics, or tech the candidate cannot defend
 - Treat team outcomes as personal outcomes without attribution
 - Hide uncertainty; mark unconfirmed items as gaps
-- Output a stronger ranking without explaining the reason for that ranking
+- return a JD-aligned rewrite that still reads like a work checklist
 
 ### Agent 2: Review And Calibrate
 
@@ -143,7 +108,7 @@ Responsibilities:
 - Judge role-template fit: does this read like a real candidate for the routed job family?
 - Identify interview failure points: what breaks under 3 to 5 follow-up questions?
 - Force a downgrade when the candidate cannot support a stronger version
-- Challenge ranking logic and explanation quality, not just wording quality
+- Challenge rewrites that match keywords but still read like duties instead of candidate value
 
 Agent 2 outputs:
 
@@ -157,15 +122,9 @@ For each project, Agent 2 must also produce:
 - Risk notes
 - Safer downgrade wording when needed
 - Interview pressure points
-- Ranking rationale
-- Release decision for the next stage
+- Strongest value proof
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
-
-When the routed case matches a segmented role, Agent 2 should also use the relevant segmented reference:
-
-- [content-operations-patterns.md](./references/content-operations-patterns.md)
-- [risk-control-backend-patterns.md](./references/risk-control-backend-patterns.md)
 
 ## Project Packaging Card
 
@@ -183,17 +142,20 @@ Minimum fields:
 - Main challenge and solution
 - Result or value
 - Packaging goal
-- Packaging explanation layer
 - Missing support
 - Risk notes
 - Resume-ready wording
 - Interview-ready explanation
 
+For experience rewriting, also capture:
+
+- strongest role value
+- whether the draft still reads like duty inventory
+- what should be cut before the section becomes strongest-first
+
 Do not allow a project into the final resume if the card is still missing basic scope, ownership, or support.
 
-Do not allow a ranked packaging plan into the final answer if it still cannot explain why that ranking is better than alternative story orders.
-
-Do not allow mock interview, self-introduction drilling, or final talking-point generation to start from a version that has not passed the release gate.
+Do not allow an experience rewrite into the final resume if it still reads like an equal-weight task list rather than a strongest-first value summary.
 
 ## Long-Term Memory
 
@@ -203,7 +165,6 @@ The memory file should track:
 
 - Candidate profile and job-search targets
 - Current approved resume direction
-- Approved ranking logic and current stage blockers
 - Project archive with statuses
 - Approved resume wording and self-introduction
 - Review risks and banned phrasing
@@ -236,16 +197,10 @@ For every weak answer, record:
 
 - The question
 - What failed
-- Which pressure chain exposed the failure
 - Better answer structure
 - What to study or clarify next
 
 Log these in [interview-error-log-template.md](./assets/interview-error-log-template.md).
-
-When available, use segmented pressure chains instead of generic follow-up logic:
-
-- [content-operations-interview-chain.md](./references/content-operations-interview-chain.md)
-- [risk-control-backend-interview-chain.md](./references/risk-control-backend-interview-chain.md)
 
 ## Quick Reference
 
@@ -256,15 +211,13 @@ If the user says this:
 - "Rewrite my self-introduction"  
   Read resume plus memory first, then align the intro with the strongest approved project angles.
 - "Mock interview me"  
-  Use the latest reviewed wording, not raw resume text; if the release gate is still blocked, say so and stay in the current stage.
+  Use the latest reviewed wording, not raw resume text.
 - "I want stronger packaging"  
   Increase clarity and ownership only until Agent 2 can still defend it.
-- "Why is this the main project?"
-  Explain the ranking using role relevance, evidence strength, time recency, and interview survivability.
+- "This still reads like job duties"
+  Rebuild each experience into strongest-first scene, action, and value bullets.
 - "I don't want to repeat myself next session"  
   Read and update `memory.md`.
-- "Why are we still here?"
-  Refresh the current stage, blocker, and exit condition before continuing.
 
 ## Example
 
@@ -277,10 +230,11 @@ Apply the skill like this:
 1. Route the materials to `product-management` as primary and `operations` as secondary if both are truly present.
 2. Ask Agent 1 questions that expose business goals, user problems, actions taken, cross-team coordination, and measurable results.
 3. Fill a project packaging card for the strongest project.
-4. Explain why that project should be the main story instead of another candidate project.
-5. Run Agent 2 review to check inflated ownership, missing metrics, weak strategic logic, and whether the ranking rationale holds up.
+4. Rewrite the strongest experience into a 3 to 5 bullet section that leads with the clearest value proof.
+5. Run Agent 2 review to check inflated ownership, missing metrics, weak strategic logic, and whether the rewrite still sounds like duties instead of value.
 6. Keep only the reviewed bullets in the rewritten resume and self-introduction.
-7. Add a short stage refresh and update `memory.md` with approved wording, weak points, next drills, and current blocker if any.
+7. Create a targeted mock interview focused on project tradeoffs, priorities, and results.
+8. Update `memory.md` with approved wording, weak points, and next drills.
 
 ## Common Mistakes
 
@@ -289,8 +243,7 @@ Apply the skill like this:
 | Rewriting the whole resume before clarifying the role | Route the candidate first, then choose the correct template family |
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
 | Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
-| Giving a ranked packaging plan with no explanation | Explain why the main story wins on role fit, evidence, and survivability |
-| Entering mock interview before the resume is ready | Block the stage release and finish resume work first |
+| Matching the JD but still sounding like a task list | Rebuild the section around strongest-first value bullets |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
@@ -303,10 +256,8 @@ Stop and recalibrate when any of these appear:
 - "Just write something impressive"
 - A metric appears with no source or explanation
 - Ownership grows while the candidate's explanation shrinks
+- Every bullet starts with a duty verb and none show why the work mattered
 - The role template changes but the review rubric does not
-- The main-story ranking changes but no one explains why
-- The conversation passes 100+ turns and the current stage is only implied
-- The user requests mock interview before the current version is strong enough to serve as the interview baseline
 - Memory starts storing unverified claims as facts
 
 When a red flag appears, ask for missing facts or downgrade the wording.
