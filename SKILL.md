@@ -52,6 +52,34 @@ At the end of any stage that changes the user's next action, provide a short sta
 
 In long conversations, refresh this more explicitly instead of relying on implication alone.
 
+## Stage Release Gate
+
+Stage names alone are not enough. A later stage may begin only when the current stage is both complete and strong enough to support the next one.
+
+Before moving from resume packaging into mock interview or talking-point generation, the system must explicitly decide whether the resume is ready to advance.
+
+Minimum release conditions:
+
+- the target role direction is locked
+- the main story and support stories are stable enough to keep
+- at least one reviewed project version exists
+- the current version is strong enough to serve as a real interview baseline
+- major blockers are no longer at `rewrite required` level
+
+Blocked-release rule:
+
+- if the current version is still below the minimum release standard, do not advance
+- if Agent 2 outputs `rewrite required`, the release decision must be `blocked`
+- if the current version is only usable after major补充 or risk reduction, stay in the current stage and explain what still blocks release
+- the user may ask to skip ahead, but the system must still state that the stage is not released and why
+
+Required release output before stage advancement:
+
+- current rating or decision label
+- release decision: `released` or `blocked`
+- why the decision was made
+- what must be fixed before the next stage can start
+
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
@@ -130,6 +158,7 @@ For each project, Agent 2 must also produce:
 - Safer downgrade wording when needed
 - Interview pressure points
 - Ranking rationale
+- Release decision for the next stage
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
 
@@ -163,6 +192,8 @@ Minimum fields:
 Do not allow a project into the final resume if the card is still missing basic scope, ownership, or support.
 
 Do not allow a ranked packaging plan into the final answer if it still cannot explain why that ranking is better than alternative story orders.
+
+Do not allow mock interview, self-introduction drilling, or final talking-point generation to start from a version that has not passed the release gate.
 
 ## Long-Term Memory
 
@@ -225,7 +256,7 @@ If the user says this:
 - "Rewrite my self-introduction"  
   Read resume plus memory first, then align the intro with the strongest approved project angles.
 - "Mock interview me"  
-  Use the latest reviewed wording, not raw resume text.
+  Use the latest reviewed wording, not raw resume text; if the release gate is still blocked, say so and stay in the current stage.
 - "I want stronger packaging"  
   Increase clarity and ownership only until Agent 2 can still defend it.
 - "Why is this the main project?"
@@ -259,6 +290,7 @@ Apply the skill like this:
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
 | Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
 | Giving a ranked packaging plan with no explanation | Explain why the main story wins on role fit, evidence, and survivability |
+| Entering mock interview before the resume is ready | Block the stage release and finish resume work first |
 | Saving every conversation detail into memory | Save only durable, reusable state |
 | Over-packaging metrics or ownership | Downgrade to the strongest version the candidate can actually defend |
 | Running mock interviews on raw or unreviewed stories | Interview only against reviewed wording |
@@ -274,6 +306,7 @@ Stop and recalibrate when any of these appear:
 - The role template changes but the review rubric does not
 - The main-story ranking changes but no one explains why
 - The conversation passes 100+ turns and the current stage is only implied
+- The user requests mock interview before the current version is strong enough to serve as the interview baseline
 - Memory starts storing unverified claims as facts
 
 When a red flag appears, ask for missing facts or downgrade the wording.

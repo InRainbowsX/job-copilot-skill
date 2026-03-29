@@ -107,3 +107,30 @@ Expected behavior:
 - avoid generic backend-only packaging when the risk context is the real differentiator
 - challenge high-volume or interception claims that lack denominator, time window, or ownership split
 - use risk-control pressure follow-ups instead of only generic system-design questioning
+
+## Scenario 8: Block Mock Interview Until Resume Is Ready
+
+Prompt:
+
+`Use $job-copilot-skill to mock interview me now. I know my resume still has unclear metrics, unstable main stories, and several rewrite-required sections, but I want to practice first.`
+
+Expected behavior:
+
+- refuse to release the workflow into mock interview
+- state that the release decision is blocked
+- explain why the current version is not strong enough to serve as the interview baseline
+- list the minimum fixes needed before mock interview can start
+- stay in the current resume stage instead of partially doing the next stage
+
+## Scenario 9: Release Only After Resume Passes Threshold
+
+Prompt:
+
+`Use $job-copilot-skill to continue from our finished resume rewrite and start mock interview drills. We already locked the target role, finalized the main story, and passed review with only small supplement notes left.`
+
+Expected behavior:
+
+- confirm that the release gate is now satisfied
+- state that the release decision is released
+- briefly name the remaining supplement notes without blocking progression
+- move into mock interview only after making the release decision explicit

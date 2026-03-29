@@ -71,6 +71,17 @@ In long dialogues, check whether the current stage remains explicit enough for t
 - what is blocking the next stage
 - what condition would allow the stage to exit
 
+### 9. Stage Release Readiness
+
+Before allowing the workflow to move into mock interview, self-introduction drilling, or later-stage talking points, check whether:
+
+- the target direction is already locked
+- the main story is stable enough to keep
+- the reviewed version is strong enough to serve as an interview baseline
+- remaining problems are supplement-level rather than rewrite-level blockers
+
+If these checks fail, the release decision must be `blocked`.
+
 ## Risk Levels
 
 - `A`: safe to use now
@@ -90,3 +101,9 @@ For each project card, output:
 - likely interview pressure points
 - ranking rationale
 - stage blocker if the dialogue has not advanced
+
+For each resume-stage conclusion, also output:
+
+- release decision: `released` or `blocked`
+- release rationale
+- minimum fixes required before the next stage
