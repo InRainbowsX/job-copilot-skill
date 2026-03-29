@@ -468,3 +468,24 @@ Each rule case should include:
 - 只靠通用规则处理，不触发产品模板
 - 把纯协调包装成完整产品 ownership
 - 不区分需求定义、方案设计和推进执行
+
+## Case 21: Personal Creation Signals Must Not Force Content-Template Routing
+
+目标规则:
+
+- `个人创作期 / 个人账号 / 内容项目` 不能单独强行触发内容运营细分模板；只有内容目标明确或内容信号占主导时才升级
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package an operations resume with one personal content project, but the candidate mainly targets user growth and activity operations.`
+
+期望行为:
+
+- 会保留 broad operations 为主路由
+- 会说明个人内容项目只借用内容包装边界，而不会直接改成内容运营模板
+- 会在确实缺少 dominant content evidence 时拒绝切进内容细分模板
+
+禁止行为:
+
+- 只因出现个人创作期或个人账号就强制切到内容运营模板
+- 让内容模板覆盖掉原本的用户增长 / 活动运营主方向

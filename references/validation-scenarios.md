@@ -377,3 +377,16 @@ Expected behavior:
 - apply product ownership checks rather than technical or generic operations checks
 - keep the interview chain focused on product decision quality and launch review
 - avoid flattening the case into broad operations or generic project wording
+
+## Scenario 26: Personal Creation Signals Must Not Misroute Broad Operations Cases
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package an operations resume that mainly targets user growth and activity operations, but includes one personal content project during a gap period.`
+
+Expected behavior:
+
+- keep broad operations as the main route
+- explain that the personal content project only borrows content-project packaging boundaries
+- require dominant content evidence or explicit content-role targeting before entering the content-operations template
+- avoid flattening the whole case into content operations just because the resume contains personal creation signals

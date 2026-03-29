@@ -4,7 +4,7 @@ Apply this template when the candidate targets internet operations roles, includ
 
 When the materials are clearly closer to `内容运营 / 自媒体运营 / 个人内容项目`, also consult [content-operations-knowledge-base.md](./content-operations-knowledge-base.md) before choosing packaging angles or review standards.
 When those cases need true content-operations or self-media standards rather than broad operations handling, also apply [content-operations-template.md](./content-operations-template.md).
-When the resume includes `个人创作期 / 个人账号 / 内容项目`, do not stop at generic gap handling. Use the content-operations template to decide safe resume placement, packaging boundaries, and interview explanation.
+When the resume includes `个人创作期 / 个人账号 / 内容项目`, do not stop at generic gap handling. Only escalate into the content-operations template when the candidate's target role is clearly `内容运营 / 自媒体运营`, or when content and self-media signals are the `dominant content evidence` inside the broader operations profile. Otherwise, keep the main route in broad operations and only borrow the content-project packaging boundary as needed.
 
 ## Role Definition
 
