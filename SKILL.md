@@ -43,6 +43,35 @@ The user should be able to tell where they are in the process at a glance. Keep 
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
 
+### Real Resume Decomposition Report
+
+Before stable packaging, the skill must first understand the resume as a structured system rather than as disconnected bullets.
+
+Use [resume-decomposition-report.md](./references/resume-decomposition-report.md).
+
+The `真实简历系统拆解报告` is the shared input between the `简历包装教练` and the `审核官`.
+
+Rules:
+
+- Build or summarize the decomposition report before treating packaging as stable
+- Use the report to explain what the skill already understands from the resume before rewriting major sections
+- Keep the decomposition report separate from final resume copy; it is an analysis layer, not the final deliverable
+- The report should be reusable across later packaging, review, interview, and memory updates
+- If the resume is still ambiguous, the report should make the ambiguity explicit instead of hiding it behind polished wording
+
+Minimum decomposition dimensions:
+
+- current analysis date and target-role routing
+- timeline breakdown
+- `主叙事 / 辅助叙事 / 补充亮点`
+- metric-caliber and ownership-risk notes
+- gap / non-standard experience conclusion
+- transferable capabilities
+- interview pressure points
+- next deep-dive priorities
+
+The decomposition report should help the user feel that the skill has actually understood the resume before packaging it.
+
 ### Visible Stage Model
 
 Map the workflow to four user-facing stages and keep those stage names stable:
@@ -94,20 +123,30 @@ Use [packaging-plan-template.md](./references/packaging-plan-template.md).
 
 Use this packaging order:
 
-1. Identify the strongest 1 to 3 experiences worth packaging first
-2. Explain what is currently weak in those experiences
-3. Produce a packaging plan that sets the main narrative, supporting narrative, and per-experience packaging goal
-4. Ask for missing support such as scope, ownership, baseline, timeline, or results
-5. Let the review officer challenge the plan itself when the path is too aggressive or too weak
+1. Produce a `真实简历系统拆解报告` or a concise decomposition summary first
+2. Identify the strongest 1 to 3 experiences worth packaging first
+3. Explain what is currently weak in those experiences
+4. Produce a packaging plan that sets the main narrative, supporting narrative, and per-experience packaging goal
+5. Ask for missing support such as scope, ownership, baseline, timeline, or results
+6. Let the review officer challenge the plan itself when the path is too aggressive or too weak
 6. Only then produce stronger wording or a more stable draft
 
 If the user asks for a direct rewrite but the supporting detail is still weak:
 
 - do not skip diagnosis
+- do not skip the decomposition layer
 - do not skip the packaging-plan layer
 - do not jump straight to a polished final version
 - give a provisional draft only if it is clearly marked as unstable
 - make the missing information explicit before treating any wording as ready
+
+Before major packaging, the packaging coach should be able to answer in plain language:
+
+- what the resume is mainly about
+- which experience carries the current main narrative
+- which items are only support or supplemental highlights
+- where the ownership, metric, or timeline risks are
+- what should be deepened next
 
 Minimum packaging output per experience:
 
