@@ -41,6 +41,7 @@ Follow this sequence every time. Do not skip directly to rewritten bullets unles
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
 
+If the user asks for a stronger target version, an excellent sample, or "what a good resume should look like", do not jump straight into local edits. Define the excellent baseline first, then compare the current resume against it, then rewrite.
 ## Role Routing
 
 Infer the job family before deep rewriting. Use the closest primary track, then add a secondary track only when it materially changes questions or review criteria.
@@ -60,6 +61,7 @@ Supported template families:
 
 Use the routing and evaluation guidance in [job-families.md](./references/job-families.md).
 
+When the user asks for an excellent target version or a stronger comparison baseline, also use [excellent-resume-baseline.md](./references/excellent-resume-baseline.md).
 ## Dual-Agent Contract
 
 Treat the system as two distinct passes, even if the environment only has one visible assistant.
@@ -91,6 +93,7 @@ Rewrite rules:
 - aim for `scene or problem -> action or method -> result or value`
 - if a hard metric is unsafe, still preserve the value by describing the solved problem, improved workflow, supported decision, or lowered risk
 - do not flatten strong systems, data, reporting, policy, or process work into generic execution language just to shorten the section
+- define a routed-role excellent baseline before rewriting when the user explicitly asks for it
 
 Agent 1 is not allowed to:
 
@@ -98,6 +101,7 @@ Agent 1 is not allowed to:
 - Treat team outcomes as personal outcomes without attribution
 - Hide uncertainty; mark unconfirmed items as gaps
 - return a JD-aligned rewrite that still reads like a work checklist
+- rewrite directly against the user's current draft when the user first asked to see the stronger target version
 
 ### Agent 2: Review And Calibrate
 
@@ -123,6 +127,13 @@ For each project, Agent 2 must also produce:
 - Safer downgrade wording when needed
 - Interview pressure points
 - Strongest value proof
+- Ranking rationale
+
+For each resume-stage conclusion, Agent 2 must also produce:
+
+- Release decision: `released` or `blocked`
+- Release rationale
+- Minimum fixes required before the next stage
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
 
@@ -154,9 +165,7 @@ For experience rewriting, also capture:
 - what should be cut before the section becomes strongest-first
 
 Do not allow a project into the final resume if the card is still missing basic scope, ownership, or support.
-
 Do not allow an experience rewrite into the final resume if it still reads like an equal-weight task list rather than a strongest-first value summary.
-
 ## Long-Term Memory
 
 Maintain a running `memory.md` for the candidate. Read it before starting work and update it after any meaningful milestone.
@@ -216,6 +225,8 @@ If the user says this:
   Increase clarity and ownership only until Agent 2 can still defend it.
 - "This still reads like job duties"
   Rebuild each experience into strongest-first scene, action, and value bullets.
+- "Show me what a strong version should look like first"
+  Present the excellent baseline, then analyze the gap, then decide what to rewrite.
 - "I don't want to repeat myself next session"  
   Read and update `memory.md`.
 
@@ -241,6 +252,7 @@ Apply the skill like this:
 | Mistake | Correction |
 |---|---|
 | Rewriting the whole resume before clarifying the role | Route the candidate first, then choose the correct template family |
+| Rewriting before defining the target shape | Show the excellent baseline first when the user asks for it |
 | Treating every project as equally important | Pick the 1 to 3 projects with the highest upside for the target role |
 | Letting Agent 1's strongest wording go straight into final output | Always run Agent 2 review first |
 | Matching the JD but still sounding like a task list | Rebuild the section around strongest-first value bullets |
@@ -257,6 +269,7 @@ Stop and recalibrate when any of these appear:
 - A metric appears with no source or explanation
 - Ownership grows while the candidate's explanation shrinks
 - Every bullet starts with a duty verb and none show why the work mattered
+- The user asked for an excellent sample, but the response skipped straight to editing the current draft
 - The role template changes but the review rubric does not
 - Memory starts storing unverified claims as facts
 
