@@ -3,6 +3,7 @@
 当候选人的主要目标岗位是后端 / 服务端时，使用本模板。
 
 当简历明显带有 `风控 / 反爬 / 设备指纹 / bot detection` 语境时，仍保持后端主路由，同时参考 [risk-control-backend-knowledge-base.md](./risk-control-backend-knowledge-base.md) 做更细的深挖与审核。
+当这些案例需要按风控 / 反爬后端的高质量标准做包装与审核时，同时应用 [risk-control-backend-template.md](./risk-control-backend-template.md)。
 
 ## 模板目标
 
