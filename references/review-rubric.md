@@ -41,6 +41,8 @@ Reject wording the candidate probably cannot explain under follow-up:
 
 Check whether the project now sounds like a real candidate for the routed job family.
 
+For SSC, HR Ops, Global Mobility, and similar support-heavy roles, treat reporting, FAQ or knowledge-base work, system maintenance, policy updates, process tracking, and risk reminders as possible strength signals rather than default low-value admin work.
+
 ### 5. Result Credibility
 
 Challenge:
@@ -63,6 +65,7 @@ Challenge rewrites where:
 - the section matches JD keywords but still sounds like checklist work
 - systems, data, reporting, policy, or process work are reduced to low-value admin wording
 - compression deletes a capability line that materially differentiates the candidate for the routed role
+- a formatting target such as `4 / 3 / 3` is followed mechanically even though it removes a stronger role-fit signal
 - the rewrite says what happened but not why it mattered
 
 ### 8. Source-Diff Integrity

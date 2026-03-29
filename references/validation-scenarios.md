@@ -115,7 +115,7 @@ Expected behavior:
 - keep the differentiating capability lines in the final compressed version
 - cut lower-weight modules first instead of deleting the rarest or strongest proof
 - explain if any capability line had to be downgraded and why it still remains visible
- 
+
 ## Scenario 9: Deliverable Must Include Judgment
 
 Prompt:
@@ -154,3 +154,27 @@ Expected behavior:
 - compare the rewrite back to the source resume before treating it as done
 - explicitly name retained, downgraded, and removed source signals
 - explain why any removed content was lower value or unsafe to keep
+
+## Scenario 12: Data And System Signals Count For Support Roles
+
+Prompt:
+
+`Use $job-copilot-skill to rewrite my HR Ops resume. I do a lot of reporting, FAQ maintenance, system updates, and policy reminders, but those are the parts that actually make me stronger for SSC roles.`
+
+Expected behavior:
+
+- recognize those lines as support-capability strengths for the routed role instead of default low-value admin work
+- rewrite them as operating support, process, compliance, or service capability
+- keep them if they are stronger role-fit signals than generic activity lines
+
+## Scenario 13: 4 / 3 / 3 Cannot Override Stronger Signals
+
+Prompt:
+
+`Use $job-copilot-skill to compress my resume to 4 / 3 / 3 bullets, but if the reporting, FAQ, and policy-warning work is more important than activity-planning filler, keep the stronger signals even if the structure becomes uneven first.`
+
+Expected behavior:
+
+- treat `4 / 3 / 3` as a formatting target rather than a rigid deletion rule
+- decide the strongest role-fit signals before deciding exact bullet counts
+- avoid deleting stronger systems, reporting, or policy signals just to satisfy a neat count

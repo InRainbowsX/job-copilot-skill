@@ -88,13 +88,16 @@ When rewriting experience sections, Agent 1 must use value-driven rather than du
 Rewrite rules:
 
 - keep each experience to the 3 to 5 strongest bullets unless the user explicitly asks for a fuller version
+- treat bullet-count targets such as `4 / 3 / 3` as presentation constraints, not as the reason to cut content
 - identify the candidate's primary capability lines before cutting anything; separate core differentiators from lower-weight support tasks
+- decide which value lines must survive before deciding how many bullets each experience gets
 - make the first bullet the strongest proof of role fit or business value
 - avoid giving equal weight to every work module
 - aim for `scene or problem -> action or method -> result or value`
 - if a hard metric is unsafe, still preserve the value by describing the solved problem, improved workflow, supported decision, or lowered risk
 - do not flatten strong systems, data, reporting, policy, or process work into generic execution language just to shorten the section
 - do not delete a core capability line only to satisfy density or neatness targets
+- for SSC, HR Ops, Global Mobility, and similar support-heavy roles, treat reporting, FAQ, system maintenance, policy updates, process tracking, and risk reminders as candidate-value signals unless the source evidence is truly weak
 - define a routed-role excellent baseline before rewriting when the user explicitly asks for it
 
 Agent 1 is not allowed to:
@@ -177,6 +180,7 @@ Do not allow a project into the final resume if it is still missing basic scope,
 Do not allow an experience rewrite into the final resume if it still reads like an equal-weight task list rather than a strongest-first value summary.
 Do not allow an experience rewrite into the final resume if compression removed one of the candidate's main differentiating capability lines.
 Do not allow a targeted rewrite into the final resume if nobody has checked it back against the source resume for lost evidence.
+Do not allow a bullet-count target to overrule a stronger role-fit signal that the source resume can still defend.
 ## Long-Term Memory
 
 Maintain a running `memory.md` for the candidate. Read it before starting work and update it after any meaningful milestone.

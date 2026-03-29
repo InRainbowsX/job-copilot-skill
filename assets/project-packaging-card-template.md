@@ -52,6 +52,7 @@
 ## Packaging Goal
 
 - What capability this project should signal:
+- Role-sensitive support signals that should count as strengths:
 - Primary capability lines that must remain:
 - Lower-weight modules that can be cut first:
 - Strongest role value:
