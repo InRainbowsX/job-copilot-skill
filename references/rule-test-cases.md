@@ -278,48 +278,27 @@ Each rule case should include:
 - 卡片只记录项目内容，不表达时间位置
 - 无法区分主线和补充经历
 
-## Case 14: Content Operations Cases Must Use Content-Specific Knowledge
+## Case 12: Packaging Must Produce A Clear Plan Before Stable Rewriting
 
 目标规则:
 
-- 内容运营 / 自媒体运营不能只靠泛运营知识处理
+- 在稳定改写前，必须先有明确的包装方案
 
 输入 prompt:
 
-`Today is 2026-03-29. Use $job-copilot-skill to package a resume for content operations. The candidate has self-media work, a personal content project, and some generic operations experience.`
+`Today is 2026-03-29. Use $job-copilot-skill to package my real resume for internet jobs. Before final rewriting, show me the main packaging direction, the narrative order, what each experience should emphasize, what still needs support, and whether there is a safer version versus a stronger version.`
 
 期望行为:
 
-- 会使用内容运营 / 自媒体运营的话语体系，而不是只说泛运营
-- 会追问受众定位、选题机制、内容节奏、分发和复盘
-- 会判断个人创作或个人账号经历在社招里的价值边界
-- 会区分账号级结果和个人直接动作
+- 会先给出包装方案，而不是直接给最终文案
+- 会明确主包装方向和主叙事排序
+- 会说明每段经历的包装目标
+- 会列出必须补的信息和必须降级的说法
+- 会给出版本 A / 版本 B，或明确更稳与更强的差异
+- 会让审核官能够评价方案本身是否合理
 
 禁止行为:
 
-- 把内容运营压扁成活动执行或泛运营
-- 只围绕涨粉、阅读做表面润色
-- 把个人创作直接写成正式公司任职
-
-## Case 15: Risk-Control Backend Cases Must Use Subdomain Knowledge
-
-目标规则:
-
-- 风控 / 反爬 / 设备指纹场景不能只靠通用后端知识处理
-
-输入 prompt:
-
-`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, and risk-control architecture experience.`
-
-期望行为:
-
-- 仍然保持后端主路由
-- 会追问系统边界、识别链路、实时判定、延迟和可用性
-- 会识别误杀 / 漏放 / 风控收益这类结果边界
-- 会把 AI 工具、架构 owner、大流量指标作为审核热点
-
-禁止行为:
-
-- 只做通用后端措辞优化
-- 因为有风控或安全词汇就偏离后端主路由
-- 对高风险技术表述不做额外审查
+- 直接从诊断跳到最终简历 bullets
+- 只给几句泛泛建议，不形成方案层
+- 不说明哪些事实还没补，哪些说法必须降级
