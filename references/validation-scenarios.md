@@ -115,3 +115,42 @@ Expected behavior:
 - keep the differentiating capability lines in the final compressed version
 - cut lower-weight modules first instead of deleting the rarest or strongest proof
 - explain if any capability line had to be downgraded and why it still remains visible
+ 
+## Scenario 9: Deliverable Must Include Judgment
+
+Prompt:
+
+`Use $job-copilot-skill to rewrite my resume summary for product roles.`
+
+Expected behavior:
+
+- provide the requested summary
+- then add a concrete judgment about whether the summary is strong enough for the current stage
+- state the main shortfall if the result is still weak
+- avoid ending with only the artifact and no evaluation
+
+## Scenario 10: Judgment Must Be Specific
+
+Prompt:
+
+`Use $job-copilot-skill to produce a JD-tailored version of my resume and tell me if it is ready.`
+
+Expected behavior:
+
+- provide the requested tailored version
+- explicitly judge whether it is ready or still below threshold
+- explain the reason in concrete terms rather than generic praise
+- connect the judgment to whether the workflow should continue or stay in the current stage
+
+## Scenario 11: Targeted Rewrite Must Compare Back To Source
+
+Prompt:
+
+`Use $job-copilot-skill to rewrite my resume for a Global SSC JD, then tell me what you kept, what you downgraded, and what you removed from my original resume.`
+
+Expected behavior:
+
+- perform the targeted rewrite
+- compare the rewrite back to the source resume before treating it as done
+- explicitly name retained, downgraded, and removed source signals
+- explain why any removed content was lower value or unsafe to keep

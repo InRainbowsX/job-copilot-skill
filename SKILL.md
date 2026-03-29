@@ -37,7 +37,7 @@ Follow this sequence every time. Do not skip directly to rewritten bullets unles
 | `2. Role Routing` | Infer main and secondary job track from the materials | Selected template family |
 | `3. Agent 1 Deep-Dive` | Ask targeted questions, extract missing project detail, propose stronger positioning | Project packaging cards, draft wording |
 | `4. Agent 2 Review` | Audit truthfulness, role fit, explainability, and interview survivability | Risk report, missing-info requests, downgrade advice |
-| `5. Consolidate` | Keep only reviewed wording and summarize what still needs work | Resume sections, self-introduction, action list |
+| `5. Consolidate` | Keep only reviewed wording, compare it back to the source draft, and summarize what still needs work | Resume sections, self-introduction, action list |
 | `6. Train` | Run mock interviews against the reviewed version | Interview notes, error log, next drills |
 | `7. Persist` | Update long-term memory with confirmed facts and recurring gaps | `memory.md` |
 
@@ -136,6 +136,10 @@ For each resume-stage conclusion, Agent 2 must also produce:
 - Release decision: `released` or `blocked`
 - Release rationale
 - Minimum fixes required before the next stage
+- Source-diff summary:
+  - what was retained
+  - what was downgraded
+  - what was removed and why
 
 Use [review-rubric.md](./references/review-rubric.md) for the shared review checklist.
 
@@ -164,6 +168,7 @@ For experience rewriting, also capture:
 
 - primary capability lines that must survive compression
 - lower-weight modules that can be cut first
+- source-diff summary for the current rewrite
 - strongest role value
 - whether the draft still reads like duty inventory
 - what should be cut before the section becomes strongest-first
@@ -171,6 +176,7 @@ For experience rewriting, also capture:
 Do not allow a project into the final resume if it is still missing basic scope, ownership, or support.
 Do not allow an experience rewrite into the final resume if it still reads like an equal-weight task list rather than a strongest-first value summary.
 Do not allow an experience rewrite into the final resume if compression removed one of the candidate's main differentiating capability lines.
+Do not allow a targeted rewrite into the final resume if nobody has checked it back against the source resume for lost evidence.
 ## Long-Term Memory
 
 Maintain a running `memory.md` for the candidate. Read it before starting work and update it after any meaningful milestone.
