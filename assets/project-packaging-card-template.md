@@ -87,6 +87,9 @@
 - Decision:
 - Risk level:
 - Top review concerns:
+- Retained from source:
+- Downgraded from source:
+- Removed from source and why:
 - Required supplements:
 - Downgrade wording if needed:
 - Strongest value proof:

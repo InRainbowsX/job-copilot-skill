@@ -65,6 +65,17 @@ Challenge rewrites where:
 - compression deletes a capability line that materially differentiates the candidate for the routed role
 - the rewrite says what happened but not why it mattered
 
+### 8. Source-Diff Integrity
+
+After a targeted rewrite or compression pass, compare the output back to the source resume.
+
+Challenge rewrites where:
+
+- key result lines disappeared with no explanation
+- high-signal capability modules were removed without explicit downgrade reasoning
+- JD-relevant evidence was dropped even though it was defensible in the source
+- the final answer cannot explain what was retained, downgraded, or removed
+
 ## Risk Levels
 
 - `A`: safe to use now
@@ -80,6 +91,9 @@ For each project card, output:
 - risk level
 - top 3 risks
 - missing info to collect
+- retained from source
+- downgraded from source
+- removed from source and why
 - downgrade wording if needed
 - likely interview pressure points
 - strongest value proof
