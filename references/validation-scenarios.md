@@ -273,3 +273,21 @@ Expected behavior:
 - state what must be downgraded
 - provide a safer and stronger route, or explain why only one route is advisable
 - avoid jumping directly from diagnosis to polished final bullets
+
+## Scenario 19: Real Resume Must Produce A Decomposition Layer Before Stable Packaging
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package my real resume for internet roles. Before rewriting, first tell me how you understand the timeline, the current main narrative, the supporting narrative, the supplemental highlights, any gap or non-standard periods, and the main interview pressure points.`
+
+Expected behavior:
+
+- begin with the required status block
+- stay in diagnosis or early deep-dive rather than pretending final packaging is already complete
+- produce a decomposition layer before stable packaging
+- make the current analysis date or hiring moment explicit when timeline matters
+- distinguish `主叙事 / 辅助叙事 / 补充亮点`
+- identify gap or non-standard periods instead of skipping them
+- surface main ownership, metric-caliber, or explainability risks
+- recommend the next deep-dive priorities before moving into final rewrite
+- avoid jumping directly from intake to polished final bullets
