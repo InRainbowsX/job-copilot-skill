@@ -219,6 +219,22 @@ Each rule case should include:
 
 - 包装不能只靠泛化润色，应该参考岗位化的高质量信号
 
+输入 prompt:
+
+`Use $job-copilot-skill to strengthen my resume for operations. I want it to sound much stronger than ordinary wording.`
+
+期望行为:
+
+- 不只做“更高级措辞”式改写
+- 会往岗位相关的高质量信号上靠拢
+- 会体现结果表达策略或包装升级策略
+- 会说明更强版本想突出什么能力
+
+禁止行为:
+
+- 只输出泛泛的漂亮句子
+- 不区分岗位，套同一种强简历话术
+
 ## Case 11: Support-Role Signals Must Count As Strengths
 
 目标规则:
@@ -261,22 +277,6 @@ Each rule case should include:
 - 先机械压成 4 / 3 / 3，再回头解释
 - 为了整齐直接删掉更强的 role-fit 证据
 
-输入 prompt:
-
-`Use $job-copilot-skill to strengthen my resume for operations. I want it to sound much stronger than ordinary wording.`
-
-期望行为:
-
-- 不只做“更高级措辞”式改写
-- 会往岗位相关的高质量信号上靠拢
-- 会体现结果表达策略或包装升级策略
-- 会说明更强版本想突出什么能力
-
-禁止行为:
-
-- 只输出泛泛的漂亮句子
-- 不区分岗位，套同一种强简历话术
-
 ## Case 13: Memory And Project Cards Must Support Session Resume
 
 目标规则:
@@ -298,7 +298,137 @@ Each rule case should include:
 - 每次都默认从阶段 1 重新开始
 - 忽略上一次已确认的阶段进度
 
-## Case 11: Project Card Must Carry Timeline And Gap Signals
+## Case 14: Project Card Must Carry Timeline And Gap Signals
+
+目标规则:
+
+- 项目包装卡片必须能表达时间权重、gap 属性和主叙事定位
+
+输入 prompt:
+
+`Use $job-copilot-skill to package my resume. I have a strong campus project, a recent operations project, and a gap-period content project.`
+
+期望行为:
+
+- 生成的项目卡片会标明是否为最近核心经历
+- 会标明是否属于 gap 或非标准经历
+- 会标明是主叙事、辅助叙事还是补充亮点
+- 会体现时间轴权重说明
+
+禁止行为:
+
+- 卡片只记录项目内容，不表达时间位置
+- 无法区分主线和补充经历
+
+## Case 15: Packaging Must Produce A Clear Plan Before Stable Rewriting
+
+目标规则:
+
+- 在稳定改写前，必须先有明确的包装方案
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package my real resume for internet jobs. Before final rewriting, show me the main packaging direction, the narrative order, what each experience should emphasize, what still needs support, and whether there is a safer version versus a stronger version.`
+
+期望行为:
+
+- 会先给出包装方案，而不是直接给最终文案
+- 会明确主包装方向和主叙事排序
+- 会说明每段经历的包装目标
+- 会列出必须补的信息和必须降级的说法
+- 会给出版本 A / 版本 B，或明确更稳与更强的差异
+- 会让审核官能够评价方案本身是否合理
+
+禁止行为:
+
+- 没有包装方案就直接进入定稿
+- 强弱版本没有边界区分
+- 明明还缺信息，却把方案写成已稳定终稿
+
+## Case 22: First Pass Must Score And Judge Packaging Route
+
+目标规则:
+
+- 首轮要先给市场判断，并决定是普通优化还是强包装
+
+输入 prompt:
+
+`Use $job-copilot-skill to assess my operations resume. I have a long gap and my recent work is weak.`
+
+期望行为:
+
+- 先给市场评分或等效强弱判断
+- 说明这份简历的主风险
+- 说明是普通优化还是必须走强包装路线
+- 在信息不足时继续停留在诊断阶段
+
+禁止行为:
+
+- 不做评分和强弱判断，直接开始终稿包装
+- 把明显弱简历当成普通润色处理
+
+## Case 23: Final Packaging Requires Route Lock
+
+目标规则:
+
+- 未锁方向前不能直接产出最终包装稿
+
+输入 prompt:
+
+`Use $job-copilot-skill to package my resume. I might target content operations, merchant operations, or ad operations.`
+
+期望行为:
+
+- 先比较几条可能路线
+- 明确主方向、次方向，或明确说明尚未锁定
+- 解释不同路线下主项目排序会怎样变化
+
+禁止行为:
+
+- 在未锁方向时直接给最终版简历
+- 把路线选择藏在默认假设里不说
+
+## Case 24: Resume Conversation Must Not Drift Into Tutorial
+
+目标规则:
+
+- 简历会话中的补充建议必须回到简历与面试主线
+
+输入 prompt:
+
+`Use $job-copilot-skill to handle my gap. I am considering a Xiaohongshu account and a personal content project.`
+
+期望行为:
+
+- 先判断这类经历在简历中的位置和作用
+- 先说它如何补 gap、补信号、控风险
+- 如果扩展建议，也要先以简历和面试可解释性为主
+
+禁止行为:
+
+- 直接展开小红书运营教程
+- 把会话主线从简历包装带偏到内容运营教学
+
+## Case 25: Next Stage Cannot Leak Before Release
+
+目标规则:
+
+- 当前阶段未放行前，不允许提前执行下一阶段核心内容
+
+输入 prompt:
+
+`Use $job-copilot-skill to finish my resume and then start mock interview questions.`
+
+期望行为:
+
+- 先完成当前阶段并给出是否放行的判断
+- 如果当前简历还没达标，就停在当前阶段
+- 只能把模拟面试写成下一步推荐，而不是直接执行
+
+禁止行为:
+
+- 当前简历还未 released 就直接开始模拟面试
+- 把“下一步推荐”当成已经执行的内容
 
 目标规则:
 

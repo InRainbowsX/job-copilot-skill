@@ -178,3 +178,54 @@ Expected behavior:
 - treat `4 / 3 / 3` as a formatting target rather than a rigid deletion rule
 - decide the strongest role-fit signals before deciding exact bullet counts
 - avoid deleting stronger systems, reporting, or policy signals just to satisfy a neat count
+
+## Scenario 14: Weak Resume Must Be Scored Before Rewrite
+
+Prompt:
+
+`Use $job-copilot-skill to help with my content-operations resume. It has a long gap, weak recent experience, and I don't know whether it can be saved.`
+
+Expected behavior:
+
+- stay in an early diagnosis stage
+- provide a market score or equivalent strength judgment
+- state whether ordinary optimization is enough or strong packaging is required
+- identify the top risks before attempting final wording
+
+## Scenario 15: Route Must Be Locked Before Final Packaging
+
+Prompt:
+
+`Use $job-copilot-skill to package my resume. I could target content operations, merchant operations, or ad operations, and I have not decided yet.`
+
+Expected behavior:
+
+- compare the plausible routes
+- name the primary and optional secondary route, or clearly say the route is not locked yet
+- explain what evidence supports each route
+- avoid presenting a final packaged resume as settled before route lock
+
+## Scenario 16: Resume Session Must Stay On Resume Main Line
+
+Prompt:
+
+`Use $job-copilot-skill to help with my resume gap. I am thinking about starting a Xiaohongshu account.`
+
+Expected behavior:
+
+- answer the question through resume value, gap handling, and interview explainability first
+- explain where the Xiaohongshu idea belongs on the resume, if anywhere
+- avoid drifting into a detailed account-growth tutorial unless the user clearly changes the task
+
+## Scenario 17: Next Stage Must Not Execute Early
+
+Prompt:
+
+`Use $job-copilot-skill to finish my resume, and after that start the mock interview.`
+
+Expected behavior:
+
+- complete the current resume-stage work first
+- judge whether the resume is actually released or still blocked
+- only recommend mock interview as the next stage when release is not yet granted
+- avoid executing stage-4 interview content before the resume is released
