@@ -41,8 +41,6 @@ Reject wording the candidate probably cannot explain under follow-up:
 
 Check whether the project now sounds like a real candidate for the routed job family.
 
-If a segmented role reference exists for the routed case, check whether the wording also sounds like a real candidate for that sub-direction rather than a generic family member.
-
 ### 5. Result Credibility
 
 Challenge:
@@ -55,32 +53,16 @@ Challenge:
 
 Ask whether the story can survive 3 to 5 follow-up questions. If not, downgrade or request more support.
 
-### 7. Packaging Explanation Quality
+### 7. Value Density
 
-Check whether the packaging coach can explain:
+Check whether the rewrite reads like a candidate value summary rather than a duty list.
 
-- why this project is ranked as main story, support story, or gap explanation
-- why the chosen wording ceiling matches the available evidence
-- why this packaging is a better fit for the routed role than alternative stories
+Challenge rewrites where:
 
-### 8. Long-Conversation Stage Legibility
-
-In long dialogues, check whether the current stage remains explicit enough for the user to understand:
-
-- why the process is still in this stage
-- what is blocking the next stage
-- what condition would allow the stage to exit
-
-### 9. Stage Release Readiness
-
-Before allowing the workflow to move into mock interview, self-introduction drilling, or later-stage talking points, check whether:
-
-- the target direction is already locked
-- the main story is stable enough to keep
-- the reviewed version is strong enough to serve as an interview baseline
-- remaining problems are supplement-level rather than rewrite-level blockers
-
-If these checks fail, the release decision must be `blocked`.
+- every bullet has equal weight and no strongest proof appears first
+- the section matches JD keywords but still sounds like checklist work
+- systems, data, reporting, policy, or process work are reduced to low-value admin wording
+- the rewrite says what happened but not why it mattered
 
 ## Risk Levels
 
@@ -99,11 +81,5 @@ For each project card, output:
 - missing info to collect
 - downgrade wording if needed
 - likely interview pressure points
-- ranking rationale
-- stage blocker if the dialogue has not advanced
-
-For each resume-stage conclusion, also output:
-
-- release decision: `released` or `blocked`
-- release rationale
-- minimum fixes required before the next stage
+- strongest value proof
+- whether the section still reads like a duty list

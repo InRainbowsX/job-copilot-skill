@@ -52,8 +52,7 @@
 ## Packaging Goal
 
 - What capability this project should signal:
-- Why this should be a main story, support story, or gap explanation:
-- Why this ordering is better than competing stories:
+- Strongest role value:
 
 ## Missing Support
 
@@ -71,13 +70,7 @@
 
 - Bullet 1:
 - Bullet 2:
-
-## Packaging Explanation Layer
-
-- Role-fit explanation:
-- Ranking rationale:
-- Evidence ceiling:
-- Why stronger wording would become unsafe:
+- Does this still read like duty inventory:
 
 ## Interview-Ready Story
 
@@ -86,7 +79,6 @@
 - Challenge:
 - Solution:
 - Result:
-- Likely pressure follow-up chain:
 
 ## Review Output
 
@@ -95,7 +87,5 @@
 - Top review concerns:
 - Required supplements:
 - Downgrade wording if needed:
-- Stage blocker if not ready to advance:
-- Release decision:
-- Release rationale:
-- Minimum fixes before next stage:
+- Strongest value proof:
+- Still reads like duty list:

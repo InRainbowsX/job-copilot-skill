@@ -52,85 +52,28 @@ Expected behavior:
 - focus on stored weak points and error log
 - update memory after the mock interview
 
-## Scenario 4: Packaging Explanation And Ranking
+## Scenario 4: JD Match But Still Reads Like Duties
 
 Prompt:
 
-`Use $job-copilot-skill to improve my resume for product roles. I have three projects and I want to know why one should be my main story and the others should be secondary.`
+`Use $job-copilot-skill to rewrite my resume for a Global SSC / HR Ops JD. The keywords are all there now, but it still reads like I just listed responsibilities.`
 
 Expected behavior:
 
-- route to product management
-- select one main story and explain why
-- explain why the other projects are support stories instead of main stories
-- reference role relevance, time recency, result strength, explainability, or risk boundary
-- avoid outputting a ranking with no justification
+- rebuild the experience section into strongest-first value bullets
+- keep only the highest-value 3 to 5 bullets per experience instead of equal-weight module dumping
+- explain why the first bullet is the strongest proof of role fit
+- preserve systems, data, reporting, policy, or process value instead of deleting them as low-value admin work
 
-## Scenario 5: Long Dialogue Stage Refresh
+## Scenario 5: Strong Lines Must Survive Compression
 
 Prompt:
 
-`Use $job-copilot-skill to continue our long resume rewrite. We have already talked for a long time and I am not sure why we are still here.`
+`Use $job-copilot-skill to shorten my SSC resume to 4 / 3 / 3 bullets, but do not lose the HRIS, FAQ, reporting, and process-efficiency parts that make me stronger.`
 
 Expected behavior:
 
-- restate the current stage explicitly
-- explain why the process is still in that stage
-- name the blocker or missing information
-- state the condition required to move to the next stage
-- keep the refresh concise rather than turning it into a full report
-
-## Scenario 6: Content Operations And Self-Media Specialization
-
-Prompt:
-
-`Use $job-copilot-skill to help me target content operations roles. I have formal operations experience plus a year of running my own content account during a gap.`
-
-Expected behavior:
-
-- route to operations with content-operations specialization
-- separate formal role experience from personal content or gap-period material
-- explain whether the personal content period is a main story, support story, or gap explanation
-- challenge metrics that lack baseline, period, or attribution
-- use content-operations-style follow-up questions instead of generic operations questions
-
-## Scenario 7: Risk-Control Backend Specialization
-
-Prompt:
-
-`Use $job-copilot-skill to improve my resume for risk-control backend roles. My background includes anti-crawler strategy services and device recognition work.`
-
-Expected behavior:
-
-- route to backend with risk-control specialization
-- ask about the risk problem, strategy chain position, tradeoffs, and attack-defense iteration
-- avoid generic backend-only packaging when the risk context is the real differentiator
-- challenge high-volume or interception claims that lack denominator, time window, or ownership split
-- use risk-control pressure follow-ups instead of only generic system-design questioning
-
-## Scenario 8: Block Mock Interview Until Resume Is Ready
-
-Prompt:
-
-`Use $job-copilot-skill to mock interview me now. I know my resume still has unclear metrics, unstable main stories, and several rewrite-required sections, but I want to practice first.`
-
-Expected behavior:
-
-- refuse to release the workflow into mock interview
-- state that the release decision is blocked
-- explain why the current version is not strong enough to serve as the interview baseline
-- list the minimum fixes needed before mock interview can start
-- stay in the current resume stage instead of partially doing the next stage
-
-## Scenario 9: Release Only After Resume Passes Threshold
-
-Prompt:
-
-`Use $job-copilot-skill to continue from our finished resume rewrite and start mock interview drills. We already locked the target role, finalized the main story, and passed review with only small supplement notes left.`
-
-Expected behavior:
-
-- confirm that the release gate is now satisfied
-- state that the release decision is released
-- briefly name the remaining supplement notes without blocking progression
-- move into mock interview only after making the release decision explicit
+- obey the shorter structure without mechanically deleting high-value lines
+- keep the strongest systems, data, reporting, or process-improvement proof if those are core to the target role
+- explain what was cut and why it was lower value than the retained bullets
+- avoid turning the candidate into a generic transaction-only executor
