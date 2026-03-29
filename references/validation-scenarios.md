@@ -52,7 +52,32 @@ Expected behavior:
 - focus on stored weak points and error log
 - update memory after the mock interview
 
-## Scenario 4: JD Match But Still Reads Like Duties
+## Scenario 4: Ask For Excellent Baseline Before Rewrite
+
+Prompt:
+
+`Use $job-copilot-skill to show me what an excellent resume for content operations should look like first, then tell me how far my current resume is from that version.`
+
+Expected behavior:
+
+- define the target excellent baseline before rewriting the current draft
+- show the strongest candidate image for the routed role
+- explain the gap between the current resume and the baseline
+- distinguish what can be strengthened from what can only be downgraded safely
+
+## Scenario 5: Baseline Must Be Realistic
+
+Prompt:
+
+`Use $job-copilot-skill to show me the strongest version of my resume, but keep it honest to my real background.`
+
+Expected behavior:
+
+- provide a stronger target shape without inventing a different candidate
+- state where the realistic upper bound is lower than the market-best version
+- avoid turning the baseline into unsupported senior language
+
+## Scenario 6: JD Match But Still Reads Like Duties
 
 Prompt:
 
@@ -65,7 +90,7 @@ Expected behavior:
 - explain why the first bullet is the strongest proof of role fit
 - preserve systems, data, reporting, policy, or process value instead of deleting them as low-value admin work
 
-## Scenario 5: Strong Lines Must Survive Compression
+## Scenario 7: Strong Lines Must Survive Compression
 
 Prompt:
 
