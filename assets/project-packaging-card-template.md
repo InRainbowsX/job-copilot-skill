@@ -96,3 +96,6 @@
 - Required supplements:
 - Downgrade wording if needed:
 - Stage blocker if not ready to advance:
+- Release decision:
+- Release rationale:
+- Minimum fixes before next stage:
