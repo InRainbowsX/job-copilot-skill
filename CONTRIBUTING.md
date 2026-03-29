@@ -69,6 +69,7 @@ Every PR should:
 - explain which layer changed
 - explain what validation was performed
 - mention any packaging-risk change
+- explicitly check Codex review findings or other automated review comments before merge
 
 If a PR changes user-visible behavior, it should also update one or more of:
 
@@ -81,6 +82,12 @@ If smoke testing discovers a new failure that is not already covered by an open 
 - create the issue first
 - use `assets/smoke-failure-issue-template.md` or `scripts/create_smoke_issue.sh`
 - only then start the fix branch and PR flow
+
+If an automated review finding is discovered after a PR has already merged:
+
+- create a follow-up issue immediately
+- fix it through the normal issue -> branch -> PR flow
+- do not silently treat the merged PR as fully complete
 
 ## Review Checklist
 

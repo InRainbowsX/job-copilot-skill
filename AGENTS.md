@@ -158,6 +158,22 @@ git status --short --branch
 
 只有当你能明确确认该问题已经被现有 open issue 覆盖时，才可以不新建 issue。
 
+### 9. 合并前必须检查 Codex review finding
+
+在 PR 合并前，必须显式检查一次 GitHub 上的 Codex review finding 或同类自动 review 评论。
+
+最低要求：
+
+1. 查看 PR 评论与 review comments
+2. 判断是否存在 actionable finding
+3. 若存在 actionable finding，必须在合并前解决，或明确建 follow-up issue 再合并
+
+如果 PR 已经合并后才发现 review finding：
+
+1. 不能口头忽略
+2. 必须补建 follow-up issue
+3. 再按标准 issue -> branch -> test -> PR 流程修复
+
 ## 典型高风险点
 
 - 新包装规则超过候选人可讲述边界
