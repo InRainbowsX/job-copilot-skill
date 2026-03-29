@@ -445,3 +445,26 @@ Each rule case should include:
 - 把未经确认的包装内容直接写成长期记忆
 - 只记 approved wording，不记高风险禁用表述
 - 面试失败项出现后不决定是否回写项目卡片或 memory
+
+## Case 20: Product Management Routing Must Trigger A Product-Specific Template
+
+目标规则:
+
+- 产品经理场景不能只靠通用流程，必须触发产品模板并按产品岗逻辑深挖与审核
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a product-manager resume with requirement design, cross-team launch, KPI review, and roadmap participation.`
+
+期望行为:
+
+- 会把候选人路由到 product management family
+- 会使用产品问题、优先级、方案权衡、跨团队推进、上线复盘的语言
+- 会审查“需求负责人”“产品 owner”“路线图 ownership”这类职责边界
+- 模拟追问会更像产品面试而不是技术或泛运营面试
+
+禁止行为:
+
+- 只靠通用规则处理，不触发产品模板
+- 把纯协调包装成完整产品 ownership
+- 不区分需求定义、方案设计和推进执行
