@@ -291,3 +291,31 @@ Expected behavior:
 - surface main ownership, metric-caliber, or explainability risks
 - recommend the next deep-dive priorities before moving into final rewrite
 - avoid jumping directly from intake to polished final bullets
+
+## Scenario 20: Fine-Grained Content-Operations Template Should Change The Packaging Path
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a real content-operations resume with campus self-media, personal creation, and generic operations work.`
+
+Expected behavior:
+
+- route to operations, then narrow into the content-operations or self-media template
+- use content-specific strong signals and expression structure
+- treat personal creation as a content-project-style signal when support exists
+- keep the review focused on audience, topic logic, distribution, iteration, and attribution
+- avoid flattening the case into generic operations wording
+
+## Scenario 21: Fine-Grained Risk-Control Backend Template Should Change The Packaging Path
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, and real-time risk decisioning systems.`
+
+Expected behavior:
+
+- keep backend as the main route, then narrow into the risk-control-backend template
+- use subdomain-specific strong signals and result strategy
+- focus the review on decision path, latency, availability, ownership, and risk tradeoffs
+- keep AI tooling, architecture authority, and large-scale metrics as high-pressure review points
+- avoid flattening the case into generic backend wording
