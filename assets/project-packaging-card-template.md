@@ -52,6 +52,8 @@
 ## Packaging Goal
 
 - What capability this project should signal:
+- Primary capability lines that must remain:
+- Lower-weight modules that can be cut first:
 - Strongest role value:
 
 ## Missing Support
@@ -88,4 +90,5 @@
 - Required supplements:
 - Downgrade wording if needed:
 - Strongest value proof:
+- Capability line accidentally removed:
 - Still reads like duty list:
