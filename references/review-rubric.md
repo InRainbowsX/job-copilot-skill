@@ -10,7 +10,28 @@ Agent 2 uses this shared rubric before anything becomes final wording.
 
 ## Required Checks
 
-### 1. Fact Consistency
+### 1. Stage And Flow Control
+
+Check whether the response stays inside the current workflow stage.
+
+Challenge outputs where:
+
+- the current stage is not stated when the task is substantive resume coaching
+- the answer executes next-stage work instead of only recommending it
+- the assistant drifts into generic project tutorials when the user is still solving a resume or interview packaging problem
+- the resume is allowed into mock-interview work even though the current version is still blocked
+
+### 2. First-Pass Diagnosis
+
+Check whether early-stage outputs include an actual market diagnosis.
+
+Challenge outputs where:
+
+- no market score or equivalent strength judgment is given on a weak or risky draft
+- the answer skips straight to polishing without deciding whether strong packaging is required
+- obvious risks such as long gaps, mixed routes, weak recent timeline, or unsupported claims are not surfaced
+
+### 3. Fact Consistency
 
 Check whether the new wording conflicts with:
 
@@ -19,7 +40,7 @@ Check whether the new wording conflicts with:
 - candidate clarifications
 - stored memory
 
-### 2. Responsibility Boundary
+### 4. Responsibility Boundary
 
 Check whether the wording accurately reflects:
 
@@ -28,7 +49,7 @@ Check whether the wording accurately reflects:
 - what the team owned
 - what the candidate only supported
 
-### 3. Explainability
+### 5. Explainability
 
 Reject wording the candidate probably cannot explain under follow-up:
 
@@ -37,13 +58,18 @@ Reject wording the candidate probably cannot explain under follow-up:
 - what was difficult
 - how the result was measured
 
-### 4. Role Fit
+### 6. Role Routing Readiness
 
-Check whether the project now sounds like a real candidate for the routed job family.
+Check whether the project now sounds like a real candidate for the routed job family, and whether the route is actually locked.
+Challenge outputs where:
+
+- the primary route is unclear but the assistant writes a final packaged version anyway
+- multiple plausible routes exist but no primary/secondary comparison is given
+- route choice is asserted without evidence from the source materials
 
 For SSC, HR Ops, Global Mobility, and similar support-heavy roles, treat reporting, FAQ or knowledge-base work, system maintenance, policy updates, process tracking, and risk reminders as possible strength signals rather than default low-value admin work.
 
-### 5. Result Credibility
+### 7. Result Credibility
 
 Challenge:
 
@@ -51,11 +77,11 @@ Challenge:
 - vague impact with no observable value
 - team-level outcomes presented as individual outcomes
 
-### 6. Interview Survivability
+### 8. Interview Survivability
 
 Ask whether the story can survive 3 to 5 follow-up questions. If not, downgrade or request more support.
 
-### 7. Value Density
+### 9. Value Density
 
 Check whether the rewrite reads like a candidate value summary rather than a duty list.
 
@@ -68,7 +94,7 @@ Challenge rewrites where:
 - a formatting target such as `4 / 3 / 3` is followed mechanically even though it removes a stronger role-fit signal
 - the rewrite says what happened but not why it mattered
 
-### 8. Source-Diff Integrity
+### 10. Source-Diff Integrity
 
 After a targeted rewrite or compression pass, compare the output back to the source resume.
 
@@ -92,6 +118,10 @@ For each project card, output:
 
 - decision label
 - risk level
+- current stage
+- route-lock status
+- market score or equivalent strength judgment
+- whether strong packaging is required
 - top 3 risks
 - missing info to collect
 - retained from source
