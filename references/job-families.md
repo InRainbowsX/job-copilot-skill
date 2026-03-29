@@ -67,6 +67,8 @@ Signals:
 
 - requirement design, roadmap, user problem, feature spec, cross-team delivery, KPI, PRD
 
+When this family is selected, also apply [product-management-template.md](./product-management-template.md).
+
 ### Sales
 
 Signals:

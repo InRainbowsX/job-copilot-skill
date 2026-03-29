@@ -344,6 +344,7 @@ Use the routing and evaluation guidance in [job-families.md](./references/job-fa
 
 Current role-specific template coverage:
 
+- Product Management: [product-management-template.md](./references/product-management-template.md)
 - Sales: [sales-template.md](./references/sales-template.md)
 - Operations: [operations-template.md](./references/operations-template.md)
 - Backend: [backend-template.md](./references/backend-template.md)
@@ -413,6 +414,8 @@ Use [review-rubric.md](./references/review-rubric.md) for the shared review chec
 
 
 When the routed family is sales, also apply the sales-specific rules in [sales-template.md](./references/sales-template.md).
+
+When the routed family is product management, also apply the product-specific rules in [product-management-template.md](./references/product-management-template.md).
 
 When the routed family is operations, including self-media operations, also apply the operations-specific rules in [operations-template.md](./references/operations-template.md).
 

@@ -363,3 +363,17 @@ Expected behavior:
 - mark the outputs with `已确认 / 待补充 / 高风险`
 - decide whether the mock-interview failure should also be written back to the project card
 - avoid storing unconfirmed wording as approved long-term memory
+
+## Scenario 25: Product Manager Cases Must Route Into The Product Template
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a product-manager resume with requirement design, user problem analysis, cross-team launch, KPI review, and roadmap participation.`
+
+Expected behavior:
+
+- route the case into `product management`
+- use product-specific deep-dive prompts around problem definition, priority, tradeoffs, coordination, and review
+- apply product ownership checks rather than technical or generic operations checks
+- keep the interview chain focused on product decision quality and launch review
+- avoid flattening the case into broad operations or generic project wording
