@@ -43,6 +43,8 @@ Follow this sequence every time. Do not skip directly to rewritten bullets unles
 
 If the user asks for a stronger target version, an excellent sample, or "what a good resume should look like", do not jump straight into local edits. Define the excellent baseline first, then compare the current resume against it, then rewrite.
 
+When the user asks what gap-period content can be added safely, use [gap-option-library.md](./references/gap-option-library.md). Prefer truthful options with clear resume placement, minimum support, and risk notes over generic "go do a project" advice.
+
 ## Stage Discipline
 
 Keep the workflow stage-visible and stage-bound.
@@ -122,6 +124,8 @@ Routing requirements:
 - when routing is still uncertain, say the route is not locked yet
 - do not produce final packaging as if it were settled until the route is locked or the user explicitly chooses among the proposed routes
 - if multiple routes remain plausible, compare them and explain how the rewrite would differ by route
+
+When the user asks for Chinese, domestic, or "real" resume examples, prefer [cn-real-resume-sample-index.md](./references/cn-real-resume-sample-index.md) over foreign-only or template-only references, and state what type of source each example is.
 ## Dual-Agent Contract
 
 Treat the system as two distinct passes, even if the environment only has one visible assistant.
@@ -310,6 +314,10 @@ If the user says this:
   Rebuild each experience into strongest-first scene, action, and value bullets.
 - "Show me what a strong version should look like first"
   Present the excellent baseline, then analyze the gap, then decide what to rewrite.
+- "What can I put in my gap period?"
+  Use the gap option library, rank the safest 2 to 4 truthful options for the routed role, and explain where each would sit on the resume.
+- "Give me Chinese real-resume examples"
+  Use the domestic sample index, prefer real-candidate or real-case sources first, and clearly label weaker template-like or commentary-only sources as supplements rather than true resume samples.
 - "I don't want to repeat myself next session"  
   Read and update `memory.md`.
 
