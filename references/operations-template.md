@@ -2,6 +2,8 @@
 
 Apply this template when the candidate targets internet operations roles, including growth operations, user operations, activity operations, content operations, and self-media operations.
 
+When the materials are clearly closer to `内容运营 / 自媒体运营 / 个人内容项目`, also consult [content-operations-knowledge-base.md](./content-operations-knowledge-base.md) before choosing packaging angles or review standards.
+
 ## Role Definition
 
 This family is judged on whether the candidate can connect business goals to operating actions, explain the funnel or audience they worked on, and show iteration logic through metrics and review.
@@ -28,6 +30,15 @@ Common keywords:
 - DAU, retention, conversion, funnel, traffic, users, reach, engagement
 - activity, campaign, growth, community, content calendar, self-media
 - followers, reads, CTR, GMV, registrations, activation, private traffic
+
+For content-heavy cases, do not stop at generic operations routing. Check whether the stronger language should shift toward:
+
+- audience positioning
+- topic selection
+- content pillars
+- editorial cadence
+- platform-native distribution
+- review and iteration loops
 
 ## Agent 1 Deep-Dive Prompts
 
