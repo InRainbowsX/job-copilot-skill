@@ -327,3 +327,49 @@ Each rule case should include:
 - 一上来直接输出最终简历 bullets
 - 只说“我理解了你的简历”，但不给结构化拆解
 - 不区分主叙事、支撑经历和补充亮点
+
+## Case 15: Fine-Grained Content-Operations Template Must Shape Packaging
+
+目标规则:
+
+- 内容运营 / 自媒体运营场景必须按细分模板来组织包装和审核，而不是只停留在 broad operations
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a content-operations resume with campus self-media work, a personal content project, and generic operations experience.`
+
+期望行为:
+
+- 会把内容运营 / 自媒体运营作为细分模板来处理
+- 会强调 audience、topic、distribution、iteration，而不只是泛运营动作
+- 会在包装和审核中区分账号级结果、个人贡献和个人创作期
+- 模拟追问会更像内容运营而不是活动运营通用题
+
+禁止行为:
+
+- 只靠 broad operations 模板处理
+- 只做泛化措辞升级
+- 忽略个人创作期的内容项目属性
+
+## Case 16: Fine-Grained Risk-Control Backend Template Must Shape Packaging
+
+目标规则:
+
+- 风控 / 反爬 / 设备指纹场景必须按细分后端模板来组织包装和审核，而不是只停留在 broad backend
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to package a backend resume with anti-crawl, device fingerprint, and real-time risk decisioning work.`
+
+期望行为:
+
+- 会把风控 / 反爬后端作为细分模板来处理
+- 会强调系统边界、决策链路、实时性约束和风险权衡
+- 会把 AI、架构 owner、大流量、高可用当成细分审核热点
+- 模拟追问会更像风控后端而不是普通 CRUD 后端
+
+禁止行为:
+
+- 只靠 broad backend 模板处理
+- 只做通用服务端措辞优化
+- 不区分普通后端项目和风控后端项目的审核重点
