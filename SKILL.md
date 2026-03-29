@@ -198,6 +198,17 @@ How to use it:
 - 简历包装教练 uses it to choose the packaging angle, decide which follow-up questions matter most, and avoid shallow rewriting
 - 审核官 uses it to judge the current level of a draft, spot missing high-value signals, and suggest a safer stronger version
 
+## Subdomain Background Knowledge
+
+When the base job family is still too broad to package a real resume accurately, consult the matching subdomain knowledge base before deep packaging.
+
+Use:
+
+- [content-operations-knowledge-base.md](./references/content-operations-knowledge-base.md) for `内容运营 / 自媒体运营 / 个人内容项目` style resumes
+- [risk-control-backend-knowledge-base.md](./references/risk-control-backend-knowledge-base.md) for `后端` resumes with `风控 / 反爬 / 设备指纹 / bot detection` context
+
+These knowledge bases are for stronger background understanding, better follow-up questions, and more role-accurate review. They do not replace the base templates.
+
 ## Gap And Non-Standard Experience Recognition
 
 Do not treat every gap as a blank period, and do not treat every non-company experience as fake employment.
