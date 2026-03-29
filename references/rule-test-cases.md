@@ -430,25 +430,50 @@ Each rule case should include:
 - 当前简历还未 released 就直接开始模拟面试
 - 把“下一步推荐”当成已经执行的内容
 
+## Case 26: Gap Options Must Be Role-Matched And Truthful
+
 目标规则:
 
-- 项目包装卡片必须能表达时间权重、gap 属性和主叙事定位
+- gap 期可选内容必须按岗位匹配度、证据门槛和风险来排序
 
 输入 prompt:
 
-`Use $job-copilot-skill to package my resume. I have a strong campus project, a recent operations project, and a gap-period content project.`
+`Use $job-copilot-skill to tell me what I can add during my gap. I am considering a Xiaohongshu account, a writing column, and a small merchant-diagnosis project.`
 
 期望行为:
 
-- 生成的项目卡片会标明是否为最近核心经历
-- 会标明是否属于 gap 或非标准经历
-- 会标明是主叙事、辅助叙事还是补充亮点
-- 会体现时间轴权重说明
+- 先判断哪些选项更贴当前目标岗
+- 说明每个选项适合放在简历哪里
+- 说明最低需要哪些支撑
+- 说明哪个最稳，哪个只能弱写
 
 禁止行为:
 
-- 卡片只记录项目内容，不表达时间位置
-- 无法区分主线和补充经历
+- 泛泛地列一堆项目点子
+- 不区分岗位差异
+- 把个人项目直接包装成正式任职
+
+## Case 27: Chinese Real Samples Must Not Fall Back To Templates
+
+目标规则:
+
+- 用户要求中文 / 国内 / 真人样本时，必须优先给国内真实案例索引
+
+输入 prompt:
+
+`Use $job-copilot-skill to show me Chinese real resume examples. Do not give me foreign templates.`
+
+期望行为:
+
+- 优先给中文真实案例或真实求改帖
+- 明确来源类型和可信度
+- 说明哪些只是补充样本，不能当完整原稿
+
+禁止行为:
+
+- 继续给国外模板站
+- 把中文模板站包装成真人简历
+- 不说明来源类型
 
 ## Case 12: Packaging Must Produce A Clear Plan Before Stable Rewriting
 

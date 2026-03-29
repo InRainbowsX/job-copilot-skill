@@ -229,3 +229,29 @@ Expected behavior:
 - judge whether the resume is actually released or still blocked
 - only recommend mock interview as the next stage when release is not yet granted
 - avoid executing stage-4 interview content before the resume is released
+
+## Scenario 18: Gap Option Suggestions Must Stay Truthful And Resume-First
+
+Prompt:
+
+`Use $job-copilot-skill to tell me what I can put in my gap period. I am thinking about a Xiaohongshu account, a small writing project, or some kind of case-study portfolio.`
+
+Expected behavior:
+
+- rank the options by fit with the target role rather than giving generic project ideas
+- explain where each option belongs on the resume
+- state the minimum support needed for each option
+- avoid turning any option into fake formal employment
+
+## Scenario 19: Chinese Real-Resume Request Must Prefer Domestic Real Cases
+
+Prompt:
+
+`Use $job-copilot-skill to show me some Chinese real resume examples. Do not give me foreign templates.`
+
+Expected behavior:
+
+- prefer domestic real-candidate or real-case sources first
+- clearly label whether each source is a real-candidate post, a before/after case, an interview deep-dive, or only commentary
+- avoid presenting template sites as if they were real resume originals
+- explain the limitation when only partial public samples exist
