@@ -422,3 +422,26 @@ Each rule case should include:
 - 默认接受 `架构师`、`整体设计`、`AI 能力` 这类强表述
 - 只做 broad backend 的泛化包装
 - 不区分团队成果和个人成果
+
+## Case 19: Review And Interview Results Must Drive Memory Writeback
+
+目标规则:
+
+- 审核结果和面试失败项必须按规则决定是否写回 memory，并能区分 `已确认 / 待补充 / 高风险`
+
+输入 prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to review a project, mark one metric as high-risk, approve one safer bullet, and record one mock-interview failure.` 
+
+期望行为:
+
+- 会明确哪些内容必须写回 memory
+- 会明确哪些内容不应写回 memory
+- 会给出 `已确认 / 待补充 / 高风险` 状态
+- 会说明面试失败项是否需要回写到项目卡片
+
+禁止行为:
+
+- 把未经确认的包装内容直接写成长期记忆
+- 只记 approved wording，不记高风险禁用表述
+- 面试失败项出现后不决定是否回写项目卡片或 memory

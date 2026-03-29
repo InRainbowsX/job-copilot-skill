@@ -349,3 +349,17 @@ Expected behavior:
 - force clear boundaries for `AI 工具真实 ownership`
 - distinguish `团队成果与个人成果区分`
 - use a more specific risk-control-backend mock interview chain instead of generic backend questions
+
+## Scenario 24: Review And Mock-Interview Results Must Produce Explicit Memory Writeback Decisions
+
+Prompt:
+
+`Today is 2026-03-29. Use $job-copilot-skill to review a packaged project, mark one bullet as approved, one metric as high-risk, and one mock-interview answer as weak. Then tell me what must be written back to memory or the project card.`
+
+Expected behavior:
+
+- make the writeback decision explicit instead of leaving it implicit
+- include `必须写回 memory` and `不应写回 memory` boundaries
+- mark the outputs with `已确认 / 待补充 / 高风险`
+- decide whether the mock-interview failure should also be written back to the project card
+- avoid storing unconfirmed wording as approved long-term memory

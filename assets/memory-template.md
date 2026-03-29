@@ -46,6 +46,7 @@
 - Approved self-introduction:
 - Approved resume bullets:
 - Approved interview storylines:
+- Status: `已确认 / 待补充 / 高风险`
 
 ## 6. Review Risk Notes
 
@@ -53,6 +54,27 @@
 - Banned or downgraded phrasing:
 - Data pending verification:
 - Likely follow-up pressure points:
+
+## Memory Writeback Rules
+
+### 必须写回 memory
+
+- 已通过审核并准备复用的表述
+- 被判定为高风险、以后不应重复使用的表述
+- 待补充但下次必须继续追问的关键事实、指标或解释缺口
+- 在模拟面试中重复暴露的问题
+
+### 不应写回 memory
+
+- 未经确认的包装尝试
+- 一次性闲聊内容
+- 还没有经过审核官确认的强表述
+
+### 写回状态
+
+- `已确认`: later sessions can reuse directly
+- `待补充`: keep as follow-up work, not approved wording
+- `高风险`: keep as warning or banned phrase
 
 ## 7. Mock Interview Notes
 
