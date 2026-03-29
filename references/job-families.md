@@ -91,6 +91,19 @@ Sub-signals worth routing explicitly:
 
 When these sub-signals dominate, apply the segmented guidance in [content-operations-patterns.md](./content-operations-patterns.md) and [content-operations-interview-chain.md](./content-operations-interview-chain.md).
 
+### Support-Heavy Operations Signals
+
+Across support-heavy routes such as SSC, HR Ops, Global Mobility, and similar operational support work, do not default these lines to low-value admin tasks:
+
+- reporting and recurring data support
+- FAQ, knowledge-base, or standard-answer maintenance
+- HRIS or workflow-system maintenance
+- policy updates, risk reminders, and process tracking
+
+When these signals are central to role fit, treat them as evidence of operating support capability, process discipline, and compliance awareness.
+
+Bullet-count targets such as `4 / 3 / 3` must follow these value judgments rather than override them.
+
 ## Conflict Handling
 
 - If technical depth dominates and business language is secondary, prefer the technical family.
